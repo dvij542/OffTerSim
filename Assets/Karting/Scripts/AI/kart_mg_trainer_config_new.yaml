@@ -1,0 +1,422 @@
+behaviors:
+  HierarchicalAgent-LSTM:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+      memory:
+        memory_size: 256
+        sequence_length: 64
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+
+  E2EAgent-LSTM:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+      memory:
+        memory_size: 256
+        sequence_length: 64
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+  
+  HierarchicalAgent-NonLSTM:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 80
+    checkpoint_interval: 100000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: false
+  
+  HierarchicalAgent:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+
+  E2EAgent-NonLSTM:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+
+  End2EndAgent:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+
+  FixedHierarchicalAgent-NonLSTM:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.0002
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 128
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 20
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 1000
+    threaded: false
+  
+  HierarchicalAgent-TeamDOE:
+    trainer_type: poca
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.00035
+      beta: 0.003
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      beta_schedule: linear
+      epsilon_schedule: linear
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 256
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 25
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: false
+ 
+  E2EAgent-Team:
+    trainer_type: poca
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.00035
+      beta: 0.003
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      beta_schedule: linear
+      epsilon_schedule: linear
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 256
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 25
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: false
+  
+  FixedHierarchicalAgent-Team:
+    trainer_type: poca
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 10240
+      learning_rate: 0.00035
+      beta: 0.003
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      beta_schedule: linear
+      epsilon_schedule: linear
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+      vis_encode_type: simple
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: true
+          hidden_units: 256
+          num_layers: 3
+          vis_encode_type: simple
+          goal_conditioning_type: hyper
+    self_play:
+      window: 10
+      play_against_latest_model_ratio: 0.5
+      save_steps: 20000
+      swap_steps: 10000
+      team_change: 100000
+      initial_elo: 400
+    keep_checkpoints: 25
+    checkpoint_interval: 500000
+    max_steps: 8000000
+    time_horizon: 64
+    summary_freq: 10000
+    threaded: false

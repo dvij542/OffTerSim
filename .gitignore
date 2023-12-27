@@ -1,0 +1,16 @@
+*Library/*
+*Temp/*
+Logs/
+*/results/*
+*/Logs/*
+results/
+*results/*
+
+# For windows
+*Library\*
+*Temp\*
+Logs\
+*\results\*
+*\Logs\*
+results\
+*results\*
