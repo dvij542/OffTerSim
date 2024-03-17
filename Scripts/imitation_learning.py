@@ -1,3 +1,6 @@
+import os
+# Set the GPU(s) to be used
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import numpy as np
 import torch
 from mlagents_envs.environment import UnityEnvironment,ActionTuple
@@ -103,12 +106,12 @@ def expert_policy_1(heights) :
         return 1
     else :
         return 0 
-    
+
 # Define policy network
 policy = PolicyNN(input_dim=input_dim,hidden_dims=[2048,1024,512,128],output_dim=output_dim).cuda()
 height_regressor = DepthToHeightNN(input_dim=input_dim,hidden_dims=[2048,1024,512,128],output_dim=55).cuda()
 # print(policy)
-env = UnityEnvironment(file_name="Build-ubuntu-all_obs1/exec", seed=2, side_channels=[])
+env = UnityEnvironment(file_name="./Build-ubuntu/exec", seed=2, side_channels=[], no_graphics=True)
 env.reset()
 
 behavior_name = list(env.behavior_specs)[0]
@@ -166,6 +169,7 @@ while(True) :
     print("n_collisions:",n_collisions)
     # one_hot_encoded = np.eye(3)[expert_cmd]
     # one_hot_tensor = torch.from_numpy(one_hot_encoded).float().cuda()
+    print("Dpeth sum = ", np.sum(depth_image))
     inputs = torch.from_numpy(np.concatenate((depth_image.flatten(),vector_observations[0,:-55]))).cuda()
     if n_collisions < 0.1 : # Update only when no collisions
         i += 1

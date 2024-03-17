@@ -64,6 +64,7 @@ namespace KartGame.AI
         bool m_Acceleration;
         bool m_Brake;
         public float added_reward;
+        public int n_curr_collisions = 0;
         public float ref_angle;
         public float respawn_x = 471;
         public float cbf_violation_reward = 10.0f;
@@ -74,9 +75,10 @@ namespace KartGame.AI
         public float percent_correct;
         public float roll_factor = 1.0f;
         public float pitch_factor = 1.0f;
+        public float smoothness_factor = 1.0f;
         public float[] neighboring_height_values = new float[11];
         // public KartGame.KartSystems.GreedyLocalController greedyLocalController;
-        bool m_EndEpisode;
+        public bool m_EndEpisode;
         public float il_reward = 1.0f;
         public float ry;
         float correct = 0.0f;
@@ -149,7 +151,7 @@ namespace KartGame.AI
             while (rz<-180.0f) rz += 360.0f;
             
             sensor.AddObservation(rx/180.0f);
-            sensor.AddObservation(ry/180.0f);
+            sensor.AddObservation(m_Kart.Rigidbody.angularVelocity.y);
             sensor.AddObservation(rz/180.0f);
             // ry = m_Kart.transform.localEulerAngles.y;
             sensor.AddObservation(m_Acceleration);
@@ -157,36 +159,41 @@ namespace KartGame.AI
             var x = this.gameObject.transform.position.z*4.096f;
             var y = (1000-this.gameObject.transform.position.x)*4.096f;
             var yaw = -this.gameObject.transform.rotation.eulerAngles.y*Mathf.PI/180.0f;
-            
+            // Debug.Log(m_Kart.Rigidbody.velocity.y);
+            if (m_Kart.Rigidbody.velocity.y<-30.0f) m_EndEpisode = true;
             ref_angle = greedyLocalController.get_reference_angle(new Vector3(x,y,yaw));
-            sensor.AddObservation(ry*math.PI/180.0f - ref_angle);
+            var rel_angle = ry*Mathf.PI/180.0f - ref_angle;
+            while (rel_angle>Mathf.PI) rel_angle -= 2.0f*Mathf.PI;
+            while (rel_angle<=-Mathf.PI) rel_angle += 2.0f*Mathf.PI;
+            sensor.AddObservation(ref_angle);
             sensor.AddObservation(greedyLocalController.get_lateral_displacement(new Vector3(x,y,yaw)));
             var target_point = greedyLocalController.get_lookahead_point(new Vector3(x,y,yaw));
             expert_steer = -greedyLocalController.get_steer(new Vector3(x,y,yaw),target_point);
-            
-            // var nhs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),5.0f);
+            var chs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),0.0f);
+            var nhs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),5.0f);
+            sensor.AddObservation(n_curr_collisions);
             // for(int i=0;i<11;i++){
-            //     sensor.AddObservation(nhs[i]);
+            //     sensor.AddObservation(nhs[i]-chs[0]);
             // }
             
-            neighboring_height_values = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw));
+            // neighboring_height_values = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw));
             // for(int i=0;i<11;i++){
-            //     sensor.AddObservation(neighboring_height_values[i]);
+            //     sensor.AddObservation(neighboring_height_values[i]-chs[0]);
             // }
             
             // nhs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),15.0f);
             // for(int i=0;i<11;i++){
-            //     sensor.AddObservation(nhs[i]);
+            //     sensor.AddObservation(nhs[i]-chs[0]);
             // }
             
             // nhs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),20.0f);
             // for(int i=0;i<11;i++){
-            //     sensor.AddObservation(nhs[i]);
+            //     sensor.AddObservation(nhs[i]-chs[0]);
             // }
             
             // nhs = greedyLocalController.get_lookahead_point_heights(new Vector3(x,y,yaw),25.0f);
             // for(int i=0;i<11;i++){
-            //     sensor.AddObservation(nhs[i]);
+            //     sensor.AddObservation(nhs[i]-chs[0]);
             // }
             
             // sensor AddObservation()
@@ -216,6 +223,7 @@ namespace KartGame.AI
             
             AddReward(-roll_factor*Mathf.Abs(rx)/180.0f);
             AddReward(-pitch_factor*Mathf.Abs(rz)/180.0f);
+            AddReward(-smoothness_factor*Mathf.Abs(m_Kart.Rigidbody.angularVelocity.y)/10.0f);
             // var next = (m_CheckpointIndex + 1) % Colliders.Length;
             // var nextCollider = Colliders[next];
             // var direction = (nextCollider.transform.position - m_Kart.transform.position).normalized;
@@ -224,6 +232,7 @@ namespace KartGame.AI
             curr_x = m_Kart.transform.position.z;
             // var reward = curr_x - prev_x;
             var forward_vel = Mathf.Sqrt(Mathf.Pow(m_Kart.Rigidbody.velocity.x,2)+Mathf.Pow(m_Kart.Rigidbody.velocity.z,2));
+            // Debug.Log("Yaw error: " + Mathf.Cos(ref_angle-this.gameObject.transform.rotation.eulerAngles.y*Mathf.PI/180.0f));
             var reward = forward_vel*Mathf.Cos(ref_angle-this.gameObject.transform.rotation.eulerAngles.y*Mathf.PI/180.0f);
             prev_x = curr_x;
             if (Mathf.Abs(reward)>10.0f){
@@ -264,8 +273,9 @@ namespace KartGame.AI
             // if 
             // AddReward(Mathf.Min(value3,Mathf.Min(value1,value2))-how_much);
             added_reward = Mathf.Min(value3,Mathf.Min(value1,value2))-how_much;
+            // Debug.Log(Time.fixedDeltaTime);
             // Debug.Log("wtf!");
-            // AddReward(avg_val-how_much);
+            // AddReward(minval-how_much);
             what_penalty = Mathf.Min(value3,Mathf.Min(value1,value2))-how_much;
             if (what_penalty>-0.00001f) correct += 1;
             else incorrect += 1;
@@ -313,6 +323,20 @@ namespace KartGame.AI
                 Brake = m_Brake,
                 TurnInput = m_Steering
             };
+        }
+
+        private void OnCollisionEnter(Collision other) {
+            if (other.transform.tag == "Obstacle"){
+                n_curr_collisions += 1;
+            }
+
+        }
+
+        private void OnCollisionExit(Collision other) {
+            if (other.transform.tag == "Obstacle"){
+                n_curr_collisions -= 1;
+            }
+
         }
     }
 }

@@ -49,10 +49,11 @@ public class procedural_heightmap : MonoBehaviour
         b_ = UnityEngine.Random.Range(-b*1.0f,b*1.0f);
         c_ = UnityEngine.Random.Range(-c*1.0f,c*1.0f);
         var road_widths = new float[terrain_size+1];
-        for (int k = 0; k < n_bumps + 1; k++){
+        for (int k = 0; k < n_bumps + 1; k++)
+        {
             phase = UnityEngine.Random.Range(0.0f,2*Mathf.PI);
-            freq_x = UnityEngine.Random.Range(0.0f,0.1f);
-            freq_y = UnityEngine.Random.Range(0.0f,0.1f);
+            freq_x = UnityEngine.Random.Range(0.0f,0.2f);
+            freq_y = UnityEngine.Random.Range(0.0f,0.2f);
             float max_h_sample = UnityEngine.Random.Range(0.0f,max_h);
             for (int i = 0; i < terrain_size + 1; i++){
                 if (k==0) {
@@ -180,12 +181,12 @@ public class procedural_heightmap : MonoBehaviour
             }
             else {
                 float r = UnityEngine.Random.Range(0.0f,1.0f);
-                if (r>0.8f){
+                if (r>0.5f){
                     int i = Mathf.RoundToInt(worldTreePos.z*4.096f);
                     int j = Mathf.RoundToInt(worldTreePos.x*4.096f);
                     int obs_radius = Mathf.RoundToInt(terrainTree.widthScale*obs_avoidance_factor);
-                    for (int k = i-obs_radius;k<i+obs_radius;k++){
-                        for (int l = j-obs_radius;l<j+obs_radius;l++){
+                    for (int k = i-obs_radius;k<i+obs_radius+1;k++){
+                        for (int l = j-obs_radius;l<j+obs_radius+1;l++){
                             float dist = Mathf.Sqrt(Mathf.Pow(k-i,2)+Mathf.Pow(l-j,2));
                             if (dist>obs_radius){
                                 continue;
@@ -198,6 +199,9 @@ public class procedural_heightmap : MonoBehaviour
                     GameObject prefabTree = Instantiate(rocks[c], worldTreePos, Quaternion.identity, treeParent.transform); // Create a prefab tree on its pos
                     prefabTree.transform.localScale = new Vector3(terrainTree.widthScale, terrainTree.heightScale, terrainTree.widthScale);
                     prefabTree.transform.rotation = Quaternion.AngleAxis(terrainTree.rotation * 57.2958f, Vector3.up);
+                }
+                else {
+                    // terrainTree.
                 }
             }
             // Create the new tree out of the prefab

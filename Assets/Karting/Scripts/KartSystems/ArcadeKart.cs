@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.VFX;
+using System.IO;
 
 namespace KartGame.KartSystems
 {
@@ -89,7 +90,9 @@ namespace KartGame.KartSystems
         public bool takeKeyboardInput = false;
         public float AirPercent    { get; private set; }
         public float GroundPercent { get; private set; }
-
+        public bool capture_trajectory = false;
+        public float k_speed = 5.0f;
+        private List<(float, float, float, float, float, float, float, float)> observations = new List<(float, float, float, float, float, float, float, float)>();
         ArcadeKart.Stats baseStats = new ArcadeKart.Stats
         {
             TopSpeed            = 3.0f,
@@ -178,6 +181,7 @@ namespace KartGame.KartSystems
         // Drift params
         public bool WantsToDrift { get; private set; } = false;
         public bool IsDrifting { get; private set; } = false;
+        public int n_iters = 0;
         float m_CurrentGrip = 1.0f;
         float m_DriftTurningPower = 0.0f;
         float m_PreviousGroundPercent = 1.0f;
@@ -235,6 +239,24 @@ namespace KartGame.KartSystems
             }
         }
 
+        public void SaveToCSV()
+        {
+            string filePath = "observations.csv";
+
+            // Create a new StreamWriter and write the header
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine("x,y,yaw,vx,vy,w,steer,throttle");
+
+                // Write each observation to the file
+                foreach ((float, float, float, float, float, float, float, float) observation in observations)
+                {
+                    writer.WriteLine($"{observation.Item1},{observation.Item2},{observation.Item3},{observation.Item4},{observation.Item5},{observation.Item6},{observation.Item7},{observation.Item8}");
+                }
+            }
+
+            Debug.Log("CSV file saved to: " + filePath);
+        }
         void UpdateSuspensionParams(WheelCollider wheel)
         {
             wheel.suspensionDistance = SuspensionHeight;
@@ -247,6 +269,7 @@ namespace KartGame.KartSystems
 
         void Awake()
         {
+            // Time.timeScale = 3f;
             Physics.IgnoreLayerCollision(13,13);
             Rigidbody = GetComponent<Rigidbody>();
             m_Inputs = GetComponents<IInput>();
@@ -296,6 +319,15 @@ namespace KartGame.KartSystems
 
         void FixedUpdate()
         {
+            n_iters += 1;
+            if (n_iters > 1000) {
+                if (capture_trajectory) SaveToCSV();
+                n_iters = 0;
+            }
+            if (capture_trajectory)
+            {
+                observations.Add((transform.position.x, transform.position.z, transform.localEulerAngles.y, Rigidbody.velocity.x, Rigidbody.velocity.z, Rigidbody.angularVelocity.y, transform.rotation.w, LocalSpeed()));
+            }
             UpdateSuspensionParams(FrontLeftWheel);
             UpdateSuspensionParams(FrontRightWheel);
             UpdateSuspensionParams(RearLeftWheel);
@@ -326,8 +358,17 @@ namespace KartGame.KartSystems
             // apply vehicle physics
             if (m_CanMove)
             {
-                if (!takeExpertCmd)
+                if (!takeExpertCmd){
+                    // TODO: Wenli stuff
+                    // var target_acc = Mathf.Max(-1.0f,Mathf.Min(1.0f,(-(Rigidbody.velocity.magnitude))/5.0f));
+                    // if (Input.Accelerate)
+                    //     target_acc = Mathf.Max(-1.0f,Mathf.Min(1.0f,(k_speed-(Rigidbody.velocity.magnitude))/5.0f));
+                    // if (Input.Brake)
+                    //     target_acc = Mathf.Max(-1.0f,Mathf.Min(1.0f,(-k_speed-(Rigidbody.velocity.magnitude))/5.0f));
+                    
+                    // MoveVehicle((target_acc>0.0f), (target_acc<0.0f), Input.TurnInput);
                     MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
+                }
                 else {
                     // if (curr_cmd.throttle > 0.0f)
                     MoveVehicle((curr_cmd.throttle>0.0f), false, curr_cmd.steer);
@@ -353,6 +394,7 @@ namespace KartGame.KartSystems
                 // Debug.Log(i);
                 Input = m_Inputs[i].GenerateInput();
                 WantsToDrift = Input.Brake && Vector3.Dot(Rigidbody.velocity, transform.forward) > 0.0f;
+                // Input.Accelerate = Mathf.Max(-1.0f,Mathf.Min(1.0f,k_speed*Input.Accelerate-(Rigidbody.velocity.magnitude)));
                 if (takeKeyboardInput) break;   
             }
             // if (takeGreedyCmd){
@@ -582,6 +624,7 @@ namespace KartGame.KartSystems
                 }
 
                 // rotate our velocity based on current steer value
+                // Debug.Log("w: " + (turnInput * m_FinalStats.Steer) );
                 Rigidbody.velocity = Quaternion.AngleAxis(turningPower * Mathf.Sign(localVel.z) * velocitySteering * m_CurrentGrip * Time.fixedDeltaTime, transform.up) * Rigidbody.velocity;
             }
             else

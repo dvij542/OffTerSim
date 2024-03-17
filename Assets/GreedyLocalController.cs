@@ -140,9 +140,9 @@ namespace KartGame.KartSystems
 
                     float derivative_val = -(3*terrain_script.a_*Mathf.Pow(t_,2) + terrain_script.b_*2*Mathf.Pow(t_,1) + terrain_script.c_);
                     float extra_cost = 0.0f;
-                    if ((Mathf.Cos(yaw+t) + Mathf.Sin(yaw+t)*derivative_val)/Mathf.Sqrt(1+Mathf.Pow(derivative_val,2)) < 0.2f){
+                    if ((Mathf.Cos(yaw+t) + Mathf.Sin(yaw+t)*derivative_val)/Mathf.Sqrt(1+Mathf.Pow(derivative_val,2)) < 0.7f){
                         // continue;
-                        extra_cost += 100.0f*Mathf.Abs((Mathf.Cos(yaw+t) + Mathf.Sin(yaw+t)*derivative_val)/Mathf.Sqrt(1+Mathf.Pow(derivative_val,2))-0.2f);
+                        extra_cost += 100.0f*Mathf.Abs((Mathf.Cos(yaw+t) + Mathf.Sin(yaw+t)*derivative_val)/Mathf.Sqrt(1+Mathf.Pow(derivative_val,2))-0.7f);
                     }
 
                     
