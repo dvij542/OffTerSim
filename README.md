@@ -43,20 +43,15 @@ Easist way to read code is to just directly go to individual objects and see wha
 1. If you point to Terrain object on the left pane, it should have a procedural_heightmap.cs script attached to it as shown below. Just double click on the script pointer and that should take you to that script in vscode. This is the script used to generate the procedurally random heightmap and the features (trees, rocks, grass etc)
 <img width="1006" alt="image" src="https://github.com/dvij542/uneven-terrain-driver/assets/43860166/f2f5cf39-ed58-4c03-91fb-526ccfc3379c">
 2. Select Main camera object and see all the scripts attached to it
-3. Select Gaddi object to see all the scripts attached on it. AracdeKart.cs is the one which controls the vehicle dynamics, KartPlayerAnimation is just for animating the wheel rotations and steers.
+3. Select Gaddi object to see all the scripts attached on it. AracdeKart.cs is the one which controls the vehicle dynamics, KartPlayerAnimation is just for animating the wheel rotations and steers. You can enable the 'Take keyboard input' checkbox to take commands from the keyboard to move the car. You can also select 'Take expert command' to get the expert expert commands from greedy controller. 
 <img width="996" alt="image" src="https://github.com/dvij542/uneven-terrain-driver/assets/43860166/a29e3654-522f-4242-8500-9c522c534e5a">
-4. utils/plot_traj.py can be run as a utility after each run to visualize the trajectory followed wrt the heightmap
+4. utils/plot_traj.py can be run as a utility after each run to visualize the trajectory followed with the heightmap in the background
+
+You can directly use the built environment inside Build-ubuntu and Build-windows. Some of the additional custom built environments can be found here: https://drive.google.com/drive/u/1/folders/1IWBaSYP6VH7vti9cb_MgK4lh1kEbcMzq
 
 ## Current WIP's 
 
-1. (Haoru and Sarthak) Unity-gym API :-
-   1. Add installation instructions once integrated and tested
-   2. Train an RL agent with PPO based off a basic reward design that maximized progress along trail while minimizing rock collisions and vehicle's pitch and roll magnitudes
-2. (Shreya and Dvij) ML-agents integration :-
-   1. ML-agents package should be installed already with this github repo. Add instructions to launch python-train interface node while training
-   2. Train an RL agent with PPO based off a basic reward design that maximized progress along trail while minimizing rock collisions and vehicle's pitch and roll magnitudes
-3. (Dvij and Shreya) Greedy algorithm to autonomously run the agent on the trail with minimal roll and pitch magnitudes. This can serve as a teacher to headstart the RL policy by behavior cloning
-4. Sim-to-real transfer to the RC car
+1. Sim-to-real transfer to the RC car
 
 ## Creating the executable to use the Unity env as a gym env
 
