@@ -267,9 +267,29 @@ namespace KartGame.KartSystems
             wheel.suspensionSpring = spring;
         }
 
+        void AddSphere(float distance, float angleDegrees)
+        {
+            // Calculate the position in xy plane based on distance and angle
+            float angleRadians = Mathf.Deg2Rad * angleDegrees;
+            float x = distance * Mathf.Cos(angleRadians);
+            float y = distance * Mathf.Sin(angleRadians);
+
+            // Create a new sphere GameObject
+            GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphere.transform.parent = this.gameObject.transform; // Set the parent
+            sphere.transform.localPosition = new Vector3(y, 0.0f, x); // Set the local position
+            sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Set the scale
+        }
         void Awake()
         {
-            // Time.timeScale = 3f;
+            // Time.timeScale = 4f;
+            // for (int j = 1; j < 5; j++)
+            // {
+            //     for (float i = -45.0f; i < 45.0f; i += 90.0f / 11.0f)
+            //     {
+            //         AddSphere(j, i);
+            //     }
+            // }
             Physics.IgnoreLayerCollision(13,13);
             Rigidbody = GetComponent<Rigidbody>();
             m_Inputs = GetComponents<IInput>();

@@ -41,7 +41,7 @@ public class procedural_heightmap : MonoBehaviour
             }    
         }
     }
-    void Start()
+    public void Start()
     {   
         var mesh = new float[terrain_size+1,terrain_size+1];
         var maxval = 0.0f;
@@ -191,7 +191,7 @@ public class procedural_heightmap : MonoBehaviour
                             if (dist>obs_radius){
                                 continue;
                             }
-                            texture.SetPixel(k, terrain_size-l, new Color(texture.GetPixel(k, terrain_size-l).r,Mathf.Min(1.0f,texture.GetPixel(k, terrain_size-l).g+Mathf.Sqrt(1.0f - dist/obs_radius)),texture.GetPixel(k, terrain_size-l).b,1.0f));
+                            // texture.SetPixel(k, terrain_size-l, new Color(texture.GetPixel(k, terrain_size-l).r,Mathf.Min(1.0f,texture.GetPixel(k, terrain_size-l).g+Mathf.Sqrt(1.0f - dist/obs_radius)),texture.GetPixel(k, terrain_size-l).b,1.0f));
                         }
                     }
                     // for (int k=i-)

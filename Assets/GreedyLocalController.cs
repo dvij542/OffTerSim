@@ -16,6 +16,7 @@ namespace KartGame.KartSystems
         public int radius_lookahead = 50;
         
         public float radius_obstacle = 1.0f;
+        public bool cbf_filter = true;
         public bool cbf_applied = false;
         public float curr_pixel_val = 0.0f;
         public float curr_height_val = 0.0f;
@@ -77,6 +78,8 @@ namespace KartGame.KartSystems
             float x = curr_pose.x;
             float y = curr_pose.y;
             Vector2 return_cmd = new Vector2(control_cmd.x,control_cmd.y);
+            if (!cbf_filter)
+                return return_cmd;
             float t_ = x*1.0f/terrain_script.terrain_size;
             float y_trail = (0.5f-terrain_script.a_*Mathf.Pow(t_,3) - terrain_script.b_*Mathf.Pow(t_,2) - terrain_script.c_*t_)*terrain_script.terrain_size;
             float derivative_val = -(3*terrain_script.a_*Mathf.Pow(t_,2) + terrain_script.b_*2*Mathf.Pow(t_,1) + terrain_script.c_);
