@@ -87,3 +87,26 @@ cd ..
 export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
 mlagents-learn config.yaml --env "Build-ubuntu/exec" --run-id ubuntu_try15 --num-envs 10 --resume
 ```
+
+## ROS2 interface
+
+You can also interact with the simulator as a ROS2 node. Full ROS2 integration is a WIP. To get started, follow the given steps:-
+
+1. Install [ROS2](https://docs.ros.org/en/foxy/Installation.html) (Foxy, Iron or any other version)
+2. If on linux, also install [mono-project](https://www.mono-project.com/download/stable/#download-lin) required for reading images within the application
+3. Change permissions of the ros2-env built environment with :-
+```
+cd ros2-env
+sudo chmod 777 *
+cd ..
+```
+4. Your params.yaml file should be in the same directory you run from. It should contain the path to the heightmap, the spawn position and which sensors to use. Run 'Scripts/ros2_interface.py'
+```
+python3 Scripts/ros2_interface.py
+```
+This should open a new simulator session with ROS2 wrapper. You can see the available topics with 'ros2 topic list' in a new terminal and it should list all sensor topics, pose, velocity and acceleration topics and the /cmd topic from where it listens to acceleration and throttle commands
+5. (optional) You can launch the example keyboard teleop script under Scripts/keyboard_controller.py that publishes to '/cmd' topic from the arrow keys to control the car. You may need to install pygame to run the script
+```
+python3 Scripts/keyboard_controller.py
+```
+6. (optional) You can open rviz2 to visualize the sensor readings
