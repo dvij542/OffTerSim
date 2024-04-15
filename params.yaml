@@ -1,0 +1,20 @@
+heightmap:
+  filename: "heightmap.png"
+  scale: 0.02
+
+respawn_loc: 
+  x: 500.0
+  y: 40.0
+  z: 30.0
+  roll: 0
+  pitch: 0
+  yaw: 0
+
+sensors:
+  lidar: true
+  camera: true
+  pose: true
+  imu: true
+
+timescale: 1.0
+  
