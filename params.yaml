@@ -1,11 +1,22 @@
+track_info:
+  centerline_file: "interpolated_traj.csv"
+  track_width: 5.0
+  texture_blend_factor: 0.9
+  obs_density: 0.4
+  vegetation_density: 0.15
+  offtrack_roughness: 0.0002
+  scale: 1.0
+  ox: 0.0
+  oy: 0.0
+
 heightmap:
   filename: "heightmap.png"
-  scale: 0.02
+  scale: 0.004
 
 respawn_loc: 
-  x: 500.0
+  x: 100.0
   y: 40.0
-  z: 30.0
+  z: 100.0
   roll: 0
   pitch: 0
   yaw: 0
