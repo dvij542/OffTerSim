@@ -1,6 +1,6 @@
 track_info:
   centerline_file: "ros2-env-v2/interpolated_traj.csv"
-  track_width: 5.0
+  track_width: 10.0
   texture_blend_factor: 0.9
   obs_density: 0.3
   vegetation_density: 0.2

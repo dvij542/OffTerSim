@@ -66,7 +66,7 @@ class CarController(Node):
             LaserScan,
             'scan',
             10)
-        self.base_idx = 1
+        self.base_idx = 2
         self.publisher = self.create_publisher(PointCloud2, 'pcl', 10)
         self.curr_time = time.time()
         self.fps_target = 10.
