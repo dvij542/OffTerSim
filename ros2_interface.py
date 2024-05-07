@@ -210,6 +210,7 @@ class CarController(Node):
         
         # for i in range(18):
         #     print(i,len(env_info[0].obs[i+1][0]))
+        
         pcl = []
         self.publish_image(np.array(env_info[0].obs[0][0]))
         avg_ds = []
