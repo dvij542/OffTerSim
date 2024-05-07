@@ -25,8 +25,8 @@ import tf2_ros
 from sensor_msgs.msg import LaserScan
 from sensor_msgs.msg import PointCloud2, PointField
 
-steer_cmd = 1
-throttle_cmd = -1
+steer_cmd = 0
+throttle_cmd = 0
 
 class CarController(Node):
     def __init__(self):
@@ -53,6 +53,7 @@ class CarController(Node):
         self.env = UnityEnvironment(file_name="ros2-env-v2/sim", seed=1, side_channels=[],worker_id=0,log_folder='logs/')#,no_graphics=True)
         # print("Started?")
         self.env.reset()
+        self.fps = 10.
         # print("Started?")
 
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
@@ -67,6 +68,8 @@ class CarController(Node):
             10)
         self.base_idx = 1
         self.publisher = self.create_publisher(PointCloud2, 'pcl', 10)
+        self.curr_time = time.time()
+        self.fps_target = 10.
     
     def publish_scan(self, scan_data):
         scan_msg = LaserScan()
@@ -91,6 +94,7 @@ class CarController(Node):
         msg.point_step = 16  # 16 bytes per point (4 floats)
         msg.row_step = msg.point_step * msg.width
         msg.is_dense = True  # No invalid points
+
 
         # Define fields (x, y, z, intensity)
         msg.fields = [
@@ -127,7 +131,7 @@ class CarController(Node):
         # Generate a sample image (you can replace this with your actual image capture code)
         img = np.zeros((img_.shape[0], img_.shape[1], 3), dtype=np.uint8)
         img[:,:,:] = (img_[:,:,::-1]*255).astype(np.uint8)
-        print(img.shape, np.max(img),np.min(img))
+        # print(img.shape, np.max(img),np.min(img))
 
         # img.fill(255)  # White image
 
@@ -141,7 +145,7 @@ class CarController(Node):
 
         # Publish the image message
         self.publisher_img.publish(image_msg)
-        self.get_logger().info('Published image')
+        # self.get_logger().info('Published image')
 
     def publish_data(self):
         # Publish car pose, twist and acceleration
@@ -199,44 +203,57 @@ class CarController(Node):
 
         ranges = [0.]*91
         for i in range(46):
-            ranges[45+i] = float(env_info[0].obs[self.base_idx][0][4*i+1])
+            ranges[45+i] = 4.*float(env_info[0].obs[self.base_idx][0][4*i+1])
             if i==0 :
                 continue
-            ranges[45-i] = float(env_info[0].obs[self.base_idx][0][4*i-1])
+            ranges[45-i] = 4.*float(env_info[0].obs[self.base_idx][0][4*i-1])
         
-        for i in range(18):
-            print(i,len(env_info[0].obs[i][0]))
+        # for i in range(18):
+        #     print(i,len(env_info[0].obs[i+1][0]))
         pcl = []
         self.publish_image(np.array(env_info[0].obs[0][0]))
+        avg_ds = []
         inds = np.array([0,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7]) + 1 # 1-based indexing
         for k in range(16) :
             a = (-15. + 2*k)*math.pi/180.
             j = inds[k]
             # print(a)
+            ds = []
             for i in range(46):
                 t = (90-2*i)*math.pi/180.
-                d = float(env_info[0].obs[j][0][4*i+1])
+                d = 4.*float(env_info[0].obs[j][0][4*i+1])
                 y = d*math.cos(t)*math.cos(a)
                 x = d*math.sin(t)*math.cos(a)
                 z = d*math.sin(a)
                 pcl.append([x,y,z,1.])
+                ds.append(d)
                 if i == 0:
                     continue
                 t = (90+2*i)*math.pi/180.
-                d = float(env_info[0].obs[j][0][4*i-1])
+                d = 4.*float(env_info[0].obs[j][0][4*i-1])
                 y = d*math.cos(t)*math.cos(a)
                 x = d*math.sin(t)*math.cos(a)
                 z = d*math.sin(a)
                 pcl.append([x,y,z,1.])
-        
+                ds.append(d)
+            avg_ds.append(np.mean(ds))
+
         # print(avg_ds)
         self.publish_pcl(np.array(pcl).astype(np.float32))
         self.publish_scan(ranges)
         # print(steer_cmd,throttle_cmd)
+        self.get_logger().info('Published (steer,throttle): '+ str(steer_cmd) + ', ' + str(throttle_cmd))
+
         actions = ActionTuple(np.array([[steer_cmd,throttle_cmd]]),None)
         self.env.set_actions(self.behavior_name, actions)
        
         self.env.step()
+        dt = time.time() - self.curr_time
+        if dt < 1./self.fps_target:
+            time.sleep(1./self.fps_target - dt)
+        self.fps = self.fps + 0.1*(1./(time.time()-self.curr_time) - self.fps)
+        self.get_logger().info('Curr FPS: '+ str(self.fps) + ' (' + "{:.2f}".format(self.fps/self.fps_target) + 'x real-time)')
+        self.curr_time = time.time()
         self.publisher_pose.publish(msg_pose)
         self.publisher_twist.publish(msg_twist)
         self.publisher_accel.publish(msg_accel)

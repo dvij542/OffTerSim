@@ -31,9 +31,9 @@ class KeyboardController(Node):
                 elif event.key == pygame.K_DOWN:
                     self.ackermann_msg.acceleration = -0.5  # Set your desired speed here
                 elif event.key == pygame.K_LEFT:
-                    self.ackermann_msg.steering_angle = -math.pi / 4  # Set your desired steering angle here
+                    self.ackermann_msg.steering_angle = -math.pi / 8  # Set your desired steering angle here
                 elif event.key == pygame.K_RIGHT:
-                    self.ackermann_msg.steering_angle = math.pi / 4  # Set your desired steering angle here
+                    self.ackermann_msg.steering_angle = math.pi / 8  # Set your desired steering angle here
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP:
                     self.ackermann_msg.acceleration = 0.  # Set your desired speed here

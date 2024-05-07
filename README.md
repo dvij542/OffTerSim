@@ -120,5 +120,6 @@ python3 Scripts/keyboard_controller.py
 7. (optional) You can open rviz2 to visualize the sensor readings
 
 ```
+source /opt/ros/<ROS_VERSION>/setup.bash
 rviz2
 ```
