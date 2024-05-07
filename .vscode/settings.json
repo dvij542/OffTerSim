@@ -52,5 +52,6 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "uneven-terrain-driver.sln",
-    "github.copilot.advanced": {}
+    "github.copilot.advanced": {},
+    "ros.distro": "foxy"
 }
