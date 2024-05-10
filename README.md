@@ -65,15 +65,10 @@ Follow this [Link](https://github.com/gzrjzcx/ML-agents/blob/476504b547b39e0bd69
 ## Making a gym environment
 
 ```
-conda create -n terrain_env python=3.6
+conda create -n terrain_env python=3.8
 conda activate terrain_env
-git clone https://github.com/gzrjzcx/ML-agents.git
-cd ML-agents/
-cd ml-agents-envs/
-python3.6 -m pip install -e ./
-cd ../
-cd ml-agents
-python3.6 -m pip install -e ./
+python3.8 -m pip install mlagents==0.28.0
+python3.8 -m pip install mkagents-envs==0.28.0
 ```
 
 ## Installing and running executable on Ubuntu
