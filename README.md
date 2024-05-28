@@ -76,6 +76,7 @@ python3.8 -m pip install mkagents-envs==0.28.0
 Ref: [Link](https://alexisrozhkov.github.io/unity_rl/). Run the following commands 
 ```
 pip install mlagents==0.28.0
+pip install mlagents-envs==0.28.0
 cd Build-ubuntu
 sudo chmod 777 *
 cd ..
