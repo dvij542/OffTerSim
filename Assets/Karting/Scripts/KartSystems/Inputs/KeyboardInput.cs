@@ -11,6 +11,7 @@ namespace KartGame.KartSystems {
         public override InputData GenerateInput() {
             return new InputData
             {
+                Throttle = Input.GetAxis("Vertical"),
                 Accelerate = Input.GetButton(AccelerateButtonName),
                 Brake = Input.GetButton(BrakeButtonName),
                 TurnInput = Input.GetAxis("Horizontal")

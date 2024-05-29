@@ -3,13 +3,8 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using UnityEngine;
-using Random = UnityEngine.Random;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.Mathematics;
+
 using System.IO;
-using System;
 using YamlDotNet.Serialization;
 
 // using UnityEditor.ShaderGraph.Internal;
@@ -66,6 +61,7 @@ namespace KartGame.AI
 
         ArcadeKart m_Kart;
         bool m_Acceleration;
+        float m_Throttle;
         bool m_Brake;
         public float added_reward;
         public int n_curr_collisions = 0;
@@ -186,6 +182,22 @@ namespace KartGame.AI
         public string yamlFilePath; // File path to the YAML parameter file
 
         [System.Serializable]
+        public class TrackParameters
+        {
+            public string centerline_file;
+            public float track_width;
+            public float texture_blend_factor;
+            public float obs_density;
+            public float vegetation_density;
+            public float offtrack_roughness;
+            public float scale;
+            public float ox;
+            public float oy;
+            public float bush_demarcation;
+
+        }
+
+        [System.Serializable]
         public class Location
         {
             public float x;
@@ -209,12 +221,13 @@ namespace KartGame.AI
         public class YamlParameters
         {
             public HeightmapParameters heightmap;
+            public TrackParameters track_info;
             public Location respawn_loc;
             public SensorInfo sensors;
             public float timescale;
         }
 
-        public override void CollectObservations(VectorSensor sensor)
+        public void CollectObservations1(VectorSensor sensor)
         {
             sensor.AddObservation(m_Kart.transform.position.x);
             sensor.AddObservation(m_Kart.transform.position.y);
@@ -234,7 +247,7 @@ namespace KartGame.AI
             sensor.AddObservation(acceleration.y);
             sensor.AddObservation(acceleration.z);
         }
-        public void CollectObservations1(VectorSensor sensor)
+        public override void CollectObservations(VectorSensor sensor)
         {
             sensor.AddObservation(m_Kart.LocalSpeed());
 
@@ -306,7 +319,7 @@ namespace KartGame.AI
         {
             // Debug.Log("Command received?");
             base.OnActionReceived(actions);
-            InterpretDiscreteActions(actions);
+            InterpretContinuousActions(actions);
             if (n_curr_collisions>0){
                 total_collision_time += Time.fixedDeltaTime;
             }
@@ -469,17 +482,28 @@ namespace KartGame.AI
         void InterpretDiscreteActions(ActionBuffers actions)
         {
             // Debug.Log(actions.ContinuousActions[0]+ " " + actions.ContinuousActions[1]);
-            // m_Steering = actions.DiscreteActions[0] - 1.0f;
-            m_Steering = Mathf.Clamp(actions.ContinuousActions[0],-1.0f,1.0f);//actions.DiscreteActions[0] - 1.0f;
-            // m_Acceleration = actions.DiscreteActions[1] > 0;
-            m_Acceleration = actions.ContinuousActions[1] > 0.0f;
-            m_Brake = actions.ContinuousActions[1] < 0.0f;
+            m_Steering = actions.DiscreteActions[0] - 1.0f;
+            // m_Steering = Mathf.Clamp(actions.ContinuousActions[0],-1.0f,1.0f);//actions.DiscreteActions[0] - 1.0f;
+            m_Acceleration = actions.DiscreteActions[1] > -1;
+            // m_Acceleration = actions.ContinuousActions[1] > 0.0f;
+            // m_Brake = actions.ContinuousActions[1] < 0.0f;
         }
 
+        void InterpretContinuousActions(ActionBuffers actions)
+        {
+            // Debug.Log(actions.ContinuousActions[0]+ " " + actions.ContinuousActions[1]);
+            // m_Steering = actions.DiscreteActions[0] - 1.0f;
+            m_Steering = Mathf.Clamp(actions.ContinuousActions[0],-1.0f,1.0f);//actions.DiscreteActions[0] - 1.0f;
+            m_Throttle = Mathf.Clamp(actions.ContinuousActions[1],-1.0f,1.0f);//actions.DiscreteActions[0] - 1.0f;
+            // m_Acceleration = actions.ContinuousActions[1] > -1;
+            // m_Acceleration = actions.ContinuousActions[1] > 0.0f;
+            // m_Brake = actions.ContinuousActions[1] < 0.0f;
+        }
         public InputData GenerateInput()
         {
             return new InputData
             {
+                Throttle = m_Throttle,
                 Accelerate = m_Acceleration,
                 Brake = m_Brake,
                 TurnInput = m_Steering

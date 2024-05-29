@@ -80,7 +80,27 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 331e6cacaa5064ecb91f918c9aca93fd,
         type: 3}
       propertyPath: m_Name
-      value: bigLeavesTree
+      value: bigLeavesTree Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331e6cacaa5064ecb91f918c9aca93fd, type: 3}
+--- !u!1 &5707783866386062751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 331e6cacaa5064ecb91f918c9aca93fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4897513955610108110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &-6604907870903470586
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5707783866386062751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4790000225344279549, guid: 331e6cacaa5064ecb91f918c9aca93fd, type: 3}

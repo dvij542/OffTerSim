@@ -1,0 +1,6308 @@
+Mono path[0] = '/home/shreya/uneven-terrain-driver/difficult-privileged-lidar/difficult-privileged-lidar_Data/Managed'
+Mono config path = '/home/shreya/uneven-terrain-driver/difficult-privileged-lidar/difficult-privileged-lidar_Data/MonoBleedingEdge/etc'
+Preloaded 'lib_burst_generated.so'
+Preloaded 'libgrpc_csharp_ext.x64.so'
+Initialize engine version: 2021.3.24f1 (cf10dcf7010d)
+[Subsystems] Discovering subsystems at path /home/shreya/uneven-terrain-driver/difficult-privileged-lidar/difficult-privileged-lidar_Data/UnitySubsystems
+Forcing GfxDevice: Null
+GfxDevice: creating device client; threaded=0; jobified=0
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+FMOD failed to initialize the output device.: "Error initializing output device. " (60)
+Forced to initialize FMOD to to the device driver's system output rate 48000, this may impact performance and/or give inconsistent experiences compared to selected sample rate 48000
+ALSA lib confmisc.c:767:(parse_card) cannot find card '0'
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1246:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4732:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5220:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM default
+FMOD failed to initialize the output device.: "Error initializing output device. " (60)
+FMOD initialized on nosound output
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.112 seconds
+ERROR: Shader Hidden/Universal Render Pipeline/Blit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/CopyDepth shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Sampling shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/LutBuilderLdr shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/LutBuilderHdr shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/UberPost shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Debug/DebugReplacement shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/FallbackError' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/Universal Render Pipeline/FallbackError shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/FallbackError' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/kMotion/CameraMotionVectors shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/kMotion/ObjectMotionVectors shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Stop NaN shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/SubpixelMorphologicalAntialiasing shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/GaussianDepthOfField shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/BokehDepthOfField shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/CameraMotionBlur shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/PaniniProjection shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Bloom shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/LensFlareDataDriven shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Scaling Setup shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/FinalPost shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Sprites/Default shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Sprites/Mask shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Simple Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Universal Render Pipeline/Simple Lit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Simple Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/TerrainEngine/Details/UniversalPipeline/BillboardWavingDoublePass shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Custom/haha shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen) shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Universal Render Pipeline/Lit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass) shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Universal Render Pipeline/Terrain/Lit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass) shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Legacy Shaders/Particles/Alpha Blended shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Hidden/TerrainEngine/Details/UniversalPipeline/WavingDoublePass shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Legacy Shaders/Particles/Additive shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Unlit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Universal Render Pipeline/Unlit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Unlit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Particles/Unlit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Universal Render Pipeline/Particles/Unlit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Particles/Unlit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Hidden/TerrainEngine/Details/UniversalPipeline/Vertexlit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+The tree grass Variant must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+UnloadTime: 1.222690 ms
+ERROR: Shader UI/Default shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+requesting resize 84 x 84
+Something wrong1!!
+10.19058
+Something wrong2!!
+3.464359
+Something wrong3!!
+(-9.66, 0.01, 3.84)
+Something wrong1!!
+10.33641
+Something wrong2!!
+3.471475
+Something wrong3!!
+(-9.94, 0.01, 3.11)
+Something wrong1!!
+10.42426
+Something wrong2!!
+3.47855
+Something wrong3!!
+(-10.17, 0.01, 2.36)
+Something wrong1!!
+10.45237
+Something wrong2!!
+3.485595
+Something wrong3!!
+(-10.34, 0.01, 1.59)
+Something wrong1!!
+10.4203
+Something wrong2!!
+3.492596
+Something wrong3!!
+(-10.45, 0.01, 0.80)
+Something wrong1!!
+10.32802
+Something wrong2!!
+3.499568
+Something wrong3!!
+(-10.50, 0.01, 0.01)
+Something wrong1!!
+10.17619
+Something wrong2!!
+3.506503
+Something wrong3!!
+(-10.49, 0.01, -0.78)
+Something wrong1!!
+-10.00454
+Something wrong2!!
+3.711375
+Something wrong3!!
+(8.83, 0.01, -6.78)
+Something wrong1!!
+-10.36258
+Something wrong2!!
+3.717259
+Something wrong3!!
+(9.33, 0.01, -6.11)
+Something wrong1!!
+-10.6619
+Something wrong2!!
+3.723112
+Something wrong3!!
+(9.78, 0.01, -5.40)
+Something wrong1!!
+-10.90223
+Something wrong2!!
+3.728938
+Something wrong3!!
+(10.17, 0.01, -4.65)
+Something wrong1!!
+-11.07811
+Something wrong2!!
+3.734728
+Something wrong3!!
+(10.51, 0.01, -3.88)
+Something wrong1!!
+-11.19056
+Something wrong2!!
+3.740499
+Something wrong3!!
+(10.79, 0.01, -3.08)
+Something wrong1!!
+-11.23868
+Something wrong2!!
+3.74623
+Something wrong3!!
+(11.01, 0.01, -2.26)
+Something wrong1!!
+-11.22202
+Something wrong2!!
+3.751943
+Something wrong3!!
+(11.16, 0.01, -1.43)
+Something wrong1!!
+-11.13992
+Something wrong2!!
+3.757618
+Something wrong3!!
+(11.26, 0.01, -0.59)
+Something wrong1!!
+-10.99348
+Something wrong2!!
+3.763273
+Something wrong3!!
+(11.29, 0.01, 0.26)
+Something wrong1!!
+-10.78306
+Something wrong2!!
+3.768898
+Something wrong3!!
+(11.25, 0.01, 1.11)
+Something wrong1!!
+-10.5097
+Something wrong2!!
+3.774498
+Something wrong3!!
+(11.15, 0.01, 1.96)
+Something wrong1!!
+-10.17474
+Something wrong2!!
+3.780063
+Something wrong3!!
+(10.99, 0.01, 2.80)
+Something wrong1!!
+10.42332
+Something wrong2!!
+3.930726
+Something wrong3!!
+(-8.98, 0.01, 7.64)
+Something wrong1!!
+10.82512
+Something wrong2!!
+3.935571
+Something wrong3!!
+(-9.54, 0.01, 6.95)
+Something wrong1!!
+11.16222
+Something wrong2!!
+3.940396
+Something wrong3!!
+(-10.05, 0.01, 6.22)
+Something wrong1!!
+11.43933
+Something wrong2!!
+3.9452
+Something wrong3!!
+(-10.51, 0.01, 5.45)
+Something wrong1!!
+11.65096
+Something wrong2!!
+3.949985
+Something wrong3!!
+(-10.90, 0.01, 4.65)
+Something wrong1!!
+11.79569
+Something wrong2!!
+3.954744
+Something wrong3!!
+(-11.23, 0.01, 3.81)
+Something wrong1!!
+11.87254
+Something wrong2!!
+3.959485
+Something wrong3!!
+(-11.50, 0.01, 2.96)
+Something wrong1!!
+11.8811
+Something wrong2!!
+3.964201
+Something wrong3!!
+(-11.71, 0.01, 2.09)
+Something wrong1!!
+11.82114
+Something wrong2!!
+3.968903
+Something wrong3!!
+(-11.85, 0.01, 1.20)
+Something wrong1!!
+11.69263
+Something wrong2!!
+3.973579
+Something wrong3!!
+(-11.92, 0.01, 0.30)
+Something wrong1!!
+11.49617
+Something wrong2!!
+3.97824
+Something wrong3!!
+(-11.92, 0.01, -0.60)
+Something wrong1!!
+11.23272
+Something wrong2!!
+3.982877
+Something wrong3!!
+(-11.85, 0.01, -1.50)
+Something wrong1!!
+10.9038
+Something wrong2!!
+3.987494
+Something wrong3!!
+(-11.72, 0.01, -2.39)
+Something wrong1!!
+10.5109
+Something wrong2!!
+3.99209
+Something wrong3!!
+(-11.52, 0.01, -3.27)
+Something wrong1!!
+10.05627
+Something wrong2!!
+3.996668
+Something wrong3!!
+(-11.25, 0.01, -4.14)
+Something wrong1!!
+-10.27823
+Something wrong2!!
+4.108979
+Something wrong3!!
+(8.37, 0.01, -9.05)
+Something wrong1!!
+-10.77614
+Something wrong2!!
+4.11306
+Something wrong3!!
+(9.04, 0.01, -8.40)
+Something wrong1!!
+-11.21752
+Something wrong2!!
+4.117117
+Something wrong3!!
+(9.66, 0.01, -7.70)
+Something wrong1!!
+-11.58917
+Something wrong2!!
+4.121161
+Something wrong3!!
+(10.22, 0.01, -6.95)
+Something wrong1!!
+-11.89443
+Something wrong2!!
+4.125185
+Something wrong3!!
+(10.73, 0.01, -6.17)
+Something wrong1!!
+-12.13142
+Something wrong2!!
+4.129193
+Something wrong3!!
+(11.18, 0.01, -5.34)
+Something wrong1!!
+-12.29863
+Something wrong2!!
+4.133185
+Something wrong3!!
+(11.56, 0.01, -4.49)
+Something wrong1!!
+-12.39532
+Something wrong2!!
+4.137159
+Something wrong3!!
+(11.88, 0.01, -3.60)
+Something wrong1!!
+-12.41946
+Something wrong2!!
+4.141117
+Something wrong3!!
+(12.13, 0.01, -2.70)
+Something wrong1!!
+-12.37173
+Something wrong2!!
+4.145057
+Something wrong3!!
+(12.31, 0.01, -1.78)
+Something wrong1!!
+-12.25226
+Something wrong2!!
+4.148982
+Something wrong3!!
+(12.42, 0.01, -0.84)
+Something wrong1!!
+-12.06159
+Something wrong2!!
+4.152887
+Something wrong3!!
+(12.46, 0.01, 0.10)
+Something wrong1!!
+-11.80002
+Something wrong2!!
+4.156777
+Something wrong3!!
+(12.43, 0.01, 1.04)
+Something wrong1!!
+-11.47014
+Something wrong2!!
+4.160652
+Something wrong3!!
+(12.32, 0.01, 1.98)
+Something wrong1!!
+-11.07321
+Something wrong2!!
+4.164507
+Something wrong3!!
+(12.15, 0.01, 2.91)
+Something wrong1!!
+-10.6114
+Something wrong2!!
+4.168349
+Something wrong3!!
+(11.91, 0.01, 3.82)
+Something wrong1!!
+-10.08727
+Something wrong2!!
+4.172173
+Something wrong3!!
+(11.59, 0.01, 4.72)
+Something wrong1!!
+10.47638
+Something wrong2!!
+4.262356
+Something wrong3!!
+(-8.33, 0.01, 9.71)
+Something wrong1!!
+11.00541
+Something wrong2!!
+4.265739
+Something wrong3!!
+(-9.04, 0.01, 9.05)
+Something wrong1!!
+11.47912
+Something wrong2!!
+4.269116
+Something wrong3!!
+(-9.71, 0.01, 8.35)
+Something wrong1!!
+11.88704
+Something wrong2!!
+4.272469
+Something wrong3!!
+(-10.32, 0.01, 7.60)
+Something wrong1!!
+12.22668
+Something wrong2!!
+4.27581
+Something wrong3!!
+(-10.88, 0.01, 6.80)
+Something wrong1!!
+12.49597
+Something wrong2!!
+4.279131
+Something wrong3!!
+(-11.37, 0.01, 5.96)
+Something wrong1!!
+12.69176
+Something wrong2!!
+4.282438
+Something wrong3!!
+(-11.80, 0.01, 5.08)
+Something wrong1!!
+12.8164
+Something wrong2!!
+4.285724
+Something wrong3!!
+(-12.16, 0.01, 4.18)
+Something wrong1!!
+12.86692
+Something wrong2!!
+4.288999
+Something wrong3!!
+(-12.45, 0.01, 3.25)
+Something wrong1!!
+12.84287
+Something wrong2!!
+4.292253
+Something wrong3!!
+(-12.67, 0.01, 2.30)
+Something wrong1!!
+12.74432
+Something wrong2!!
+4.295495
+Something wrong3!!
+(-12.82, 0.01, 1.33)
+Something wrong1!!
+12.57257
+Something wrong2!!
+4.298716
+Something wrong3!!
+(-12.89, 0.01, 0.36)
+Something wrong1!!
+12.32706
+Something wrong2!!
+4.301925
+Something wrong3!!
+(-12.89, 0.01, -0.62)
+Something wrong1!!
+12.00965
+Something wrong2!!
+4.305113
+Something wrong3!!
+(-12.82, 0.01, -1.60)
+Something wrong1!!
+11.6221
+Something wrong2!!
+4.308287
+Something wrong3!!
+(-12.67, 0.01, -2.57)
+Something wrong1!!
+11.16656
+Something wrong2!!
+4.311445
+Something wrong3!!
+(-12.45, 0.01, -3.52)
+Something wrong1!!
+10.64439
+Something wrong2!!
+4.314584
+Something wrong3!!
+(-12.15, 0.01, -4.46)
+Something wrong1!!
+10.06074
+Something wrong2!!
+4.317712
+Something wrong3!!
+(-11.79, 0.01, -5.37)
+Something wrong1!!
+-10.02238
+Something wrong2!!
+4.385296
+Something wrong3!!
+(7.46, 0.01, -10.84)
+Something wrong1!!
+-10.65744
+Something wrong2!!
+4.388056
+Something wrong3!!
+(8.26, 0.01, -10.25)
+Something wrong1!!
+-11.22165
+Something wrong2!!
+4.3908
+Something wrong3!!
+(9.02, 0.01, -9.60)
+Something wrong1!!
+-11.72136
+Something wrong2!!
+4.393533
+Something wrong3!!
+(9.73, 0.01, -8.89)
+Something wrong1!!
+-12.15365
+Something wrong2!!
+4.396245
+Something wrong3!!
+(10.38, 0.01, -8.13)
+Something wrong1!!
+-12.51588
+Something wrong2!!
+4.39895
+Something wrong3!!
+(10.98, 0.01, -7.32)
+Something wrong1!!
+-12.80867
+Something wrong2!!
+4.401636
+Something wrong3!!
+(11.51, 0.01, -6.47)
+Something wrong1!!
+-13.02377
+Something wrong2!!
+4.40431
+Something wrong3!!
+(11.97, 0.01, -5.59)
+Something wrong1!!
+-13.16349
+Something wrong2!!
+4.406968
+Something wrong3!!
+(12.37, 0.01, -4.66)
+Something wrong1!!
+-13.22692
+Something wrong2!!
+4.409613
+Something wrong3!!
+(12.70, 0.01, -3.71)
+Something wrong1!!
+-13.21358
+Something wrong2!!
+4.412244
+Something wrong3!!
+(12.95, 0.01, -2.74)
+Something wrong1!!
+-13.12265
+Something wrong2!!
+4.414861
+Something wrong3!!
+(13.13, 0.01, -1.75)
+Something wrong1!!
+-12.95573
+Something wrong2!!
+4.417467
+Something wrong3!!
+(13.23, 0.01, -0.75)
+Something wrong1!!
+-12.71334
+Something wrong2!!
+4.420057
+Something wrong3!!
+(13.26, 0.01, 0.26)
+Something wrong1!!
+-12.39679
+Something wrong2!!
+4.422631
+Something wrong3!!
+(13.21, 0.01, 1.26)
+Something wrong1!!
+-12.00784
+Something wrong2!!
+4.425193
+Something wrong3!!
+(13.08, 0.01, 2.26)
+Something wrong1!!
+-11.54884
+Something wrong2!!
+4.427741
+Something wrong3!!
+(12.88, 0.01, 3.25)
+Something wrong1!!
+-11.02203
+Something wrong2!!
+4.430275
+Something wrong3!!
+(12.60, 0.01, 4.22)
+Something wrong1!!
+-10.43058
+Something wrong2!!
+4.432798
+Something wrong3!!
+(12.25, 0.01, 5.17)
+Something wrong1!!
+10.08067
+Something wrong2!!
+4.487247
+Something wrong3!!
+(-7.35, 0.01, 11.28)
+Something wrong1!!
+10.73623
+Something wrong2!!
+4.489465
+Something wrong3!!
+(-8.19, 0.01, 10.69)
+Something wrong1!!
+11.33
+Something wrong2!!
+4.491671
+Something wrong3!!
+(-8.98, 0.01, 10.04)
+Something wrong1!!
+11.85849
+Something wrong2!!
+4.493867
+Something wrong3!!
+(-9.73, 0.01, 9.34)
+Something wrong1!!
+12.31851
+Something wrong2!!
+4.496047
+Something wrong3!!
+(-10.41, 0.01, 8.57)
+Something wrong1!!
+12.70296
+Something wrong2!!
+4.498212
+Something wrong3!!
+(-11.04, 0.01, 7.76)
+Something wrong1!!
+13.01919
+Something wrong2!!
+4.500364
+Something wrong3!!
+(-11.60, 0.01, 6.90)
+Something wrong1!!
+13.25999
+Something wrong2!!
+4.502504
+Something wrong3!!
+(-12.10, 0.01, 6.00)
+Something wrong1!!
+13.42388
+Something wrong2!!
+4.504631
+Something wrong3!!
+(-12.53, 0.01, 5.07)
+Something wrong1!!
+13.50983
+Something wrong2!!
+4.506744
+Something wrong3!!
+(-12.88, 0.01, 4.10)
+Something wrong1!!
+13.51755
+Something wrong2!!
+4.508846
+Something wrong3!!
+(-13.16, 0.01, 3.11)
+Something wrong1!!
+13.44691
+Something wrong2!!
+4.510931
+Something wrong3!!
+(-13.37, 0.01, 2.11)
+Something wrong1!!
+13.29797
+Something wrong2!!
+4.513006
+Something wrong3!!
+(-13.50, 0.01, 1.08)
+Something wrong1!!
+13.07149
+Something wrong2!!
+4.515067
+Something wrong3!!
+(-13.55, 0.01, 0.05)
+Something wrong1!!
+12.76872
+Something wrong2!!
+4.517113
+Something wrong3!!
+(-13.52, 0.01, -0.98)
+Something wrong1!!
+12.39192
+Something wrong2!!
+4.519148
+Something wrong3!!
+(-13.41, 0.01, -2.00)
+Something wrong1!!
+11.94218
+Something wrong2!!
+4.521169
+Something wrong3!!
+(-13.22, 0.01, -3.02)
+Something wrong1!!
+11.42252
+Something wrong2!!
+4.523176
+Something wrong3!!
+(-12.96, 0.01, -4.02)
+Something wrong1!!
+10.83589
+Something wrong2!!
+4.525171
+Something wrong3!!
+(-12.62, 0.01, -4.99)
+Something wrong1!!
+10.18566
+Something wrong2!!
+4.527151
+Something wrong3!!
+(-12.21, 0.01, -5.94)
+Something wrong1!!
+-10.1633
+Something wrong2!!
+4.567578
+Something wrong3!!
+(7.26, 0.01, -11.62)
+Something wrong1!!
+-10.83858
+Something wrong2!!
+4.569274
+Something wrong3!!
+(8.12, 0.01, -11.04)
+Something wrong1!!
+-11.4512
+Something wrong2!!
+4.570962
+Something wrong3!!
+(8.94, 0.01, -10.39)
+Something wrong1!!
+-11.99756
+Something wrong2!!
+4.57264
+Something wrong3!!
+(9.71, 0.01, -9.69)
+Something wrong1!!
+-12.48053
+Something wrong2!!
+4.574305
+Something wrong3!!
+(10.43, 0.01, -8.92)
+Something wrong1!!
+-12.88396
+Something wrong2!!
+4.575953
+Something wrong3!!
+(11.08, 0.01, -8.11)
+Something wrong1!!
+-13.21258
+Something wrong2!!
+4.577593
+Something wrong3!!
+(11.67, 0.01, -7.24)
+Something wrong1!!
+-13.46443
+Something wrong2!!
+4.579224
+Something wrong3!!
+(12.19, 0.01, -6.33)
+Something wrong1!!
+-13.63796
+Something wrong2!!
+4.580842
+Something wrong3!!
+(12.64, 0.01, -5.39)
+Something wrong1!!
+-13.73256
+Something wrong2!!
+4.582449
+Something wrong3!!
+(13.02, 0.01, -4.41)
+Something wrong1!!
+-13.74595
+Something wrong2!!
+4.584042
+Something wrong3!!
+(13.32, 0.01, -3.41)
+Something wrong1!!
+-13.67921
+Something wrong2!!
+4.585625
+Something wrong3!!
+(13.55, 0.01, -2.38)
+Something wrong1!!
+-13.53266
+Something wrong2!!
+4.587199
+Something wrong3!!
+(13.70, 0.01, -1.35)
+Something wrong1!!
+-13.30709
+Something wrong2!!
+4.58876
+Something wrong3!!
+(13.76, 0.01, -0.30)
+Something wrong1!!
+-13.00271
+Something wrong2!!
+4.590312
+Something wrong3!!
+(13.75, 0.01, 0.75)
+Something wrong1!!
+-12.62308
+Something wrong2!!
+4.591849
+Something wrong3!!
+(13.66, 0.01, 1.80)
+Something wrong1!!
+-12.16959
+Something wrong2!!
+4.593379
+Something wrong3!!
+(13.49, 0.01, 2.83)
+Something wrong1!!
+-11.64479
+Something wrong2!!
+4.594898
+Something wrong3!!
+(13.23, 0.01, 3.85)
+Something wrong1!!
+-11.05174
+Something wrong2!!
+4.596407
+Something wrong3!!
+(12.91, 0.01, 4.85)
+Something wrong1!!
+-10.39631
+Something wrong2!!
+4.597902
+Something wrong3!!
+(12.50, 0.01, 5.82)
+Something wrong1!!
+10.17388
+Something wrong2!!
+4.628249
+Something wrong3!!
+(-7.19, 0.01, 11.88)
+Something wrong1!!
+10.86843
+Something wrong2!!
+4.629518
+Something wrong3!!
+(-8.07, 0.01, 11.30)
+Something wrong1!!
+11.49991
+Something wrong2!!
+4.630775
+Something wrong3!!
+(-8.91, 0.01, 10.66)
+Something wrong1!!
+12.05671
+Something wrong2!!
+4.632023
+Something wrong3!!
+(-9.70, 0.01, 9.95)
+Something wrong1!!
+12.55232
+Something wrong2!!
+4.633263
+Something wrong3!!
+(-10.44, 0.01, 9.18)
+Something wrong1!!
+12.97491
+Something wrong2!!
+4.634491
+Something wrong3!!
+(-11.11, 0.01, 8.36)
+Something wrong1!!
+13.32195
+Something wrong2!!
+4.635713
+Something wrong3!!
+(-11.72, 0.01, 7.49)
+Something wrong1!!
+13.59137
+Something wrong2!!
+4.636927
+Something wrong3!!
+(-12.26, 0.01, 6.58)
+Something wrong1!!
+13.78002
+Something wrong2!!
+4.638133
+Something wrong3!!
+(-12.73, 0.01, 5.62)
+Something wrong1!!
+13.89067
+Something wrong2!!
+4.639328
+Something wrong3!!
+(-13.12, 0.01, 4.64)
+Something wrong1!!
+13.92022
+Something wrong2!!
+4.640513
+Something wrong3!!
+(-13.44, 0.01, 3.62)
+Something wrong1!!
+13.86848
+Something wrong2!!
+4.64169
+Something wrong3!!
+(-13.68, 0.01, 2.59)
+Something wrong1!!
+13.7357
+Something wrong2!!
+4.642859
+Something wrong3!!
+(-13.84, 0.01, 1.54)
+Something wrong1!!
+13.52375
+Something wrong2!!
+4.644019
+Something wrong3!!
+(-13.92, 0.01, 0.48)
+Something wrong1!!
+13.23189
+Something wrong2!!
+4.645169
+Something wrong3!!
+(-13.92, 0.01, -0.59)
+Something wrong1!!
+12.86259
+Something wrong2!!
+4.646315
+Something wrong3!!
+(-13.84, 0.01, -1.65)
+Something wrong1!!
+12.41794
+Something wrong2!!
+4.647449
+Something wrong3!!
+(-13.68, 0.01, -2.70)
+Something wrong1!!
+11.9005
+Something wrong2!!
+4.648572
+Something wrong3!!
+(-13.44, 0.01, -3.74)
+Something wrong1!!
+11.31196
+Something wrong2!!
+4.649689
+Something wrong3!!
+(-13.12, 0.01, -4.75)
+Something wrong1!!
+10.65821
+Something wrong2!!
+4.6508
+Something wrong3!!
+(-12.72, 0.01, -5.74)
+Something wrong1!!
+-10.22195
+Something wrong2!!
+4.673209
+Something wrong3!!
+(7.13, 0.01, -12.07)
+Something wrong1!!
+-10.9273
+Something wrong2!!
+4.674142
+Something wrong3!!
+(8.04, 0.01, -11.49)
+Something wrong1!!
+-11.57871
+Something wrong2!!
+4.675068
+Something wrong3!!
+(8.89, 0.01, -10.85)
+Something wrong1!!
+-12.15195
+Something wrong2!!
+4.675985
+Something wrong3!!
+(9.70, 0.01, -10.14)
+Something wrong1!!
+-12.65432
+Something wrong2!!
+4.676895
+Something wrong3!!
+(10.44, 0.01, -9.37)
+Something wrong1!!
+-13.08292
+Something wrong2!!
+4.677803
+Something wrong3!!
+(11.13, 0.01, -8.55)
+Something wrong1!!
+-13.43515
+Something wrong2!!
+4.6787
+Something wrong3!!
+(11.75, 0.01, -7.67)
+Something wrong1!!
+-13.71169
+Something wrong2!!
+4.679592
+Something wrong3!!
+(12.31, 0.01, -6.75)
+Something wrong1!!
+-13.90444
+Something wrong2!!
+4.680476
+Something wrong3!!
+(12.79, 0.01, -5.80)
+Something wrong1!!
+-14.01591
+Something wrong2!!
+4.681352
+Something wrong3!!
+(13.20, 0.01, -4.80)
+Something wrong1!!
+-14.04545
+Something wrong2!!
+4.682222
+Something wrong3!!
+(13.53, 0.01, -3.78)
+Something wrong1!!
+-13.99283
+Something wrong2!!
+4.683087
+Something wrong3!!
+(13.78, 0.01, -2.74)
+Something wrong1!!
+-13.85725
+Something wrong2!!
+4.683948
+Something wrong3!!
+(13.95, 0.01, -1.68)
+Something wrong1!!
+-13.64113
+Something wrong2!!
+4.684796
+Something wrong3!!
+(14.04, 0.01, -0.61)
+Something wrong1!!
+-13.34512
+Something wrong2!!
+4.685639
+Something wrong3!!
+(14.05, 0.01, 0.47)
+Something wrong1!!
+-12.97094
+Something wrong2!!
+4.68648
+Something wrong3!!
+(13.98, 0.01, 1.54)
+Something wrong1!!
+-12.52071
+Something wrong2!!
+4.687314
+Something wrong3!!
+(13.82, 0.01, 2.60)
+Something wrong1!!
+-11.99742
+Something wrong2!!
+4.688139
+Something wrong3!!
+(13.58, 0.01, 3.65)
+Something wrong1!!
+-11.40341
+Something wrong2!!
+4.688956
+Something wrong3!!
+(13.27, 0.01, 4.68)
+Something wrong1!!
+-10.74247
+Something wrong2!!
+4.689767
+Something wrong3!!
+(12.87, 0.01, 5.68)
+Something wrong1!!
+-10.01843
+Something wrong2!!
+4.690574
+Something wrong3!!
+(12.40, 0.01, 6.65)
+Something wrong1!!
+10.22854
+Something wrong2!!
+4.706157
+Something wrong3!!
+(-7.10, 0.01, 12.20)
+Something wrong1!!
+10.93289
+Something wrong2!!
+4.706837
+Something wrong3!!
+(-8.01, 0.01, 11.63)
+Something wrong1!!
+11.58575
+Something wrong2!!
+4.707512
+Something wrong3!!
+(-8.88, 0.01, 10.98)
+Something wrong1!!
+12.17096
+Something wrong2!!
+4.708182
+Something wrong3!!
+(-9.69, 0.01, 10.27)
+Something wrong1!!
+12.68509
+Something wrong2!!
+4.708845
+Something wrong3!!
+(-10.45, 0.01, 9.50)
+Something wrong1!!
+13.12509
+Something wrong2!!
+4.709506
+Something wrong3!!
+(-11.15, 0.01, 8.68)
+Something wrong1!!
+13.48421
+Something wrong2!!
+4.710161
+Something wrong3!!
+(-11.78, 0.01, 7.80)
+Something wrong1!!
+13.76963
+Something wrong2!!
+4.710811
+Something wrong3!!
+(-12.35, 0.01, 6.88)
+Something wrong1!!
+13.97449
+Something wrong2!!
+4.711454
+Something wrong3!!
+(-12.84, 0.01, 5.92)
+Something wrong1!!
+14.09759
+Something wrong2!!
+4.712098
+Something wrong3!!
+(-13.25, 0.01, 4.92)
+Something wrong1!!
+14.13815
+Something wrong2!!
+4.712731
+Something wrong3!!
+(-13.59, 0.01, 3.89)
+Something wrong1!!
+14.09655
+Something wrong2!!
+4.713359
+Something wrong3!!
+(-13.85, 0.01, 2.84)
+Something wrong1!!
+13.97237
+Something wrong2!!
+4.713986
+Something wrong3!!
+(-14.03, 0.01, 1.77)
+Something wrong1!!
+13.76631
+Something wrong2!!
+4.714605
+Something wrong3!!
+(-14.13, 0.01, 0.70)
+Something wrong1!!
+13.47958
+Something wrong2!!
+4.715219
+Something wrong3!!
+(-14.14, 0.01, -0.38)
+Something wrong1!!
+13.11382
+Something wrong2!!
+4.715829
+Something wrong3!!
+(-14.07, 0.01, -1.46)
+Something wrong1!!
+12.67155
+Something wrong2!!
+4.716434
+Something wrong3!!
+(-13.92, 0.01, -2.54)
+Something wrong1!!
+12.1546
+Something wrong2!!
+4.717034
+Something wrong3!!
+(-13.69, 0.01, -3.59)
+Something wrong1!!
+11.56635
+Something wrong2!!
+4.717632
+Something wrong3!!
+(-13.37, 0.01, -4.63)
+Something wrong1!!
+10.91017
+Something wrong2!!
+4.718225
+Something wrong3!!
+(-12.98, 0.01, -5.64)
+Something wrong1!!
+10.18991
+Something wrong2!!
+4.718812
+Something wrong3!!
+(-12.52, 0.01, -6.62)
+Something wrong1!!
+-10.27119
+Something wrong2!!
+4.730128
+Something wrong3!!
+(7.08, 0.01, -12.30)
+Something wrong1!!
+-10.99115
+Something wrong2!!
+4.730623
+Something wrong3!!
+(8.00, 0.01, -11.72)
+Something wrong1!!
+-11.64685
+Something wrong2!!
+4.731112
+Something wrong3!!
+(8.88, 0.01, -11.08)
+Something wrong1!!
+-12.23446
+Something wrong2!!
+4.731599
+Something wrong3!!
+(9.70, 0.01, -10.37)
+Something wrong1!!
+-12.75047
+Something wrong2!!
+4.732081
+Something wrong3!!
+(10.46, 0.01, -9.60)
+Something wrong1!!
+-13.19754
+Something wrong2!!
+4.732561
+Something wrong3!!
+(11.17, 0.01, -8.77)
+Something wrong1!!
+-13.56062
+Something wrong2!!
+4.733036
+Something wrong3!!
+(11.81, 0.01, -7.89)
+Something wrong1!!
+-13.8443
+Something wrong2!!
+4.733507
+Something wrong3!!
+(12.38, 0.01, -6.96)
+Something wrong1!!
+-14.0469
+Something wrong2!!
+4.733975
+Something wrong3!!
+(12.87, 0.01, -6.00)
+Something wrong1!!
+-14.1672
+Something wrong2!!
+4.734439
+Something wrong3!!
+(13.30, 0.01, -5.00)
+Something wrong1!!
+-14.20445
+Something wrong2!!
+4.734899
+Something wrong3!!
+(13.64, 0.01, -3.97)
+Something wrong1!!
+-14.15776
+Something wrong2!!
+4.735356
+Something wrong3!!
+(13.90, 0.01, -2.91)
+Something wrong1!!
+-14.02806
+Something wrong2!!
+4.735807
+Something wrong3!!
+(14.09, 0.01, -1.84)
+Something wrong1!!
+-13.81613
+Something wrong2!!
+4.736256
+Something wrong3!!
+(14.19, 0.01, -0.76)
+Something wrong1!!
+-13.52317
+Something wrong2!!
+4.736702
+Something wrong3!!
+(14.21, 0.01, 0.33)
+Something wrong1!!
+-13.14992
+Something wrong2!!
+4.737144
+Something wrong3!!
+(14.14, 0.01, 1.42)
+Something wrong1!!
+-12.7003
+Something wrong2!!
+4.737583
+Something wrong3!!
+(13.99, 0.01, 2.49)
+Something wrong1!!
+-12.17614
+Something wrong2!!
+4.738018
+Something wrong3!!
+(13.76, 0.01, 3.56)
+Something wrong1!!
+-11.58051
+Something wrong2!!
+4.738451
+Something wrong3!!
+(13.45, 0.01, 4.60)
+Something wrong1!!
+-10.91686
+Something wrong2!!
+4.738879
+Something wrong3!!
+(13.06, 0.01, 5.61)
+Something wrong1!!
+-10.19261
+Something wrong2!!
+4.739304
+Something wrong3!!
+(12.59, 0.01, 6.60)
+Something wrong1!!
+10.25844
+Something wrong2!!
+4.747492
+Something wrong3!!
+(-7.07, 0.01, 12.36)
+Something wrong1!!
+10.98515
+Something wrong2!!
+4.747849
+Something wrong3!!
+(-8.00, 0.01, 11.79)
+Something wrong1!!
+11.64756
+Something wrong2!!
+4.748203
+Something wrong3!!
+(-8.88, 0.01, 11.14)
+Something wrong1!!
+12.24175
+Something wrong2!!
+4.748554
+Something wrong3!!
+(-9.70, 0.01, 10.43)
+Something wrong1!!
+12.75711
+Something wrong2!!
+4.748907
+Something wrong3!!
+(-10.47, 0.01, 9.66)
+Something wrong1!!
+13.20596
+Something wrong2!!
+4.749251
+Something wrong3!!
+(-11.18, 0.01, 8.83)
+Something wrong1!!
+13.57744
+Something wrong2!!
+4.749595
+Something wrong3!!
+(-11.83, 0.01, 7.95)
+Something wrong1!!
+13.86935
+Something wrong2!!
+4.749934
+Something wrong3!!
+(-12.40, 0.01, 7.02)
+Something wrong1!!
+14.07996
+Something wrong2!!
+4.750273
+Something wrong3!!
+(-12.90, 0.01, 6.05)
+Something wrong1!!
+14.20719
+Something wrong2!!
+4.750609
+Something wrong3!!
+(-13.33, 0.01, 5.05)
+Something wrong1!!
+14.25278
+Something wrong2!!
+4.750942
+Something wrong3!!
+(-13.68, 0.01, 4.01)
+Something wrong1!!
+14.21479
+Something wrong2!!
+4.751272
+Something wrong3!!
+(-13.94, 0.01, 2.96)
+Something wrong1!!
+14.09341
+Something wrong2!!
+4.751598
+Something wrong3!!
+(-14.13, 0.01, 1.88)
+Something wrong1!!
+13.88938
+Something wrong2!!
+4.751924
+Something wrong3!!
+(-14.23, 0.01, 0.79)
+Something wrong1!!
+13.60505
+Something wrong2!!
+4.752246
+Something wrong3!!
+(-14.25, 0.01, -0.30)
+Something wrong1!!
+13.23996
+Something wrong2!!
+4.752564
+Something wrong3!!
+(-14.19, 0.01, -1.39)
+Something wrong1!!
+12.79718
+Something wrong2!!
+4.75288
+Something wrong3!!
+(-14.04, 0.01, -2.47)
+Something wrong1!!
+12.27927
+Something wrong2!!
+4.753193
+Something wrong3!!
+(-13.81, 0.01, -3.54)
+Something wrong1!!
+11.68927
+Something wrong2!!
+4.753504
+Something wrong3!!
+(-13.50, 0.01, -4.58)
+Something wrong1!!
+11.02848
+Something wrong2!!
+4.753816
+Something wrong3!!
+(-13.11, 0.01, -5.60)
+Something wrong1!!
+10.30486
+Something wrong2!!
+4.754124
+Something wrong3!!
+(-12.65, 0.01, -6.59)
+Something wrong1!!
+-10.30141
+Something wrong2!!
+4.76003
+Something wrong3!!
+(7.07, 0.01, -12.41)
+Something wrong1!!
+-11.02866
+Something wrong2!!
+4.760288
+Something wrong3!!
+(8.00, 0.01, -11.83)
+Something wrong1!!
+-11.69133
+Something wrong2!!
+4.760541
+Something wrong3!!
+(8.88, 0.01, -11.18)
+Something wrong1!!
+-12.29423
+Something wrong2!!
+4.760797
+Something wrong3!!
+(9.71, 0.01, -10.47)
+Something wrong1!!
+-12.81521
+Something wrong2!!
+4.761049
+Something wrong3!!
+(10.49, 0.01, -9.70)
+Something wrong1!!
+-13.26101
+Something wrong2!!
+4.761297
+Something wrong3!!
+(11.20, 0.01, -8.87)
+Something wrong1!!
+-13.62909
+Something wrong2!!
+4.761543
+Something wrong3!!
+(11.84, 0.01, -7.99)
+Something wrong1!!
+-13.91722
+Something wrong2!!
+4.761789
+Something wrong3!!
+(12.42, 0.01, -7.06)
+Something wrong1!!
+-14.1256
+Something wrong2!!
+4.762032
+Something wrong3!!
+(12.92, 0.01, -6.09)
+Something wrong1!!
+-14.24833
+Something wrong2!!
+4.762276
+Something wrong3!!
+(13.35, 0.01, -5.08)
+Something wrong1!!
+-14.28747
+Something wrong2!!
+4.762514
+Something wrong3!!
+(13.70, 0.01, -4.04)
+Something wrong1!!
+-14.24279
+Something wrong2!!
+4.762754
+Something wrong3!!
+(13.97, 0.01, -2.98)
+Something wrong1!!
+-14.11452
+Something wrong2!!
+4.762986
+Something wrong3!!
+(14.16, 0.01, -1.90)
+Something wrong1!!
+-13.90213
+Something wrong2!!
+4.763221
+Something wrong3!!
+(14.27, 0.01, -0.81)
+Something wrong1!!
+-13.60901
+Something wrong2!!
+4.763451
+Something wrong3!!
+(14.29, 0.01, 0.28)
+Something wrong1!!
+-13.23602
+Something wrong2!!
+4.763682
+Something wrong3!!
+(14.23, 0.01, 1.37)
+Something wrong1!!
+-12.78532
+Something wrong2!!
+4.763909
+Something wrong3!!
+(14.08, 0.01, 2.46)
+Something wrong1!!
+-12.25957
+Something wrong2!!
+4.764137
+Something wrong3!!
+(13.85, 0.01, 3.53)
+Something wrong1!!
+-11.66293
+Something wrong2!!
+4.76436
+Something wrong3!!
+(13.54, 0.01, 4.58)
+Something wrong1!!
+-10.99683
+Something wrong2!!
+4.764583
+Something wrong3!!
+(13.15, 0.01, 5.60)
+Something wrong1!!
+-10.26608
+Something wrong2!!
+4.764805
+Something wrong3!!
+(12.68, 0.01, 6.59)
+Something wrong1!!
+10.29749
+Something wrong2!!
+4.769064
+Something wrong3!!
+(-7.07, 0.01, 12.44)
+Something wrong1!!
+11.02804
+Something wrong2!!
+4.769247
+Something wrong3!!
+(-8.01, 0.01, 11.86)
+Something wrong1!!
+11.68364
+Something wrong2!!
+4.76943
+Something wrong3!!
+(-8.89, 0.01, 11.21)
+Something wrong1!!
+12.28211
+Something wrong2!!
+4.769613
+Something wrong3!!
+(-9.72, 0.01, 10.50)
+Something wrong1!!
+12.80851
+Something wrong2!!
+4.769794
+Something wrong3!!
+(-10.50, 0.01, 9.72)
+Something wrong1!!
+13.25981
+Something wrong2!!
+4.769974
+Something wrong3!!
+(-11.21, 0.01, 8.89)
+Something wrong1!!
+13.63329
+Something wrong2!!
+4.770152
+Something wrong3!!
+(-11.86, 0.01, 8.01)
+Something wrong1!!
+13.92373
+Something wrong2!!
+4.770328
+Something wrong3!!
+(-12.44, 0.01, 7.08)
+Something wrong1!!
+14.13652
+Something wrong2!!
+4.770504
+Something wrong3!!
+(-12.94, 0.01, 6.10)
+Something wrong1!!
+14.26636
+Something wrong2!!
+4.770676
+Something wrong3!!
+(-13.37, 0.01, 5.10)
+Something wrong1!!
+14.31247
+Something wrong2!!
+4.77085
+Something wrong3!!
+(-13.73, 0.01, 4.06)
+Something wrong1!!
+14.27458
+Something wrong2!!
+4.771021
+Something wrong3!!
+(-14.00, 0.01, 3.00)
+Something wrong1!!
+14.15394
+Something wrong2!!
+4.771192
+Something wrong3!!
+(-14.18, 0.01, 1.91)
+Something wrong1!!
+13.94971
+Something wrong2!!
+4.771359
+Something wrong3!!
+(-14.29, 0.01, 0.82)
+Something wrong1!!
+13.66358
+Something wrong2!!
+4.771527
+Something wrong3!!
+(-14.31, 0.01, -0.27)
+Something wrong1!!
+13.29724
+Something wrong2!!
+4.771693
+Something wrong3!!
+(-14.25, 0.01, -1.37)
+Something wrong1!!
+12.85282
+Something wrong2!!
+4.771857
+Something wrong3!!
+(-14.10, 0.01, -2.45)
+Something wrong1!!
+12.33273
+Something wrong2!!
+4.772019
+Something wrong3!!
+(-13.87, 0.01, -3.53)
+Something wrong1!!
+11.74038
+Something wrong2!!
+4.772182
+Something wrong3!!
+(-13.56, 0.01, -4.58)
+Something wrong1!!
+11.07908
+Something wrong2!!
+4.772341
+Something wrong3!!
+(-13.17, 0.01, -5.60)
+Something wrong1!!
+10.35269
+Something wrong2!!
+4.772501
+Something wrong3!!
+(-12.71, 0.01, -6.60)
+Something wrong1!!
+-10.32909
+Something wrong2!!
+4.775561
+Something wrong3!!
+(7.08, 0.01, -12.45)
+Something wrong1!!
+-11.07101
+Something wrong2!!
+4.775694
+Something wrong3!!
+(8.02, 0.01, -11.88)
+Something wrong1!!
+-11.73506
+Something wrong2!!
+4.775823
+Something wrong3!!
+(8.90, 0.01, -11.23)
+Something wrong1!!
+-12.33027
+Something wrong2!!
+4.775957
+Something wrong3!!
+(9.73, 0.01, -10.51)
+Something wrong1!!
+-12.85313
+Something wrong2!!
+4.776087
+Something wrong3!!
+(10.51, 0.01, -9.74)
+Something wrong1!!
+-13.30056
+Something wrong2!!
+4.776217
+Something wrong3!!
+(11.23, 0.01, -8.90)
+Something wrong1!!
+-13.67432
+Something wrong2!!
+4.776343
+Something wrong3!!
+(11.88, 0.01, -8.02)
+Something wrong1!!
+-13.96238
+Something wrong2!!
+4.776468
+Something wrong3!!
+(12.45, 0.01, -7.09)
+Something wrong1!!
+-14.16848
+Something wrong2!!
+4.776596
+Something wrong3!!
+(12.96, 0.01, -6.11)
+Something wrong1!!
+-14.29143
+Something wrong2!!
+4.776722
+Something wrong3!!
+(13.39, 0.01, -5.10)
+Something wrong1!!
+-14.33047
+Something wrong2!!
+4.776845
+Something wrong3!!
+(13.74, 0.01, -4.06)
+Something wrong1!!
+-14.2847
+Something wrong2!!
+4.77697
+Something wrong3!!
+(14.01, 0.01, -3.00)
+Something wrong1!!
+-14.15509
+Something wrong2!!
+4.777089
+Something wrong3!!
+(14.20, 0.01, -1.92)
+Something wrong1!!
+-13.94237
+Something wrong2!!
+4.77721
+Something wrong3!!
+(14.31, 0.01, -0.82)
+Something wrong1!!
+-13.64779
+Something wrong2!!
+4.777328
+Something wrong3!!
+(14.33, 0.01, 0.27)
+Something wrong1!!
+-13.27308
+Something wrong2!!
+4.777449
+Something wrong3!!
+(14.27, 0.01, 1.37)
+Something wrong1!!
+-12.81992
+Something wrong2!!
+4.777565
+Something wrong3!!
+(14.12, 0.01, 2.46)
+Something wrong1!!
+-12.29188
+Something wrong2!!
+4.777682
+Something wrong3!!
+(13.89, 0.01, 3.53)
+Something wrong1!!
+-11.69167
+Something wrong2!!
+4.777798
+Something wrong3!!
+(13.58, 0.01, 4.59)
+Something wrong1!!
+-11.02277
+Something wrong2!!
+4.777914
+Something wrong3!!
+(13.19, 0.01, 5.61)
+Something wrong1!!
+-10.28913
+Something wrong2!!
+4.778029
+Something wrong3!!
+(12.72, 0.01, 6.61)
+Something wrong1!!
+10.32222
+Something wrong2!!
+4.780228
+Something wrong3!!
+(-7.09, 0.01, 12.46)
+Something wrong1!!
+11.05441
+Something wrong2!!
+4.780324
+Something wrong3!!
+(-8.03, 0.01, 11.88)
+Something wrong1!!
+11.72168
+Something wrong2!!
+4.780419
+Something wrong3!!
+(-8.91, 0.01, 11.23)
+Something wrong1!!
+12.3202
+Something wrong2!!
+4.780513
+Something wrong3!!
+(-9.75, 0.01, 10.52)
+Something wrong1!!
+12.84637
+Something wrong2!!
+4.78061
+Something wrong3!!
+(-10.53, 0.01, 9.74)
+Something wrong1!!
+13.29136
+Something wrong2!!
+4.7807
+Something wrong3!!
+(-11.24, 0.01, 8.91)
+Something wrong1!!
+13.66518
+Something wrong2!!
+4.780791
+Something wrong3!!
+(-11.89, 0.01, 8.02)
+Something wrong1!!
+13.9588
+Something wrong2!!
+4.780884
+Something wrong3!!
+(-12.47, 0.01, 7.09)
+Something wrong1!!
+14.17045
+Something wrong2!!
+4.780972
+Something wrong3!!
+(-12.98, 0.01, 6.11)
+Something wrong1!!
+14.29892
+Something wrong2!!
+4.781065
+Something wrong3!!
+(-13.41, 0.01, 5.10)
+Something wrong1!!
+14.34341
+Something wrong2!!
+4.781153
+Something wrong3!!
+(-13.76, 0.01, 4.06)
+Something wrong1!!
+14.30444
+Something wrong2!!
+4.781242
+Something wrong3!!
+(-14.03, 0.01, 2.99)
+Something wrong1!!
+14.18148
+Something wrong2!!
+4.781329
+Something wrong3!!
+(-14.22, 0.01, 1.91)
+Something wrong1!!
+13.97524
+Something wrong2!!
+4.781416
+Something wrong3!!
+(-14.32, 0.01, 0.82)
+Something wrong1!!
+13.68694
+Something wrong2!!
+4.781502
+Something wrong3!!
+(-14.34, 0.01, -0.28)
+Something wrong1!!
+13.31921
+Something wrong2!!
+4.781588
+Something wrong3!!
+(-14.28, 0.01, -1.38)
+Something wrong1!!
+12.87249
+Something wrong2!!
+4.781671
+Something wrong3!!
+(-14.13, 0.01, -2.47)
+Something wrong1!!
+12.35018
+Something wrong2!!
+4.781755
+Something wrong3!!
+(-13.90, 0.01, -3.54)
+Something wrong1!!
+11.75531
+Something wrong2!!
+4.781839
+Something wrong3!!
+(-13.59, 0.01, -4.60)
+Something wrong1!!
+11.09143
+Something wrong2!!
+4.781924
+Something wrong3!!
+(-13.20, 0.01, -5.62)
+Something wrong1!!
+10.35898
+Something wrong2!!
+4.782005
+Something wrong3!!
+(-12.73, 0.01, -6.62)
+Something wrong1!!
+-10.36928
+Something wrong2!!
+4.783582
+Something wrong3!!
+(7.11, 0.01, -12.47)
+Something wrong1!!
+-11.09866
+Something wrong2!!
+4.783651
+Something wrong3!!
+(8.04, 0.01, -11.89)
+Something wrong1!!
+-11.76289
+Something wrong2!!
+4.78372
+Something wrong3!!
+(8.93, 0.01, -11.24)
+Something wrong1!!
+-12.35806
+Something wrong2!!
+4.783788
+Something wrong3!!
+(9.76, 0.01, -10.52)
+Something wrong1!!
+-12.88801
+Something wrong2!!
+4.783855
+Something wrong3!!
+(10.54, 0.01, -9.74)
+Something wrong1!!
+-13.33384
+Something wrong2!!
+4.783922
+Something wrong3!!
+(11.25, 0.01, -8.91)
+Something wrong1!!
+-13.70139
+Something wrong2!!
+4.783988
+Something wrong3!!
+(11.90, 0.01, -8.02)
+Something wrong1!!
+-13.98848
+Something wrong2!!
+4.784054
+Something wrong3!!
+(12.48, 0.01, -7.08)
+Something wrong1!!
+-14.19345
+Something wrong2!!
+4.784121
+Something wrong3!!
+(12.99, 0.01, -6.11)
+Something wrong1!!
+-14.31587
+Something wrong2!!
+4.784187
+Something wrong3!!
+(13.42, 0.01, -5.09)
+Something wrong1!!
+-14.35256
+Something wrong2!!
+4.784251
+Something wrong3!!
+(13.77, 0.01, -4.05)
+Something wrong1!!
+-14.30497
+Something wrong2!!
+4.784314
+Something wrong3!!
+(14.04, 0.01, -2.98)
+Something wrong1!!
+-14.17337
+Something wrong2!!
+4.784377
+Something wrong3!!
+(14.23, 0.01, -1.90)
+Something wrong1!!
+-13.95853
+Something wrong2!!
+4.784439
+Something wrong3!!
+(14.33, 0.01, -0.81)
+Something wrong1!!
+-13.66045
+Something wrong2!!
+4.784502
+Something wrong3!!
+(14.35, 0.01, 0.29)
+Something wrong1!!
+-13.28309
+Something wrong2!!
+4.784563
+Something wrong3!!
+(14.29, 0.01, 1.39)
+Something wrong1!!
+-12.82774
+Something wrong2!!
+4.784623
+Something wrong3!!
+(14.14, 0.01, 2.48)
+Something wrong1!!
+-12.29703
+Something wrong2!!
+4.784681
+Something wrong3!!
+(13.91, 0.01, 3.56)
+Something wrong1!!
+-11.69409
+Something wrong2!!
+4.784743
+Something wrong3!!
+(13.59, 0.01, 4.61)
+Something wrong1!!
+-11.02474
+Something wrong2!!
+4.784802
+Something wrong3!!
+(13.20, 0.01, 5.64)
+Something wrong1!!
+-10.28856
+Something wrong2!!
+4.78486
+Something wrong3!!
+(12.73, 0.01, 6.63)
+Something wrong1!!
+10.35914
+Something wrong2!!
+4.785996
+Something wrong3!!
+(-7.12, 0.01, 12.47)
+Something wrong1!!
+11.09016
+Something wrong2!!
+4.786046
+Something wrong3!!
+(-8.06, 0.01, 11.88)
+Something wrong1!!
+11.75604
+Something wrong2!!
+4.786092
+Something wrong3!!
+(-8.94, 0.01, 11.23)
+Something wrong1!!
+12.34416
+Something wrong2!!
+4.786142
+Something wrong3!!
+(-9.78, 0.01, 10.51)
+Something wrong1!!
+12.86965
+Something wrong2!!
+4.786195
+Something wrong3!!
+(-10.55, 0.01, 9.74)
+Something wrong1!!
+13.31958
+Something wrong2!!
+4.786239
+Something wrong3!!
+(-11.27, 0.01, 8.90)
+Something wrong1!!
+13.69129
+Something wrong2!!
+4.786288
+Something wrong3!!
+(-11.92, 0.01, 8.01)
+Something wrong1!!
+13.98259
+Something wrong2!!
+4.786333
+Something wrong3!!
+(-12.50, 0.01, 7.07)
+Something wrong1!!
+14.18993
+Something wrong2!!
+4.78638
+Something wrong3!!
+(-13.00, 0.01, 6.10)
+Something wrong1!!
+14.31671
+Something wrong2!!
+4.786425
+Something wrong3!!
+(-13.43, 0.01, 5.08)
+Something wrong1!!
+14.35942
+Something wrong2!!
+4.786473
+Something wrong3!!
+(-13.78, 0.01, 4.04)
+Something wrong1!!
+14.31779
+Something wrong2!!
+4.78652
+Something wrong3!!
+(-14.05, 0.01, 2.97)
+Something wrong1!!
+14.19207
+Something wrong2!!
+4.786564
+Something wrong3!!
+(-14.24, 0.01, 1.89)
+Something wrong1!!
+13.98426
+Something wrong2!!
+4.786608
+Something wrong3!!
+(-14.34, 0.01, 0.79)
+Something wrong1!!
+13.69348
+Something wrong2!!
+4.786656
+Something wrong3!!
+(-14.36, 0.01, -0.31)
+Something wrong1!!
+13.32226
+Something wrong2!!
+4.7867
+Something wrong3!!
+(-14.29, 0.01, -1.41)
+Something wrong1!!
+12.87279
+Something wrong2!!
+4.786743
+Something wrong3!!
+(-14.14, 0.01, -2.50)
+Something wrong1!!
+12.3477
+Something wrong2!!
+4.786786
+Something wrong3!!
+(-13.91, 0.01, -3.57)
+Something wrong1!!
+11.74897
+Something wrong2!!
+4.78683
+Something wrong3!!
+(-13.59, 0.01, -4.63)
+Something wrong1!!
+11.08221
+Something wrong2!!
+4.786872
+Something wrong3!!
+(-13.20, 0.01, -5.65)
+Something wrong1!!
+10.35037
+Something wrong2!!
+4.786912
+Something wrong3!!
+(-12.73, 0.01, -6.65)
+Something wrong1!!
+-10.3958
+Something wrong2!!
+4.787724
+Something wrong3!!
+(7.14, 0.01, -12.46)
+Something wrong1!!
+-11.12432
+Something wrong2!!
+4.78776
+Something wrong3!!
+(8.07, 0.01, -11.88)
+Something wrong1!!
+-11.79791
+Something wrong2!!
+4.787796
+Something wrong3!!
+(8.96, 0.01, -11.23)
+Something wrong1!!
+-12.39072
+Something wrong2!!
+4.787829
+Something wrong3!!
+(9.79, 0.01, -10.51)
+Something wrong1!!
+-12.91079
+Something wrong2!!
+4.787866
+Something wrong3!!
+(10.57, 0.01, -9.73)
+Something wrong1!!
+-13.35503
+Something wrong2!!
+4.787899
+Something wrong3!!
+(11.28, 0.01, -8.89)
+Something wrong1!!
+-13.72083
+Something wrong2!!
+4.787931
+Something wrong3!!
+(11.93, 0.01, -8.00)
+Something wrong1!!
+-14.00908
+Something wrong2!!
+4.787965
+Something wrong3!!
+(12.51, 0.01, -7.06)
+Something wrong1!!
+-14.21102
+Something wrong2!!
+4.787999
+Something wrong3!!
+(13.01, 0.01, -6.08)
+Something wrong1!!
+-14.3295
+Something wrong2!!
+4.788033
+Something wrong3!!
+(13.44, 0.01, -5.07)
+Something wrong1!!
+-14.36382
+Something wrong2!!
+4.788067
+Something wrong3!!
+(13.79, 0.01, -4.02)
+Something wrong1!!
+-14.31379
+Something wrong2!!
+4.788101
+Something wrong3!!
+(14.06, 0.01, -2.96)
+Something wrong1!!
+-14.17854
+Something wrong2!!
+4.788132
+Something wrong3!!
+(14.24, 0.01, -1.87)
+Something wrong1!!
+-13.9606
+Something wrong2!!
+4.788165
+Something wrong3!!
+(14.34, 0.01, -0.78)
+Something wrong1!!
+-13.66068
+Something wrong2!!
+4.788198
+Something wrong3!!
+(14.36, 0.01, 0.33)
+Something wrong1!!
+-13.28051
+Something wrong2!!
+4.78823
+Something wrong3!!
+(14.29, 0.01, 1.42)
+Something wrong1!!
+-12.82234
+Something wrong2!!
+4.788261
+Something wrong3!!
+(14.14, 0.01, 2.51)
+Something wrong1!!
+-12.28911
+Something wrong2!!
+4.788292
+Something wrong3!!
+(13.91, 0.01, 3.59)
+Something wrong1!!
+-11.68345
+Something wrong2!!
+4.788323
+Something wrong3!!
+(13.59, 0.01, 4.64)
+Something wrong1!!
+-11.00919
+Something wrong2!!
+4.788352
+Something wrong3!!
+(13.20, 0.01, 5.67)
+Something wrong1!!
+-10.27023
+Something wrong2!!
+4.788382
+Something wrong3!!
+(12.72, 0.01, 6.67)
+Something wrong1!!
+10.39601
+Something wrong2!!
+4.788966
+Something wrong3!!
+(-7.16, 0.01, 12.46)
+Something wrong1!!
+11.11322
+Something wrong2!!
+4.788991
+Something wrong3!!
+(-8.09, 0.01, 11.87)
+Something wrong1!!
+11.77794
+Something wrong2!!
+4.789017
+Something wrong3!!
+(-8.98, 0.01, 11.22)
+Something wrong1!!
+12.3735
+Something wrong2!!
+4.78904
+Something wrong3!!
+(-9.81, 0.01, 10.50)
+Something wrong1!!
+12.89639
+Something wrong2!!
+4.789069
+Something wrong3!!
+(-10.58, 0.01, 9.72)
+Something wrong1!!
+13.34354
+Something wrong2!!
+4.789092
+Something wrong3!!
+(-11.30, 0.01, 8.88)
+Something wrong1!!
+13.708
+Something wrong2!!
+4.789116
+Something wrong3!!
+(-11.94, 0.01, 7.99)
+Something wrong1!!
+13.99731
+Something wrong2!!
+4.78914
+Something wrong3!!
+(-12.52, 0.01, 7.05)
+Something wrong1!!
+14.2044
+Something wrong2!!
+4.789162
+Something wrong3!!
+(-13.02, 0.01, 6.07)
+Something wrong1!!
+14.32808
+Something wrong2!!
+4.789188
+Something wrong3!!
+(-13.45, 0.01, 5.05)
+Something wrong1!!
+14.36759
+Something wrong2!!
+4.789212
+Something wrong3!!
+(-13.80, 0.01, 4.01)
+Something wrong1!!
+14.32338
+Something wrong2!!
+4.789237
+Something wrong3!!
+(-14.06, 0.01, 2.94)
+Something wrong1!!
+14.195
+Something wrong2!!
+4.789257
+Something wrong3!!
+(-14.25, 0.01, 1.85)
+Something wrong1!!
+13.98326
+Something wrong2!!
+4.789283
+Something wrong3!!
+(-14.35, 0.01, 0.76)
+Something wrong1!!
+13.68938
+Something wrong2!!
+4.789306
+Something wrong3!!
+(-14.36, 0.01, -0.34)
+Something wrong1!!
+13.31508
+Something wrong2!!
+4.789327
+Something wrong3!!
+(-14.30, 0.01, -1.44)
+Something wrong1!!
+12.86304
+Something wrong2!!
+4.78935
+Something wrong3!!
+(-14.14, 0.01, -2.53)
+Something wrong1!!
+12.33504
+Something wrong2!!
+4.789371
+Something wrong3!!
+(-13.91, 0.01, -3.61)
+Something wrong1!!
+11.73461
+Something wrong2!!
+4.789395
+Something wrong3!!
+(-13.59, 0.01, -4.66)
+Something wrong1!!
+11.06523
+Something wrong2!!
+4.789419
+Something wrong3!!
+(-13.19, 0.01, -5.69)
+Something wrong1!!
+10.33085
+Something wrong2!!
+4.78944
+Something wrong3!!
+(-12.72, 0.01, -6.68)
+Something wrong1!!
+-10.43508
+Something wrong2!!
+4.789852
+Something wrong3!!
+(7.18, 0.01, -12.45)
+Something wrong1!!
+-11.16103
+Something wrong2!!
+4.78987
+Something wrong3!!
+(8.11, 0.01, -11.86)
+Something wrong1!!
+-11.82144
+Something wrong2!!
+4.78989
+Something wrong3!!
+(8.99, 0.01, -11.21)
+Something wrong1!!
+-12.41243
+Something wrong2!!
+4.789909
+Something wrong3!!
+(9.83, 0.01, -10.49)
+Something wrong1!!
+-12.93051
+Something wrong2!!
+4.789927
+Something wrong3!!
+(10.60, 0.01, -9.70)
+Something wrong1!!
+-13.37838
+Something wrong2!!
+4.789946
+Something wrong3!!
+(11.31, 0.01, -8.86)
+Something wrong1!!
+-13.74083
+Something wrong2!!
+4.789964
+Something wrong3!!
+(11.96, 0.01, -7.97)
+Something wrong1!!
+-14.02257
+Something wrong2!!
+4.78998
+Something wrong3!!
+(12.53, 0.01, -7.03)
+Something wrong1!!
+-14.22195
+Something wrong2!!
+4.789998
+Something wrong3!!
+(13.03, 0.01, -6.05)
+Something wrong1!!
+-14.3378
+Something wrong2!!
+4.790014
+Something wrong3!!
+(13.46, 0.01, -5.04)
+Something wrong1!!
+-14.36933
+Something wrong2!!
+4.790033
+Something wrong3!!
+(13.81, 0.01, -3.99)
+Something wrong1!!
+-14.3158
+Something wrong2!!
+4.79005
+Something wrong3!!
+(14.07, 0.01, -2.92)
+Something wrong1!!
+-14.17818
+Something wrong2!!
+4.790066
+Something wrong3!!
+(14.25, 0.01, -1.83)
+Something wrong1!!
+-13.95727
+Something wrong2!!
+4.790081
+Something wrong3!!
+(14.35, 0.01, -0.74)
+Something wrong1!!
+-13.6544
+Something wrong2!!
+4.790099
+Something wrong3!!
+(14.37, 0.01, 0.36)
+Something wrong1!!
+-13.27033
+Something wrong2!!
+4.790114
+Something wrong3!!
+(14.30, 0.01, 1.46)
+Something wrong1!!
+-12.80911
+Something wrong2!!
+4.790132
+Something wrong3!!
+(14.14, 0.01, 2.55)
+Something wrong1!!
+-12.27266
+Something wrong2!!
+4.790148
+Something wrong3!!
+(13.90, 0.01, 3.63)
+Something wrong1!!
+-11.66409
+Something wrong2!!
+4.790163
+Something wrong3!!
+(13.59, 0.01, 4.68)
+Something wrong1!!
+-10.98702
+Something wrong2!!
+4.790179
+Something wrong3!!
+(13.19, 0.01, 5.71)
+Something wrong1!!
+-10.24901
+Something wrong2!!
+4.790194
+Something wrong3!!
+(12.71, 0.01, 6.70)
+Something wrong1!!
+10.41937
+Something wrong2!!
+4.790492
+Something wrong3!!
+(-7.19, 0.01, 12.44)
+Something wrong1!!
+11.14686
+Something wrong2!!
+4.790506
+Something wrong3!!
+(-8.13, 0.01, 11.85)
+Something wrong1!!
+11.80887
+Something wrong2!!
+4.790518
+Something wrong3!!
+(-9.01, 0.01, 11.20)
+Something wrong1!!
+12.40153
+Something wrong2!!
+4.79053
+Something wrong3!!
+(-9.84, 0.01, 10.47)
+Something wrong1!!
+12.91418
+Something wrong2!!
+4.790543
+Something wrong3!!
+(-10.61, 0.01, 9.69)
+Something wrong1!!
+13.35924
+Something wrong2!!
+4.790554
+Something wrong3!!
+(-11.33, 0.01, 8.85)
+Something wrong1!!
+13.72584
+Something wrong2!!
+4.790568
+Something wrong3!!
+(-11.97, 0.01, 7.95)
+Something wrong1!!
+14.01181
+Something wrong2!!
+4.790581
+Something wrong3!!
+(-12.54, 0.01, 7.01)
+Something wrong1!!
+14.21548
+Something wrong2!!
+4.790593
+Something wrong3!!
+(-13.04, 0.01, 6.03)
+Something wrong1!!
+14.33488
+Something wrong2!!
+4.790606
+Something wrong3!!
+(-13.47, 0.01, 5.02)
+Something wrong1!!
+14.37168
+Something wrong2!!
+4.790618
+Something wrong3!!
+(-13.81, 0.01, 3.97)
+Something wrong1!!
+14.32406
+Something wrong2!!
+4.79063
+Something wrong3!!
+(-14.08, 0.01, 2.90)
+Something wrong1!!
+14.1923
+Something wrong2!!
+4.79064
+Something wrong3!!
+(-14.26, 0.01, 1.81)
+Something wrong1!!
+13.97717
+Something wrong2!!
+4.790649
+Something wrong3!!
+(-14.35, 0.01, 0.72)
+Something wrong1!!
+13.68115
+Something wrong2!!
+4.790663
+Something wrong3!!
+(-14.37, 0.01, -0.38)
+Something wrong1!!
+13.30386
+Something wrong2!!
+4.790674
+Something wrong3!!
+(-14.30, 0.01, -1.48)
+Something wrong1!!
+12.84841
+Something wrong2!!
+4.790687
+Something wrong3!!
+(-14.14, 0.01, -2.57)
+Something wrong1!!
+12.3175
+Something wrong2!!
+4.790699
+Something wrong3!!
+(-13.90, 0.01, -3.65)
+Something wrong1!!
+11.71422
+Something wrong2!!
+4.790712
+Something wrong3!!
+(-13.58, 0.01, -4.70)
+Something wrong1!!
+11.03984
+Something wrong2!!
+4.790722
+Something wrong3!!
+(-13.18, 0.01, -5.73)
+Something wrong1!!
+10.30268
+Something wrong2!!
+4.790733
+Something wrong3!!
+(-12.70, 0.01, -6.72)
+Something wrong1!!
+-10.46131
+Something wrong2!!
+4.790946
+Something wrong3!!
+(7.21, 0.01, -12.43)
+Something wrong1!!
+-11.18542
+Something wrong2!!
+4.790955
+Something wrong3!!
+(8.14, 0.01, -11.84)
+Something wrong1!!
+-11.84385
+Something wrong2!!
+4.790966
+Something wrong3!!
+(9.03, 0.01, -11.18)
+Something wrong1!!
+-12.44143
+Something wrong2!!
+4.790974
+Something wrong3!!
+(9.86, 0.01, -10.46)
+Something wrong1!!
+-12.95606
+Something wrong2!!
+4.790983
+Something wrong3!!
+(10.63, 0.01, -9.67)
+Something wrong1!!
+-13.39461
+Something wrong2!!
+4.790992
+Something wrong3!!
+(11.34, 0.01, -8.83)
+Something wrong1!!
+-13.75447
+Something wrong2!!
+4.791
+Something wrong3!!
+(11.98, 0.01, -7.94)
+Something wrong1!!
+-14.03355
+Something wrong2!!
+4.791011
+Something wrong3!!
+(12.56, 0.01, -7.00)
+Something wrong1!!
+-14.23192
+Something wrong2!!
+4.791019
+Something wrong3!!
+(13.05, 0.01, -6.01)
+Something wrong1!!
+-14.34403
+Something wrong2!!
+4.791028
+Something wrong3!!
+(13.48, 0.01, -5.00)
+Something wrong1!!
+-14.37189
+Something wrong2!!
+4.791039
+Something wrong3!!
+(13.82, 0.01, -3.95)
+Something wrong1!!
+-14.31531
+Something wrong2!!
+4.791046
+Something wrong3!!
+(14.08, 0.01, -2.88)
+Something wrong1!!
+-14.17465
+Something wrong2!!
+4.791053
+Something wrong3!!
+(14.26, 0.01, -1.79)
+Something wrong1!!
+-13.9494
+Something wrong2!!
+4.791062
+Something wrong3!!
+(14.36, 0.01, -0.70)
+Something wrong1!!
+-13.64313
+Something wrong2!!
+4.79107
+Something wrong3!!
+(14.37, 0.01, 0.41)
+Something wrong1!!
+-13.25671
+Something wrong2!!
+4.791081
+Something wrong3!!
+(14.29, 0.01, 1.50)
+Something wrong1!!
+-12.79243
+Something wrong2!!
+4.79109
+Something wrong3!!
+(14.14, 0.01, 2.59)
+Something wrong1!!
+-12.25298
+Something wrong2!!
+4.791098
+Something wrong3!!
+(13.90, 0.01, 3.67)
+Something wrong1!!
+-11.64285
+Something wrong2!!
+4.791107
+Something wrong3!!
+(13.57, 0.01, 4.72)
+Something wrong1!!
+-10.96317
+Something wrong2!!
+4.791113
+Something wrong3!!
+(13.17, 0.01, 5.75)
+Something wrong1!!
+-10.21912
+Something wrong2!!
+4.79112
+Something wrong3!!
+(12.69, 0.01, 6.74)
+Something wrong1!!
+10.45572
+Something wrong2!!
+4.791276
+Something wrong3!!
+(-7.23, 0.01, 12.42)
+Something wrong1!!
+11.18041
+Something wrong2!!
+4.791283
+Something wrong3!!
+(-8.16, 0.01, 11.83)
+Something wrong1!!
+11.8293
+Something wrong2!!
+4.791291
+Something wrong3!!
+(-9.04, 0.01, 11.17)
+Something wrong1!!
+12.41992
+Something wrong2!!
+4.791296
+Something wrong3!!
+(-9.87, 0.01, 10.45)
+Something wrong1!!
+12.93762
+Something wrong2!!
+4.791303
+Something wrong3!!
+(-10.64, 0.01, 9.66)
+Something wrong1!!
+13.37931
+Something wrong2!!
+4.791309
+Something wrong3!!
+(-11.35, 0.01, 8.82)
+Something wrong1!!
+13.74242
+Something wrong2!!
+4.791317
+Something wrong3!!
+(-12.00, 0.01, 7.92)
+Something wrong1!!
+14.02188
+Something wrong2!!
+4.791324
+Something wrong3!!
+(-12.57, 0.01, 6.98)
+Something wrong1!!
+14.22287
+Something wrong2!!
+4.791327
+Something wrong3!!
+(-13.06, 0.01, 6.00)
+Something wrong1!!
+14.34032
+Something wrong2!!
+4.791333
+Something wrong3!!
+(-13.48, 0.01, 4.98)
+Something wrong1!!
+14.37354
+Something wrong2!!
+4.79134
+Something wrong3!!
+(-13.83, 0.01, 3.93)
+Something wrong1!!
+14.32232
+Something wrong2!!
+4.791346
+Something wrong3!!
+(-14.09, 0.01, 2.86)
+Something wrong1!!
+14.18807
+Something wrong2!!
+4.791355
+Something wrong3!!
+(-14.26, 0.01, 1.77)
+Something wrong1!!
+13.9699
+Something wrong2!!
+4.791363
+Something wrong3!!
+(-14.36, 0.01, 0.67)
+Something wrong1!!
+13.66966
+Something wrong2!!
+4.791366
+Something wrong3!!
+(-14.37, 0.01, -0.43)
+Something wrong1!!
+13.28912
+Something wrong2!!
+4.791372
+Something wrong3!!
+(-14.29, 0.01, -1.53)
+Something wrong1!!
+12.83053
+Something wrong2!!
+4.791376
+Something wrong3!!
+(-14.13, 0.01, -2.62)
+Something wrong1!!
+12.29623
+Something wrong2!!
+4.791381
+Something wrong3!!
+(-13.89, 0.01, -3.69)
+Something wrong1!!
+11.69001
+Something wrong2!!
+4.791388
+Something wrong3!!
+(-13.57, 0.01, -4.74)
+Something wrong1!!
+11.0151
+Something wrong2!!
+4.791394
+Something wrong3!!
+(-13.17, 0.01, -5.77)
+Something wrong1!!
+10.27548
+Something wrong2!!
+4.791399
+Something wrong3!!
+(-12.69, 0.01, -6.76)
+Something wrong1!!
+-10.48718
+Something wrong2!!
+4.79151
+Something wrong3!!
+(7.25, 0.01, -12.41)
+Something wrong1!!
+-11.221
+Something wrong2!!
+4.791517
+Something wrong3!!
+(8.18, 0.01, -11.82)
+Something wrong1!!
+-11.87611
+Something wrong2!!
+4.791521
+Something wrong3!!
+(9.06, 0.01, -11.16)
+Something wrong1!!
+-12.46149
+Something wrong2!!
+4.791525
+Something wrong3!!
+(9.89, 0.01, -10.43)
+Something wrong1!!
+-12.97364
+Something wrong2!!
+4.791527
+Something wrong3!!
+(10.66, 0.01, -9.64)
+Something wrong1!!
+-13.40962
+Something wrong2!!
+4.791534
+Something wrong3!!
+(11.37, 0.01, -8.80)
+Something wrong1!!
+-13.771
+Something wrong2!!
+4.791538
+Something wrong3!!
+(12.01, 0.01, -7.90)
+Something wrong1!!
+-14.04625
+Something wrong2!!
+4.791543
+Something wrong3!!
+(12.58, 0.01, -6.96)
+Something wrong1!!
+-14.23898
+Something wrong2!!
+4.791549
+Something wrong3!!
+(13.07, 0.01, -5.98)
+Something wrong1!!
+-14.34806
+Something wrong2!!
+4.791551
+Something wrong3!!
+(13.49, 0.01, -4.96)
+Something wrong1!!
+-14.37286
+Something wrong2!!
+4.791555
+Something wrong3!!
+(13.83, 0.01, -3.91)
+Something wrong1!!
+-14.31246
+Something wrong2!!
+4.791558
+Something wrong3!!
+(14.09, 0.01, -2.84)
+Something wrong1!!
+-14.16812
+Something wrong2!!
+4.791563
+Something wrong3!!
+(14.27, 0.01, -1.75)
+Something wrong1!!
+-13.94056
+Something wrong2!!
+4.791566
+Something wrong3!!
+(14.36, 0.01, -0.65)
+Something wrong1!!
+-13.63111
+Something wrong2!!
+4.791571
+Something wrong3!!
+(14.37, 0.01, 0.45)
+Something wrong1!!
+-13.24157
+Something wrong2!!
+4.791573
+Something wrong3!!
+(14.29, 0.01, 1.55)
+Something wrong1!!
+-12.77386
+Something wrong2!!
+4.791576
+Something wrong3!!
+(14.13, 0.01, 2.64)
+Something wrong1!!
+-12.23145
+Something wrong2!!
+4.791582
+Something wrong3!!
+(13.89, 0.01, 3.71)
+Something wrong1!!
+-11.61721
+Something wrong2!!
+4.791587
+Something wrong3!!
+(13.56, 0.01, 4.77)
+Something wrong1!!
+-10.9347
+Something wrong2!!
+4.791592
+Something wrong3!!
+(13.16, 0.01, 5.79)
+Something wrong1!!
+-10.18799
+Something wrong2!!
+4.791597
+Something wrong3!!
+(12.68, 0.01, 6.78)
+Something wrong1!!
+10.47905
+Something wrong2!!
+4.791676
+Something wrong3!!
+(-7.27, 0.01, 12.40)
+Something wrong1!!
+11.20191
+Something wrong2!!
+4.791682
+Something wrong3!!
+(-8.20, 0.01, 11.81)
+Something wrong1!!
+11.85899
+Something wrong2!!
+4.791684
+Something wrong3!!
+(-9.08, 0.01, 11.14)
+Something wrong1!!
+12.44637
+Something wrong2!!
+4.791687
+Something wrong3!!
+(-9.91, 0.01, 10.42)
+Something wrong1!!
+12.96067
+Something wrong2!!
+4.79169
+Something wrong3!!
+(-10.67, 0.01, 9.63)
+Something wrong1!!
+13.39327
+Something wrong2!!
+4.791694
+Something wrong3!!
+(-11.38, 0.01, 8.78)
+Something wrong1!!
+13.75383
+Something wrong2!!
+4.791698
+Something wrong3!!
+(-12.02, 0.01, 7.88)
+Something wrong1!!
+14.0336
+Something wrong2!!
+4.7917
+Something wrong3!!
+(-12.59, 0.01, 6.94)
+Something wrong1!!
+14.23094
+Something wrong2!!
+4.791703
+Something wrong3!!
+(-13.08, 0.01, 5.96)
+Something wrong1!!
+14.34468
+Something wrong2!!
+4.791707
+Something wrong3!!
+(-13.50, 0.01, 4.94)
+Something wrong1!!
+14.37427
+Something wrong2!!
+4.79171
+Something wrong3!!
+(-13.84, 0.01, 3.89)
+Something wrong1!!
+14.32005
+Something wrong2!!
+4.791715
+Something wrong3!!
+(-14.10, 0.01, 2.82)
+Something wrong1!!
+14.18171
+Something wrong2!!
+4.791721
+Something wrong3!!
+(-14.27, 0.01, 1.73)
+Something wrong1!!
+13.96005
+Something wrong2!!
+4.791721
+Something wrong3!!
+(-14.36, 0.01, 0.63)
+Something wrong1!!
+13.6564
+Something wrong2!!
+4.791725
+Something wrong3!!
+(-14.37, 0.01, -0.47)
+Something wrong1!!
+13.27343
+Something wrong2!!
+4.791728
+Something wrong3!!
+(-14.29, 0.01, -1.57)
+Something wrong1!!
+12.81174
+Something wrong2!!
+4.791728
+Something wrong3!!
+(-14.13, 0.01, -2.66)
+Something wrong1!!
+12.27481
+Something wrong2!!
+4.791732
+Something wrong3!!
+(-13.88, 0.01, -3.73)
+Something wrong1!!
+11.66577
+Something wrong2!!
+4.791738
+Something wrong3!!
+(-13.56, 0.01, -4.79)
+Something wrong1!!
+10.9882
+Something wrong2!!
+4.79174
+Something wrong3!!
+(-13.15, 0.01, -5.81)
+Something wrong1!!
+10.24246
+Something wrong2!!
+4.791743
+Something wrong3!!
+(-12.67, 0.01, -6.80)
+Something wrong1!!
+-10.52605
+Something wrong2!!
+4.7918
+Something wrong3!!
+(7.29, 0.01, -12.39)
+Something wrong1!!
+-11.24497
+Something wrong2!!
+4.791803
+Something wrong3!!
+(8.22, 0.01, -11.80)
+Something wrong1!!
+-11.89784
+Something wrong2!!
+4.791806
+Something wrong3!!
+(9.10, 0.01, -11.13)
+Something wrong1!!
+-12.4808
+Something wrong2!!
+4.791807
+Something wrong3!!
+(9.92, 0.01, -10.40)
+Something wrong1!!
+-12.99753
+Something wrong2!!
+4.791811
+Something wrong3!!
+(10.69, 0.01, -9.61)
+Something wrong1!!
+-13.42973
+Something wrong2!!
+4.791813
+Something wrong3!!
+(11.39, 0.01, -8.76)
+Something wrong1!!
+-13.78301
+Something wrong2!!
+4.791815
+Something wrong3!!
+(12.03, 0.01, -7.87)
+Something wrong1!!
+-14.05535
+Something wrong2!!
+4.791816
+Something wrong3!!
+(12.60, 0.01, -6.92)
+Something wrong1!!
+-14.24512
+Something wrong2!!
+4.791821
+Something wrong3!!
+(13.09, 0.01, -5.94)
+Something wrong1!!
+-14.35185
+Something wrong2!!
+4.791823
+Something wrong3!!
+(13.51, 0.01, -4.92)
+Something wrong1!!
+-14.37279
+Something wrong2!!
+4.791825
+Something wrong3!!
+(13.85, 0.01, -3.87)
+Something wrong1!!
+-14.3093
+Something wrong2!!
+4.791826
+Something wrong3!!
+(14.10, 0.01, -2.80)
+Something wrong1!!
+-14.16176
+Something wrong2!!
+4.791829
+Something wrong3!!
+(14.27, 0.01, -1.71)
+Something wrong1!!
+-13.93102
+Something wrong2!!
+4.791831
+Something wrong3!!
+(14.36, 0.01, -0.61)
+Something wrong1!!
+-13.61722
+Something wrong2!!
+4.791835
+Something wrong3!!
+(14.37, 0.01, 0.49)
+Something wrong1!!
+-13.22437
+Something wrong2!!
+4.791837
+Something wrong3!!
+(14.29, 0.01, 1.59)
+Something wrong1!!
+-12.75384
+Something wrong2!!
+4.791837
+Something wrong3!!
+(14.12, 0.01, 2.68)
+Something wrong1!!
+-12.20838
+Something wrong2!!
+4.791841
+Something wrong3!!
+(13.88, 0.01, 3.76)
+Something wrong1!!
+-11.59124
+Something wrong2!!
+4.791842
+Something wrong3!!
+(13.55, 0.01, 4.81)
+Something wrong1!!
+-10.90846
+Something wrong2!!
+4.791844
+Something wrong3!!
+(13.14, 0.01, 5.83)
+Something wrong1!!
+-10.15937
+Something wrong2!!
+4.791846
+Something wrong3!!
+(12.65, 0.01, 6.82)
+Something wrong1!!
+10.51485
+Something wrong2!!
+4.791885
+Something wrong3!!
+(-7.31, 0.01, 12.38)
+Something wrong1!!
+11.23474
+Something wrong2!!
+4.79189
+Something wrong3!!
+(-8.24, 0.01, 11.78)
+Something wrong1!!
+11.88866
+Something wrong2!!
+4.791889
+Something wrong3!!
+(-9.11, 0.01, 11.12)
+Something wrong1!!
+12.46422
+Something wrong2!!
+4.791891
+Something wrong3!!
+(-9.94, 0.01, 10.39)
+Something wrong1!!
+12.97617
+Something wrong2!!
+4.791892
+Something wrong3!!
+(-10.71, 0.01, 9.59)
+Something wrong1!!
+13.41193
+Something wrong2!!
+4.791894
+Something wrong3!!
+(-11.41, 0.01, 8.75)
+Something wrong1!!
+13.76886
+Something wrong2!!
+4.791895
+Something wrong3!!
+(-12.04, 0.01, 7.85)
+Something wrong1!!
+14.04494
+Something wrong2!!
+4.791895
+Something wrong3!!
+(-12.61, 0.01, 6.90)
+Something wrong1!!
+14.23685
+Something wrong2!!
+4.7919
+Something wrong3!!
+(-13.10, 0.01, 5.92)
+Something wrong1!!
+14.34769
+Something wrong2!!
+4.791901
+Something wrong3!!
+(-13.52, 0.01, 4.89)
+Something wrong1!!
+14.37425
+Something wrong2!!
+4.791901
+Something wrong3!!
+(-13.85, 0.01, 3.85)
+Something wrong1!!
+14.31637
+Something wrong2!!
+4.791903
+Something wrong3!!
+(-14.11, 0.01, 2.77)
+Something wrong1!!
+14.17441
+Something wrong2!!
+4.791905
+Something wrong3!!
+(-14.28, 0.01, 1.68)
+Something wrong1!!
+13.95044
+Something wrong2!!
+4.791907
+Something wrong3!!
+(-14.36, 0.01, 0.59)
+Something wrong1!!
+13.64365
+Something wrong2!!
+4.791909
+Something wrong3!!
+(-14.37, 0.01, -0.52)
+Something wrong1!!
+13.25671
+Something wrong2!!
+4.791911
+Something wrong3!!
+(-14.28, 0.01, -1.61)
+Something wrong1!!
+12.7919
+Something wrong2!!
+4.791914
+Something wrong3!!
+(-14.12, 0.01, -2.70)
+Something wrong1!!
+12.25194
+Something wrong2!!
+4.791914
+Something wrong3!!
+(-13.87, 0.01, -3.78)
+Something wrong1!!
+11.6387
+Something wrong2!!
+4.791916
+Something wrong3!!
+(-13.54, 0.01, -4.83)
+Something wrong1!!
+10.95826
+Something wrong2!!
+4.79192
+Something wrong3!!
+(-13.13, 0.01, -5.85)
+Something wrong1!!
+10.21347
+Something wrong2!!
+4.791922
+Something wrong3!!
+(-12.64, 0.01, -6.84)
+Something wrong1!!
+-10.55177
+Something wrong2!!
+4.791946
+Something wrong3!!
+(7.33, 0.01, -12.37)
+Something wrong1!!
+-11.26855
+Something wrong2!!
+4.791949
+Something wrong3!!
+(8.25, 0.01, -11.77)
+Something wrong1!!
+-11.92918
+Something wrong2!!
+4.791948
+Something wrong3!!
+(9.13, 0.01, -11.10)
+Something wrong1!!
+-12.50857
+Something wrong2!!
+4.79195
+Something wrong3!!
+(9.96, 0.01, -10.37)
+Something wrong1!!
+-13.01447
+Something wrong2!!
+4.791952
+Something wrong3!!
+(10.72, 0.01, -9.58)
+Something wrong1!!
+-13.44392
+Something wrong2!!
+4.791951
+Something wrong3!!
+(11.42, 0.01, -8.73)
+Something wrong1!!
+-13.7944
+Something wrong2!!
+4.791953
+Something wrong3!!
+(12.06, 0.01, -7.83)
+Something wrong1!!
+-14.06663
+Something wrong2!!
+4.791952
+Something wrong3!!
+(12.62, 0.01, -6.88)
+Something wrong1!!
+-14.25245
+Something wrong2!!
+4.791955
+Something wrong3!!
+(13.11, 0.01, -5.90)
+Something wrong1!!
+-14.35455
+Something wrong2!!
+4.791955
+Something wrong3!!
+(13.52, 0.01, -4.87)
+Something wrong1!!
+-14.37233
+Something wrong2!!
+4.791959
+Something wrong3!!
+(13.86, 0.01, -3.82)
+Something wrong1!!
+-14.30569
+Something wrong2!!
+4.791962
+Something wrong3!!
+(14.11, 0.01, -2.75)
+Something wrong1!!
+-14.15381
+Something wrong2!!
+4.791964
+Something wrong3!!
+(14.28, 0.01, -1.66)
+Something wrong1!!
+-13.91947
+Something wrong2!!
+4.791965
+Something wrong3!!
+(14.36, 0.01, -0.56)
+Something wrong1!!
+-13.60336
+Something wrong2!!
+4.791966
+Something wrong3!!
+(14.37, 0.01, 0.54)
+Something wrong1!!
+-13.20733
+Something wrong2!!
+4.791966
+Something wrong3!!
+(14.28, 0.01, 1.64)
+Something wrong1!!
+-12.73373
+Something wrong2!!
+4.791968
+Something wrong3!!
+(14.12, 0.01, 2.73)
+Something wrong1!!
+-12.18574
+Something wrong2!!
+4.791967
+Something wrong3!!
+(13.86, 0.01, 3.80)
+Something wrong1!!
+-11.5658
+Something wrong2!!
+4.791968
+Something wrong3!!
+(13.53, 0.01, 4.85)
+Something wrong1!!
+-10.87793
+Something wrong2!!
+4.791972
+Something wrong3!!
+(13.12, 0.01, 5.87)
+Something wrong1!!
+-10.12616
+Something wrong2!!
+4.791974
+Something wrong3!!
+(12.63, 0.01, 6.86)
+Something wrong1!!
+10.5508
+Something wrong2!!
+4.791994
+Something wrong3!!
+(-7.35, 0.01, 12.36)
+Something wrong1!!
+11.25624
+Something wrong2!!
+4.791994
+Something wrong3!!
+(-8.27, 0.01, 11.76)
+Something wrong1!!
+11.90801
+Something wrong2!!
+4.791994
+Something wrong3!!
+(-9.15, 0.01, 11.09)
+Something wrong1!!
+12.4899
+Something wrong2!!
+4.791993
+Something wrong3!!
+(-9.97, 0.01, 10.36)
+Something wrong1!!
+12.99838
+Something wrong2!!
+4.791995
+Something wrong3!!
+(-10.74, 0.01, 9.56)
+Something wrong1!!
+13.43053
+Something wrong2!!
+4.791995
+Something wrong3!!
+(-11.44, 0.01, 8.71)
+Something wrong1!!
+13.77971
+Something wrong2!!
+4.791996
+Something wrong3!!
+(-12.07, 0.01, 7.81)
+Something wrong1!!
+14.05305
+Something wrong2!!
+4.791996
+Something wrong3!!
+(-12.63, 0.01, 6.86)
+Something wrong1!!
+14.24384
+Something wrong2!!
+4.791997
+Something wrong3!!
+(-13.12, 0.01, 5.87)
+Something wrong1!!
+14.35096
+Something wrong2!!
+4.792
+Something wrong3!!
+(-13.53, 0.01, 4.85)
+Something wrong1!!
+14.37377
+Something wrong2!!
+4.792002
+Something wrong3!!
+(-13.86, 0.01, 3.80)
+Something wrong1!!
+14.3129
+Something wrong2!!
+4.792002
+Something wrong3!!
+(-14.11, 0.01, 2.73)
+Something wrong1!!
+14.16782
+Something wrong2!!
+4.792003
+Something wrong3!!
+(-14.28, 0.01, 1.64)
+Something wrong1!!
+13.9395
+Something wrong2!!
+4.792004
+Something wrong3!!
+(-14.37, 0.01, 0.54)
+Something wrong1!!
+13.62931
+Something wrong2!!
+4.792005
+Something wrong3!!
+(-14.37, 0.01, -0.56)
+Something wrong1!!
+13.23905
+Something wrong2!!
+4.792005
+Something wrong3!!
+(-14.28, 0.01, -1.66)
+Something wrong1!!
+12.77134
+Something wrong2!!
+4.792006
+Something wrong3!!
+(-14.11, 0.01, -2.75)
+Something wrong1!!
+12.22835
+Something wrong2!!
+4.792006
+Something wrong3!!
+(-13.86, 0.01, -3.82)
+Something wrong1!!
+11.61352
+Something wrong2!!
+4.792008
+Something wrong3!!
+(-13.53, 0.01, -4.87)
+Something wrong1!!
+10.93046
+Something wrong2!!
+4.79201
+Something wrong3!!
+(-13.11, 0.01, -5.89)
+Something wrong1!!
+10.18319
+Something wrong2!!
+4.79201
+Something wrong3!!
+(-12.62, 0.01, -6.88)
+Something wrong1!!
+-10.59017
+Something wrong2!!
+4.792023
+Something wrong3!!
+(7.37, 0.01, -12.34)
+Something wrong1!!
+-11.30366
+Something wrong2!!
+4.792024
+Something wrong3!!
+(8.29, 0.01, -11.74)
+Something wrong1!!
+-11.95075
+Something wrong2!!
+4.792024
+Something wrong3!!
+(9.17, 0.01, -11.07)
+Something wrong1!!
+-12.52764
+Something wrong2!!
+4.792024
+Something wrong3!!
+(9.99, 0.01, -10.34)
+Something wrong1!!
+-13.03093
+Something wrong2!!
+4.792025
+Something wrong3!!
+(10.75, 0.01, -9.54)
+Something wrong1!!
+-13.46313
+Something wrong2!!
+4.792027
+Something wrong3!!
+(11.45, 0.01, -8.69)
+Something wrong1!!
+-13.8097
+Something wrong2!!
+4.792027
+Something wrong3!!
+(12.08, 0.01, -7.79)
+Something wrong1!!
+-14.07514
+Something wrong2!!
+4.792027
+Something wrong3!!
+(12.64, 0.01, -6.84)
+Something wrong1!!
+-14.25791
+Something wrong2!!
+4.792028
+Something wrong3!!
+(13.13, 0.01, -5.85)
+Something wrong1!!
+-14.35692
+Something wrong2!!
+4.79203
+Something wrong3!!
+(13.54, 0.01, -4.83)
+Something wrong1!!
+-14.37134
+Something wrong2!!
+4.792029
+Something wrong3!!
+(13.87, 0.01, -3.78)
+Something wrong1!!
+-14.30087
+Something wrong2!!
+4.792031
+Something wrong3!!
+(14.12, 0.01, -2.71)
+Something wrong1!!
+-14.14638
+Something wrong2!!
+4.792032
+Something wrong3!!
+(14.28, 0.01, -1.62)
+Something wrong1!!
+-13.90879
+Something wrong2!!
+4.792034
+Something wrong3!!
+(14.37, 0.01, -0.52)
+Something wrong1!!
+-13.58949
+Something wrong2!!
+4.792034
+Something wrong3!!
+(14.36, 0.01, 0.58)
+Something wrong1!!
+-13.18948
+Something wrong2!!
+4.792035
+Something wrong3!!
+(14.28, 0.01, 1.68)
+Something wrong1!!
+-12.71272
+Something wrong2!!
+4.792037
+Something wrong3!!
+(14.11, 0.01, 2.77)
+Something wrong1!!
+-12.16129
+Something wrong2!!
+4.79204
+Something wrong3!!
+(13.85, 0.01, 3.84)
+Something wrong1!!
+-11.5384
+Something wrong2!!
+4.792038
+Something wrong3!!
+(13.52, 0.01, 4.89)
+Something wrong1!!
+-10.84776
+Something wrong2!!
+4.792037
+Something wrong3!!
+(13.10, 0.01, 5.91)
+Something wrong1!!
+-10.09725
+Something wrong2!!
+4.792039
+Something wrong3!!
+(12.61, 0.01, 6.90)
+Something wrong1!!
+10.57366
+Something wrong2!!
+4.79205
+Something wrong3!!
+(-7.39, 0.01, 12.33)
+Something wrong1!!
+11.28857
+Something wrong2!!
+4.792052
+Something wrong3!!
+(-8.31, 0.01, 11.73)
+Something wrong1!!
+11.93719
+Something wrong2!!
+4.792052
+Something wrong3!!
+(-9.18, 0.01, 11.06)
+Something wrong1!!
+12.51567
+Something wrong2!!
+4.792053
+Something wrong3!!
+(-10.00, 0.01, 10.32)
+Something wrong1!!
+13.01377
+Something wrong2!!
+4.792054
+Something wrong3!!
+(-10.77, 0.01, 9.53)
+Something wrong1!!
+13.44339
+Something wrong2!!
+4.792052
+Something wrong3!!
+(-11.46, 0.01, 8.68)
+Something wrong1!!
+13.79404
+Something wrong2!!
+4.792051
+Something wrong3!!
+(-12.09, 0.01, 7.77)
+Something wrong1!!
+14.06366
+Something wrong2!!
+4.79205
+Something wrong3!!
+(-12.65, 0.01, 6.82)
+Something wrong1!!
+14.25068
+Something wrong2!!
+4.792051
+Something wrong3!!
+(-13.14, 0.01, 5.83)
+Something wrong1!!
+14.35338
+Something wrong2!!
+4.792053
+Something wrong3!!
+(-13.55, 0.01, 4.81)
+Something wrong1!!
+14.37319
+Something wrong2!!
+4.792056
+Something wrong3!!
+(-13.88, 0.01, 3.76)
+Something wrong1!!
+14.30855
+Something wrong2!!
+4.792057
+Something wrong3!!
+(-14.12, 0.01, 2.69)
+Something wrong1!!
+14.15986
+Something wrong2!!
+4.792056
+Something wrong3!!
+(-14.29, 0.01, 1.60)
+Something wrong1!!
+13.928
+Something wrong2!!
+4.792057
+Something wrong3!!
+(-14.37, 0.01, 0.50)
+Something wrong1!!
+13.61549
+Something wrong2!!
+4.792058
+Something wrong3!!
+(-14.36, 0.01, -0.61)
+Something wrong1!!
+13.22211
+Something wrong2!!
+4.792059
+Something wrong3!!
+(-14.27, 0.01, -1.70)
+Something wrong1!!
+12.75103
+Something wrong2!!
+4.792059
+Something wrong3!!
+(-14.10, 0.01, -2.79)
+Something wrong1!!
+12.20506
+Something wrong2!!
+4.792058
+Something wrong3!!
+(-13.85, 0.01, -3.86)
+Something wrong1!!
+11.5874
+Something wrong2!!
+4.792058
+Something wrong3!!
+(-13.51, 0.01, -4.91)
+Something wrong1!!
+10.89913
+Something wrong2!!
+4.792058
+Something wrong3!!
+(-13.09, 0.01, -5.93)
+Something wrong1!!
+10.14915
+Something wrong2!!
+4.792058
+Something wrong3!!
+(-12.60, 0.01, -6.92)
+Something wrong1!!
+-10.61584
+Something wrong2!!
+4.792064
+Something wrong3!!
+(7.41, 0.01, -12.32)
+Something wrong1!!
+-11.32712
+Something wrong2!!
+4.792063
+Something wrong3!!
+(8.33, 0.01, -11.72)
+Something wrong1!!
+-11.97186
+Something wrong2!!
+4.792064
+Something wrong3!!
+(9.20, 0.01, -11.05)
+Something wrong1!!
+-12.55469
+Something wrong2!!
+4.792062
+Something wrong3!!
+(10.02, 0.01, -10.31)
+Something wrong1!!
+-13.05422
+Something wrong2!!
+4.792062
+Something wrong3!!
+(10.78, 0.01, -9.51)
+Something wrong1!!
+-13.47708
+Something wrong2!!
+4.792063
+Something wrong3!!
+(11.48, 0.01, -8.66)
+Something wrong1!!
+-13.82076
+Something wrong2!!
+4.792064
+Something wrong3!!
+(12.11, 0.01, -7.75)
+Something wrong1!!
+-14.08326
+Something wrong2!!
+4.792064
+Something wrong3!!
+(12.66, 0.01, -6.80)
+Something wrong1!!
+-14.26455
+Something wrong2!!
+4.792066
+Something wrong3!!
+(13.15, 0.01, -5.81)
+Something wrong1!!
+-14.35961
+Something wrong2!!
+4.792067
+Something wrong3!!
+(13.56, 0.01, -4.79)
+Something wrong1!!
+-14.37032
+Something wrong2!!
+4.792068
+Something wrong3!!
+(13.88, 0.01, -3.74)
+Something wrong1!!
+-14.2966
+Something wrong2!!
+4.792067
+Something wrong3!!
+(14.13, 0.01, -2.66)
+Something wrong1!!
+-14.1389
+Something wrong2!!
+4.792066
+Something wrong3!!
+(14.29, 0.01, -1.57)
+Something wrong1!!
+-13.89681
+Something wrong2!!
+4.792065
+Something wrong3!!
+(14.37, 0.01, -0.47)
+Something wrong1!!
+-13.57403
+Something wrong2!!
+4.792064
+Something wrong3!!
+(14.36, 0.01, 0.63)
+Something wrong1!!
+-13.17153
+Something wrong2!!
+4.792067
+Something wrong3!!
+(14.27, 0.01, 1.73)
+Something wrong1!!
+-12.69164
+Something wrong2!!
+4.792069
+Something wrong3!!
+(14.10, 0.01, 2.81)
+Something wrong1!!
+-12.13722
+Something wrong2!!
+4.792069
+Something wrong3!!
+(13.84, 0.01, 3.89)
+Something wrong1!!
+-11.51294
+Something wrong2!!
+4.792067
+Something wrong3!!
+(13.50, 0.01, 4.93)
+Something wrong1!!
+-10.81975
+Something wrong2!!
+4.792068
+Something wrong3!!
+(13.09, 0.01, 5.95)
+Something wrong1!!
+-10.06297
+Something wrong2!!
+4.792067
+Something wrong3!!
+(12.59, 0.01, 6.94)
+Something wrong1!!
+10.60924
+Something wrong2!!
+4.792077
+Something wrong3!!
+(-7.43, 0.01, 12.31)
+Something wrong1!!
+11.3211
+Something wrong2!!
+4.792078
+Something wrong3!!
+(-8.35, 0.01, 11.71)
+Something wrong1!!
+11.95661
+Something wrong2!!
+4.792077
+Something wrong3!!
+(-9.22, 0.01, 11.03)
+Something wrong1!!
+12.53283
+Something wrong2!!
+4.792078
+Something wrong3!!
+(-10.04, 0.01, 10.29)
+Something wrong1!!
+13.03542
+Something wrong2!!
+4.792077
+Something wrong3!!
+(-10.80, 0.01, 9.49)
+Something wrong1!!
+13.46145
+Something wrong2!!
+4.792078
+Something wrong3!!
+(-11.49, 0.01, 8.64)
+Something wrong1!!
+13.8084
+Something wrong2!!
+4.79208
+Something wrong3!!
+(-12.12, 0.01, 7.73)
+Something wrong1!!
+14.07157
+Something wrong2!!
+4.792079
+Something wrong3!!
+(-12.68, 0.01, 6.78)
+Something wrong1!!
+14.2557
+Something wrong2!!
+4.792078
+Something wrong3!!
+(-13.16, 0.01, 5.79)
+Something wrong1!!
+14.35611
+Something wrong2!!
+4.792079
+Something wrong3!!
+(-13.56, 0.01, 4.77)
+Something wrong1!!
+14.37219
+Something wrong2!!
+4.792079
+Something wrong3!!
+(-13.89, 0.01, 3.72)
+Something wrong1!!
+14.30382
+Something wrong2!!
+4.792078
+Something wrong3!!
+(-14.13, 0.01, 2.64)
+Something wrong1!!
+14.1526
+Something wrong2!!
+4.792081
+Something wrong3!!
+(-14.29, 0.01, 1.55)
+Something wrong1!!
+13.91757
+Something wrong2!!
+4.79208
+Something wrong3!!
+(-14.37, 0.01, 0.45)
+Something wrong1!!
+13.60081
+Something wrong2!!
+4.79208
+Something wrong3!!
+(-14.36, 0.01, -0.65)
+Something wrong1!!
+13.20412
+Something wrong2!!
+4.79208
+Something wrong3!!
+(-14.27, 0.01, -1.75)
+Something wrong1!!
+12.72991
+Something wrong2!!
+4.79208
+Something wrong3!!
+(-14.09, 0.01, -2.84)
+Something wrong1!!
+12.1804
+Something wrong2!!
+4.792081
+Something wrong3!!
+(-13.84, 0.01, -3.91)
+Something wrong1!!
+11.55979
+Something wrong2!!
+4.792083
+Something wrong3!!
+(-13.50, 0.01, -4.96)
+Something wrong1!!
+10.87124
+Something wrong2!!
+4.792083
+Something wrong3!!
+(-13.08, 0.01, -5.97)
+Something wrong1!!
+10.11887
+Something wrong2!!
+4.792082
+Something wrong3!!
+(-12.58, 0.01, -6.96)
+Something wrong1!!
+-10.64117
+Something wrong2!!
+4.792089
+Something wrong3!!
+(7.44, 0.01, -12.30)
+Something wrong1!!
+-11.36166
+Something wrong2!!
+4.79209
+Something wrong3!!
+(8.36, 0.01, -11.69)
+Something wrong1!!
+-12.00291
+Something wrong2!!
+4.792091
+Something wrong3!!
+(9.24, 0.01, -11.02)
+Something wrong1!!
+-12.57365
+Something wrong2!!
+4.792089
+Something wrong3!!
+(10.05, 0.01, -10.28)
+Something wrong1!!
+-13.07053
+Something wrong2!!
+4.79209
+Something wrong3!!
+(10.81, 0.01, -9.48)
+Something wrong1!!
+-13.49063
+Something wrong2!!
+4.792087
+Something wrong3!!
+(11.50, 0.01, -8.62)
+Something wrong1!!
+-13.83541
+Something wrong2!!
+4.792087
+Something wrong3!!
+(12.13, 0.01, -7.72)
+Something wrong1!!
+-14.09394
+Something wrong2!!
+4.792088
+Something wrong3!!
+(12.69, 0.01, -6.76)
+Something wrong1!!
+-14.26968
+Something wrong2!!
+4.792087
+Something wrong3!!
+(13.17, 0.01, -5.77)
+Something wrong1!!
+-14.36159
+Something wrong2!!
+4.792088
+Something wrong3!!
+(13.57, 0.01, -4.75)
+Something wrong1!!
+-14.36914
+Something wrong2!!
+4.792088
+Something wrong3!!
+(13.89, 0.01, -3.69)
+Something wrong1!!
+-14.2914
+Something wrong2!!
+4.792088
+Something wrong3!!
+(14.14, 0.01, -2.62)
+Something wrong1!!
+-14.12997
+Something wrong2!!
+4.792087
+Something wrong3!!
+(14.29, 0.01, -1.53)
+Something wrong1!!
+-13.88555
+Something wrong2!!
+4.792087
+Something wrong3!!
+(14.37, 0.01, -0.43)
+Something wrong1!!
+-13.55954
+Something wrong2!!
+4.792088
+Something wrong3!!
+(14.36, 0.01, 0.67)
+Something wrong1!!
+-13.15389
+Something wrong2!!
+4.792086
+Something wrong3!!
+(14.27, 0.01, 1.77)
+Something wrong1!!
+-12.6707
+Something wrong2!!
+4.792089
+Something wrong3!!
+(14.09, 0.01, 2.86)
+Something wrong1!!
+-12.11332
+Something wrong2!!
+4.792087
+Something wrong3!!
+(13.83, 0.01, 3.93)
+Something wrong1!!
+-11.48476
+Something wrong2!!
+4.792087
+Something wrong3!!
+(13.49, 0.01, 4.98)
+Something wrong1!!
+-10.78876
+Something wrong2!!
+4.792089
+Something wrong3!!
+(13.07, 0.01, 5.99)
+Something wrong1!!
+-10.02938
+Something wrong2!!
+4.79209
+Something wrong3!!
+(12.57, 0.01, 6.98)
+Something wrong1!!
+10.63215
+Something wrong2!!
+4.792088
+Something wrong3!!
+(-7.46, 0.01, 12.29)
+Something wrong1!!
+11.34201
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-8.38, 0.01, 11.68)
+Something wrong1!!
+11.98527
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-9.25, 0.01, 11.00)
+Something wrong1!!
+12.55809
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-10.07, 0.01, 10.26)
+Something wrong1!!
+13.05718
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-10.82, 0.01, 9.46)
+Something wrong1!!
+13.47426
+Something wrong2!!
+4.79209
+Something wrong3!!
+(-11.52, 0.01, 8.60)
+Something wrong1!!
+13.81855
+Something wrong2!!
+4.792089
+Something wrong3!!
+(-12.14, 0.01, 7.70)
+Something wrong1!!
+14.08167
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-12.70, 0.01, 6.74)
+Something wrong1!!
+14.26208
+Something wrong2!!
+4.792093
+Something wrong3!!
+(-13.18, 0.01, 5.75)
+Something wrong1!!
+14.35869
+Something wrong2!!
+4.792094
+Something wrong3!!
+(-13.58, 0.01, 4.73)
+Something wrong1!!
+14.37121
+Something wrong2!!
+4.792092
+Something wrong3!!
+(-13.90, 0.01, 3.67)
+Something wrong1!!
+14.29977
+Something wrong2!!
+4.792092
+Something wrong3!!
+(-14.14, 0.01, 2.60)
+Something wrong1!!
+14.14433
+Something wrong2!!
+4.792093
+Something wrong3!!
+(-14.30, 0.01, 1.51)
+Something wrong1!!
+13.9058
+Something wrong2!!
+4.792092
+Something wrong3!!
+(-14.37, 0.01, 0.41)
+Something wrong1!!
+13.58558
+Something wrong2!!
+4.792091
+Something wrong3!!
+(-14.36, 0.01, -0.70)
+Something wrong1!!
+13.18637
+Something wrong2!!
+4.792093
+Something wrong3!!
+(-14.26, 0.01, -1.79)
+Something wrong1!!
+12.70904
+Something wrong2!!
+4.792094
+Something wrong3!!
+(-14.08, 0.01, -2.88)
+Something wrong1!!
+12.15703
+Something wrong2!!
+4.792093
+Something wrong3!!
+(-13.82, 0.01, -3.95)
+Something wrong1!!
+11.53364
+Something wrong2!!
+4.792092
+Something wrong3!!
+(-13.48, 0.01, -5.00)
+Something wrong1!!
+10.84246
+Something wrong2!!
+4.792093
+Something wrong3!!
+(-13.06, 0.01, -6.02)
+Something wrong1!!
+10.08372
+Something wrong2!!
+4.792092
+Something wrong3!!
+(-12.56, 0.01, -7.00)
+Something wrong1!!
+-10.67936
+Something wrong2!!
+4.792099
+Something wrong3!!
+(7.48, 0.01, -12.27)
+Something wrong1!!
+-11.3851
+Something wrong2!!
+4.792096
+Something wrong3!!
+(8.40, 0.01, -11.67)
+Something wrong1!!
+-12.02396
+Something wrong2!!
+4.792097
+Something wrong3!!
+(9.27, 0.01, -10.99)
+Something wrong1!!
+-12.59219
+Something wrong2!!
+4.792097
+Something wrong3!!
+(10.08, 0.01, -10.25)
+Something wrong1!!
+-13.09322
+Something wrong2!!
+4.792098
+Something wrong3!!
+(10.84, 0.01, -9.44)
+Something wrong1!!
+-13.50944
+Something wrong2!!
+4.792097
+Something wrong3!!
+(11.53, 0.01, -8.59)
+Something wrong1!!
+-13.84631
+Something wrong2!!
+4.792097
+Something wrong3!!
+(12.15, 0.01, -7.68)
+Something wrong1!!
+-14.10184
+Something wrong2!!
+4.792097
+Something wrong3!!
+(12.71, 0.01, -6.72)
+Something wrong1!!
+-14.27454
+Something wrong2!!
+4.792097
+Something wrong3!!
+(13.18, 0.01, -5.73)
+Something wrong1!!
+-14.36383
+Something wrong2!!
+4.792096
+Something wrong3!!
+(13.58, 0.01, -4.70)
+Something wrong1!!
+-14.36747
+Something wrong2!!
+4.792096
+Something wrong3!!
+(13.91, 0.01, -3.65)
+Something wrong1!!
+-14.28671
+Something wrong2!!
+4.792097
+Something wrong3!!
+(14.14, 0.01, -2.57)
+Something wrong1!!
+-14.12204
+Something wrong2!!
+4.7921
+Something wrong3!!
+(14.30, 0.01, -1.48)
+Something wrong1!!
+-13.8744
+Something wrong2!!
+4.792099
+Something wrong3!!
+(14.37, 0.01, -0.38)
+Something wrong1!!
+-13.54405
+Something wrong2!!
+4.792098
+Something wrong3!!
+(14.36, 0.01, 0.72)
+Something wrong1!!
+-13.13508
+Something wrong2!!
+4.792097
+Something wrong3!!
+(14.26, 0.01, 1.82)
+Something wrong1!!
+-12.64896
+Something wrong2!!
+4.792097
+Something wrong3!!
+(14.08, 0.01, 2.90)
+Something wrong1!!
+-12.08853
+Something wrong2!!
+4.792096
+Something wrong3!!
+(13.82, 0.01, 3.97)
+Something wrong1!!
+-11.45709
+Something wrong2!!
+4.792098
+Something wrong3!!
+(13.47, 0.01, 5.02)
+Something wrong1!!
+-10.76109
+Something wrong2!!
+4.792098
+Something wrong3!!
+(13.05, 0.01, 6.04)
+Something wrong1!!
+10.66734
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-7.50, 0.01, 12.26)
+Something wrong1!!
+11.37414
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-8.42, 0.01, 11.65)
+Something wrong1!!
+12.01412
+Something wrong2!!
+4.7921
+Something wrong3!!
+(-9.29, 0.01, 10.97)
+Something wrong1!!
+12.57535
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-10.10, 0.01, 10.23)
+Something wrong1!!
+13.07199
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-10.85, 0.01, 9.43)
+Something wrong1!!
+13.49185
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-11.54, 0.01, 8.57)
+Something wrong1!!
+13.83245
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-12.17, 0.01, 7.66)
+Something wrong1!!
+14.09181
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-12.72, 0.01, 6.70)
+Something wrong1!!
+14.26693
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-13.19, 0.01, 5.71)
+Something wrong1!!
+14.36059
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-13.59, 0.01, 4.68)
+Something wrong1!!
+14.36988
+Something wrong2!!
+4.7921
+Something wrong3!!
+(-13.91, 0.01, 3.63)
+Something wrong1!!
+14.29477
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-14.15, 0.01, 2.55)
+Something wrong1!!
+14.13568
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-14.30, 0.01, 1.46)
+Something wrong1!!
+13.89482
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-14.37, 0.01, 0.36)
+Something wrong1!!
+13.57145
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-14.36, 0.01, -0.74)
+Something wrong1!!
+13.16834
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-14.26, 0.01, -1.84)
+Something wrong1!!
+12.68789
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-14.08, 0.01, -2.92)
+Something wrong1!!
+12.13291
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-13.81, 0.01, -3.99)
+Something wrong1!!
+11.50512
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-13.46, 0.01, -5.04)
+Something wrong1!!
+10.81111
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-13.04, 0.01, -6.06)
+Something wrong1!!
+10.05359
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-12.54, 0.01, -7.04)
+Something wrong1!!
+-10.70466
+Something wrong2!!
+4.792099
+Something wrong3!!
+(7.52, 0.01, -12.25)
+Something wrong1!!
+-11.40817
+Something wrong2!!
+4.792099
+Something wrong3!!
+(8.44, 0.01, -11.64)
+Something wrong1!!
+-12.05444
+Something wrong2!!
+4.792099
+Something wrong3!!
+(9.30, 0.01, -10.96)
+Something wrong1!!
+-12.619
+Something wrong2!!
+4.792101
+Something wrong3!!
+(10.12, 0.01, -10.21)
+Something wrong1!!
+-13.10945
+Something wrong2!!
+4.792102
+Something wrong3!!
+(10.87, 0.01, -9.41)
+Something wrong1!!
+-13.52287
+Something wrong2!!
+4.7921
+Something wrong3!!
+(11.56, 0.01, -8.55)
+Something wrong1!!
+-13.85687
+Something wrong2!!
+4.792101
+Something wrong3!!
+(12.18, 0.01, -7.64)
+Something wrong1!!
+-14.11199
+Something wrong2!!
+4.792102
+Something wrong3!!
+(12.73, 0.01, -6.68)
+Something wrong1!!
+-14.28071
+Something wrong2!!
+4.792102
+Something wrong3!!
+(13.20, 0.01, -5.69)
+Something wrong1!!
+-14.36552
+Something wrong2!!
+4.792101
+Something wrong3!!
+(13.60, 0.01, -4.66)
+Something wrong1!!
+-14.36596
+Something wrong2!!
+4.792102
+Something wrong3!!
+(13.92, 0.01, -3.61)
+Something wrong1!!
+-14.28202
+Something wrong2!!
+4.792104
+Something wrong3!!
+(14.15, 0.01, -2.53)
+Something wrong1!!
+-14.11292
+Something wrong2!!
+4.792104
+Something wrong3!!
+(14.30, 0.01, -1.44)
+Something wrong1!!
+-13.86167
+Something wrong2!!
+4.792103
+Something wrong3!!
+(14.37, 0.01, -0.34)
+Something wrong1!!
+-13.52899
+Something wrong2!!
+4.792103
+Something wrong3!!
+(14.36, 0.01, 0.76)
+Something wrong1!!
+-13.11684
+Something wrong2!!
+4.792101
+Something wrong3!!
+(14.26, 0.01, 1.86)
+Something wrong1!!
+-12.62764
+Something wrong2!!
+4.792105
+Something wrong3!!
+(14.07, 0.01, 2.95)
+Something wrong1!!
+-12.06489
+Something wrong2!!
+4.792108
+Something wrong3!!
+(13.80, 0.01, 4.02)
+Something wrong1!!
+-11.43069
+Something wrong2!!
+4.792105
+Something wrong3!!
+(13.46, 0.01, 5.06)
+Something wrong1!!
+-10.72937
+Something wrong2!!
+4.792104
+Something wrong3!!
+(13.03, 0.01, 6.08)
+Something wrong1!!
+10.70266
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-7.54, 0.01, 12.24)
+Something wrong1!!
+11.39518
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-8.46, 0.01, 11.63)
+Something wrong1!!
+12.03301
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-9.32, 0.01, 10.94)
+Something wrong1!!
+12.60016
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-10.13, 0.01, 10.20)
+Something wrong1!!
+13.09329
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-10.88, 0.01, 9.39)
+Something wrong1!!
+13.50951
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-11.57, 0.01, 8.53)
+Something wrong1!!
+13.84258
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-12.19, 0.01, 7.62)
+Something wrong1!!
+14.09915
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-12.74, 0.01, 6.66)
+Something wrong1!!
+14.2729
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-13.21, 0.01, 5.67)
+Something wrong1!!
+14.3628
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-13.61, 0.01, 4.64)
+Something wrong1!!
+14.36833
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-13.92, 0.01, 3.58)
+Something wrong1!!
+14.29031
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-14.16, 0.01, 2.51)
+Something wrong1!!
+14.12808
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-14.31, 0.01, 1.42)
+Something wrong1!!
+13.88287
+Something wrong2!!
+4.792101
+Something wrong3!!
+(-14.37, 0.01, 0.32)
+Something wrong1!!
+13.5561
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-14.35, 0.01, -0.79)
+Something wrong1!!
+13.14972
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-14.25, 0.01, -1.88)
+Something wrong1!!
+12.66625
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-14.07, 0.01, -2.97)
+Something wrong1!!
+12.10824
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-13.80, 0.01, -4.04)
+Something wrong1!!
+11.47909
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.45, 0.01, -5.08)
+Something wrong1!!
+10.78251
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-13.02, 0.01, -6.10)
+Something wrong1!!
+10.02259
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-12.51, 0.01, -7.08)
+Something wrong1!!
+-10.74235
+Something wrong2!!
+4.792104
+Something wrong3!!
+(7.56, 0.01, -12.23)
+Something wrong1!!
+-11.44253
+Something wrong2!!
+4.792106
+Something wrong3!!
+(8.47, 0.01, -11.61)
+Something wrong1!!
+-12.07547
+Something wrong2!!
+4.792103
+Something wrong3!!
+(9.34, 0.01, -10.93)
+Something wrong1!!
+-12.63751
+Something wrong2!!
+4.792106
+Something wrong3!!
+(10.15, 0.01, -10.18)
+Something wrong1!!
+-13.12528
+Something wrong2!!
+4.792106
+Something wrong3!!
+(10.90, 0.01, -9.37)
+Something wrong1!!
+-13.54112
+Something wrong2!!
+4.792105
+Something wrong3!!
+(11.58, 0.01, -8.51)
+Something wrong1!!
+-13.87116
+Something wrong2!!
+4.792104
+Something wrong3!!
+(12.20, 0.01, -7.60)
+Something wrong1!!
+-14.11973
+Something wrong2!!
+4.792105
+Something wrong3!!
+(12.75, 0.01, -6.64)
+Something wrong1!!
+-14.28535
+Something wrong2!!
+4.792106
+Something wrong3!!
+(13.22, 0.01, -5.65)
+Something wrong1!!
+-14.36706
+Something wrong2!!
+4.792106
+Something wrong3!!
+(13.61, 0.01, -4.62)
+Something wrong1!!
+-14.36399
+Something wrong2!!
+4.792107
+Something wrong3!!
+(13.93, 0.01, -3.56)
+Something wrong1!!
+-14.27621
+Something wrong2!!
+4.792108
+Something wrong3!!
+(14.16, 0.01, -2.49)
+Something wrong1!!
+-14.10457
+Something wrong2!!
+4.792109
+Something wrong3!!
+(14.31, 0.01, -1.39)
+Something wrong1!!
+-13.85007
+Something wrong2!!
+4.792107
+Something wrong3!!
+(14.37, 0.01, -0.29)
+Something wrong1!!
+-13.5142
+Something wrong2!!
+4.792108
+Something wrong3!!
+(14.35, 0.01, 0.81)
+Something wrong1!!
+-13.09817
+Something wrong2!!
+4.792109
+Something wrong3!!
+(14.25, 0.01, 1.91)
+Something wrong1!!
+-12.60585
+Something wrong2!!
+4.792108
+Something wrong3!!
+(14.06, 0.01, 2.99)
+Something wrong1!!
+-12.03947
+Something wrong2!!
+4.792108
+Something wrong3!!
+(13.79, 0.01, 4.06)
+Something wrong1!!
+-11.40238
+Something wrong2!!
+4.79211
+Something wrong3!!
+(13.44, 0.01, 5.10)
+Something wrong1!!
+-10.6983
+Something wrong2!!
+4.792108
+Something wrong3!!
+(13.01, 0.01, 6.12)
+Something wrong1!!
+10.72516
+Something wrong2!!
+4.792103
+Something wrong3!!
+(-7.58, 0.01, 12.22)
+Something wrong1!!
+11.42683
+Something wrong2!!
+4.792102
+Something wrong3!!
+(-8.49, 0.01, 11.60)
+Something wrong1!!
+12.06143
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-9.36, 0.01, 10.91)
+Something wrong1!!
+12.62514
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-10.17, 0.01, 10.17)
+Something wrong1!!
+13.10814
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-10.91, 0.01, 9.36)
+Something wrong1!!
+13.5218
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-11.60, 0.01, 8.49)
+Something wrong1!!
+13.85603
+Something wrong2!!
+4.792106
+Something wrong3!!
+(-12.21, 0.01, 7.58)
+Something wrong1!!
+14.10886
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-12.76, 0.01, 6.62)
+Something wrong1!!
+14.27882
+Something wrong2!!
+4.792106
+Something wrong3!!
+(-13.23, 0.01, 5.63)
+Something wrong1!!
+14.36447
+Something wrong2!!
+4.792104
+Something wrong3!!
+(-13.62, 0.01, 4.60)
+Something wrong1!!
+14.36696
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-13.93, 0.01, 3.54)
+Something wrong1!!
+14.28506
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-14.16, 0.01, 2.46)
+Something wrong1!!
+14.11924
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-14.31, 0.01, 1.37)
+Something wrong1!!
+13.87047
+Something wrong2!!
+4.792106
+Something wrong3!!
+(-14.37, 0.01, 0.27)
+Something wrong1!!
+13.54136
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-14.35, 0.01, -0.83)
+Something wrong1!!
+13.13181
+Something wrong2!!
+4.792106
+Something wrong3!!
+(-14.25, 0.01, -1.93)
+Something wrong1!!
+12.64515
+Something wrong2!!
+4.792106
+Something wrong3!!
+(-14.06, 0.01, -3.01)
+Something wrong1!!
+12.08418
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.78, 0.01, -4.08)
+Something wrong1!!
+11.45225
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.43, 0.01, -5.12)
+Something wrong1!!
+10.75024
+Something wrong2!!
+4.792105
+Something wrong3!!
+(-13.00, 0.01, -6.14)
+Something wrong1!!
+-10.00645
+Something wrong2!!
+4.79211
+Something wrong3!!
+(6.64, 0.01, -12.75)
+Something wrong1!!
+-10.76761
+Something wrong2!!
+4.792111
+Something wrong3!!
+(7.60, 0.01, -12.20)
+Something wrong1!!
+-11.46554
+Something wrong2!!
+4.79211
+Something wrong3!!
+(8.51, 0.01, -11.59)
+Something wrong1!!
+-12.09609
+Something wrong2!!
+4.792112
+Something wrong3!!
+(9.37, 0.01, -10.90)
+Something wrong1!!
+-12.66372
+Something wrong2!!
+4.792111
+Something wrong3!!
+(10.18, 0.01, -10.15)
+Something wrong1!!
+-13.14769
+Something wrong2!!
+4.792111
+Something wrong3!!
+(10.93, 0.01, -9.34)
+Something wrong1!!
+-13.55446
+Something wrong2!!
+4.792111
+Something wrong3!!
+(11.61, 0.01, -8.48)
+Something wrong1!!
+-13.88159
+Something wrong2!!
+4.792111
+Something wrong3!!
+(12.23, 0.01, -7.56)
+Something wrong1!!
+-14.12718
+Something wrong2!!
+4.792109
+Something wrong3!!
+(12.77, 0.01, -6.60)
+Something wrong1!!
+-14.29108
+Something wrong2!!
+4.79211
+Something wrong3!!
+(13.24, 0.01, -5.61)
+Something wrong1!!
+-14.36884
+Something wrong2!!
+4.792111
+Something wrong3!!
+(13.63, 0.01, -4.58)
+Something wrong1!!
+-14.36219
+Something wrong2!!
+4.792112
+Something wrong3!!
+(13.94, 0.01, -3.52)
+Something wrong1!!
+-14.27116
+Something wrong2!!
+4.79211
+Something wrong3!!
+(14.17, 0.01, -2.44)
+Something wrong1!!
+-14.0963
+Something wrong2!!
+4.79211
+Something wrong3!!
+(14.31, 0.01, -1.35)
+Something wrong1!!
+-13.83729
+Something wrong2!!
+4.792108
+Something wrong3!!
+(14.37, 0.01, -0.25)
+Something wrong1!!
+-13.49799
+Something wrong2!!
+4.79211
+Something wrong3!!
+(14.35, 0.01, 0.85)
+Something wrong1!!
+-13.07937
+Something wrong2!!
+4.792109
+Something wrong3!!
+(14.24, 0.01, 1.95)
+Something wrong1!!
+-12.58395
+Something wrong2!!
+4.792109
+Something wrong3!!
+(14.05, 0.01, 3.04)
+Something wrong1!!
+-12.01457
+Something wrong2!!
+4.792107
+Something wrong3!!
+(13.78, 0.01, 4.10)
+Something wrong1!!
+-11.37635
+Something wrong2!!
+4.792108
+Something wrong3!!
+(13.42, 0.01, 5.15)
+Something wrong1!!
+-10.66976
+Something wrong2!!
+4.792109
+Something wrong3!!
+(12.99, 0.01, 6.16)
+Something wrong1!!
+10.76009
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-7.62, 0.01, 12.19)
+Something wrong1!!
+11.45868
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-8.53, 0.01, 11.57)
+Something wrong1!!
+12.08042
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-9.39, 0.01, 10.89)
+Something wrong1!!
+12.64186
+Something wrong2!!
+4.79211
+Something wrong3!!
+(-10.20, 0.01, 10.13)
+Something wrong1!!
+13.129
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-10.94, 0.01, 9.32)
+Something wrong1!!
+13.53905
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-11.63, 0.01, 8.46)
+Something wrong1!!
+13.86954
+Something wrong2!!
+4.79211
+Something wrong3!!
+(-12.24, 0.01, 7.54)
+Something wrong1!!
+14.11615
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-12.78, 0.01, 6.58)
+Something wrong1!!
+14.28321
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.25, 0.01, 5.59)
+Something wrong1!!
+14.36637
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-13.64, 0.01, 4.55)
+Something wrong1!!
+14.36514
+Something wrong2!!
+4.79211
+Something wrong3!!
+(-13.94, 0.01, 3.50)
+Something wrong1!!
+14.27952
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-14.17, 0.01, 2.42)
+Something wrong1!!
+14.11122
+Something wrong2!!
+4.79211
+Something wrong3!!
+(-14.32, 0.01, 1.33)
+Something wrong1!!
+13.8593
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-14.37, 0.01, 0.23)
+Something wrong1!!
+13.52596
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-14.35, 0.01, -0.88)
+Something wrong1!!
+13.11317
+Something wrong2!!
+4.792109
+Something wrong3!!
+(-14.24, 0.01, -1.97)
+Something wrong1!!
+12.62336
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-14.05, 0.01, -3.06)
+Something wrong1!!
+12.05869
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.77, 0.01, -4.12)
+Something wrong1!!
+11.42382
+Something wrong2!!
+4.792108
+Something wrong3!!
+(-13.42, 0.01, -5.17)
+Something wrong1!!
+10.72181
+Something wrong2!!
+4.792107
+Something wrong3!!
+(-12.98, 0.01, -6.18)
+Something wrong1!!
+-10.03348
+Something wrong2!!
+4.792109
+Something wrong3!!
+(6.68, 0.01, -12.73)
+Something wrong1!!
+-10.79257
+Something wrong2!!
+4.792107
+Something wrong3!!
+(7.64, 0.01, -12.18)
+Setting up 128 worker threads for Enlighten.
+Memory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [32.0 KB-64.0 KB]: 110610 frames, [4.0 MB-8.0 MB]: 1 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 4.0 MB
+      Peak Allocated Bytes 4.0 MB
+      Overflow Count 2
+    [ALLOC_TEMP_Job.Worker 18]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 42]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 58]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 44]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 73]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 40]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 36]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 77]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 16]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 19.5 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 52]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 27]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 60]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 110]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 85]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 103]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 70]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 79]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 78]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 66]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 74]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 101]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 38]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 53]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 20]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 46]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 43]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 106]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 96]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 30]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 51]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 63]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 86]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 26]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 82]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 21]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 25]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 92]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 39]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 111]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 100]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 71]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 31]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 47]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 29]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 13]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 55]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 76]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 98]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 22]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 14.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 75]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 80]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 35]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 67]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 15.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 90]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 32]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 23]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 59]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 49]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 33]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 10]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 15]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 24]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 29.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 12]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 83]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 384.0 KB
+      Peak Allocated Bytes 346.7 KB
+      Overflow Count 5
+    [ALLOC_TEMP_Job.Worker 107]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 87]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 99]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 109]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 108]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 17]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 65]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 97]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 14]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 255
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 56]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 88]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 37]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 84]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 62]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 50]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 54]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 94]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 41]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 11]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 81]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 64]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 91]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 34]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 95]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 48]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 57]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 68]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 89]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 72]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_EnlightenWorker] x 128
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 104]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 28]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 69]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 61]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 9]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 102]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 93]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 105]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 19]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 45]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 214 B
+      Overflow Count 0
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 4980
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 2.7 MB
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [64.0 MB-128.0 MB]: 110610 frames, [128.0 MB-256.0 MB]: 1 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 2
+      Peak Allocated memory 133.2 MB
+      Peak Large allocation bytes 128.1 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [32.0 MB-64.0 MB]: 110611 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 46.4 MB
+      Peak Large allocation bytes 32.0 MB
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 2
+  Overflow Count (too large) 2
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 4
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 2.7 MB
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [64.0 MB-128.0 MB]: 110611 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 85.4 MB
+      Peak Large allocation bytes 85.4 MB
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [2.0 MB-4.0 MB]: 110611 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 2.8 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 2.7 MB
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 110610 frames, [16.0 MB-32.0 MB]: 1 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 2
+      Peak Allocated memory 30.9 MB
+      Peak Large allocation bytes 24.9 MB
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 110610 frames, [8.0 MB-16.0 MB]: 1 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 3
+      Peak Allocated memory 9.4 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 2.7 MB
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [0-1.0 KB]: 110611 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 1.1 KB
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [1.0 KB-2.0 KB]: 110610 frames, [2.0 KB-4.0 KB]: 1 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 2.2 KB
+      Peak Large allocation bytes 0 B

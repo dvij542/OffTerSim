@@ -1,0 +1,24 @@
+1. Open the tool window: click on Tools/Prepare detail for bend
+
+2. The GameObject (your bush or grass object) to edit should be located on the scene at the world position 0, 0, 0.
+
+3. Drag and drop the desired GameObject from the scene to the GameObject parameter.
+
+4. By default the bend potential is 70%, you can play with that value as you wish, but for the first test I recommend to leave it between 70% and 100%.
+	
+5. You can change the ground Y offset and preview the appearance.
+
+6. Finally click on Save and choose the desired location for the new Mesh that will be attached to the GameObject automatically.
+
+7. Create a new prefab from the modified GameObject.
+
+8. Add this prefab as a Detail Mesh (Render Mode - Grass) to the Terrain. Place some instances in the Terrain with this Detail Mesh.
+
+9. Ready for tests.
+
+Also you can check a video: https://youtu.be/xuX3kUbjWfM
+
+
+Useful links: 
+https://docs.unity3d.com/Manual/terrain-Grass.html
+https://answers.unity.com/questions/16834/wind-detail-meshes-are-moved-by-wind-back-and-fort.html

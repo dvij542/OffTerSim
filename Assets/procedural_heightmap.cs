@@ -65,7 +65,8 @@ public class procedural_heightmap : MonoBehaviour
                 // road_width += UnityEngine.Random.Range(-road_width/400.0f,road_width/400.0f);
                 // float diff = (j - y)/terrain_size;
                 road_width = road_widths[i];
-                for (int j = Mathf.Max(0,Mathf.RoundToInt(y-road_width*terrain_size)); j < Mathf.Min(terrain_size + 1,Mathf.RoundToInt(y+road_width*terrain_size)); j++){
+                // for (int j = Mathf.Max(0,Mathf.RoundToInt(y-road_width*terrain_size)); j < Mathf.Min(terrain_size + 1,Mathf.RoundToInt(y+road_width*terrain_size)); j++){
+                for (int j = 0; j < terrain_size + 1; j++){
                     mesh[i,j] += (max_h_sample+max_h_sample*Mathf.Sin(phase+i*freq_x+j*freq_y))/100.0f;
                     maxval = Mathf.Max(maxval,mesh[i,j]);
                 }        
@@ -191,7 +192,7 @@ public class procedural_heightmap : MonoBehaviour
                             if (dist>obs_radius){
                                 continue;
                             }
-                            // texture.SetPixel(k, terrain_size-l, new Color(texture.GetPixel(k, terrain_size-l).r,Mathf.Min(1.0f,texture.GetPixel(k, terrain_size-l).g+Mathf.Sqrt(1.0f - dist/obs_radius)),texture.GetPixel(k, terrain_size-l).b,1.0f));
+                            texture.SetPixel(k, terrain_size-l, new Color(texture.GetPixel(k, terrain_size-l).r,Mathf.Min(1.0f,texture.GetPixel(k, terrain_size-l).g+Mathf.Sqrt(1.0f - dist/obs_radius)),texture.GetPixel(k, terrain_size-l).b,1.0f));
                         }
                     }
                     // for (int k=i-)

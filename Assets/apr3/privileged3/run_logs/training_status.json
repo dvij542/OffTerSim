@@ -1,0 +1,65 @@
+{
+    "ArcadeDriver": {
+        "checkpoints": [
+            {
+                "steps": 1869968,
+                "file_path": "results/privileged3/ArcadeDriver/ArcadeDriver-1869968.onnx",
+                "reward": 2345.9233288764954,
+                "creation_time": 1712082718.7168064,
+                "auxillary_file_paths": [
+                    "results/privileged3/ArcadeDriver/ArcadeDriver-1869968.pt"
+                ]
+            },
+            {
+                "steps": 1879936,
+                "file_path": "results/privileged3/ArcadeDriver/ArcadeDriver-1879936.onnx",
+                "reward": 2654.3447838340485,
+                "creation_time": 1712082743.7689726,
+                "auxillary_file_paths": [
+                    "results/privileged3/ArcadeDriver/ArcadeDriver-1879936.pt"
+                ]
+            },
+            {
+                "steps": 1889968,
+                "file_path": "results/privileged3/ArcadeDriver/ArcadeDriver-1889968.onnx",
+                "reward": 1624.9733781814575,
+                "creation_time": 1712082766.8802545,
+                "auxillary_file_paths": [
+                    "results/privileged3/ArcadeDriver/ArcadeDriver-1889968.pt"
+                ]
+            },
+            {
+                "steps": 1899952,
+                "file_path": "results/privileged3/ArcadeDriver/ArcadeDriver-1899952.onnx",
+                "reward": null,
+                "creation_time": 1712082791.6500428,
+                "auxillary_file_paths": [
+                    "results/privileged3/ArcadeDriver/ArcadeDriver-1899952.pt"
+                ]
+            },
+            {
+                "steps": 1904432,
+                "file_path": "results/privileged3/ArcadeDriver/ArcadeDriver-1904432.onnx",
+                "reward": 2479.2485612630844,
+                "creation_time": 1712082800.7730274,
+                "auxillary_file_paths": [
+                    "results/privileged3/ArcadeDriver/ArcadeDriver-1904432.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1904432,
+            "file_path": "results/privileged3/ArcadeDriver.onnx",
+            "reward": 2479.2485612630844,
+            "creation_time": 1712082800.7730274,
+            "auxillary_file_paths": [
+                "results/privileged3/ArcadeDriver/ArcadeDriver-1904432.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "2.1.1+cu121"
+    }
+}
