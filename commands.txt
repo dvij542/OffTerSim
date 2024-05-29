@@ -1,9 +1,0 @@
-conda activate mlagents
-cd C:\Users\dvijk\uneven-terrain-driver\Assets\Karting\Prefabs\AI
-mlagents-learn kart_mg_trainer_config_new.yaml --run-id first_attempt
-
-git init
-git remote add origin https://github.com/dvij542/uneven-terrain-driver.git
-git add .
-git commit -m "Initial commit"
-git push origin main -f

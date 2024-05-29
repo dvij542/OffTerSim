@@ -65,15 +65,10 @@ Follow this [Link](https://github.com/gzrjzcx/ML-agents/blob/476504b547b39e0bd69
 ## Making a gym environment
 
 ```
-conda create -n terrain_env python=3.6
+conda create -n terrain_env python=3.8
 conda activate terrain_env
-git clone https://github.com/gzrjzcx/ML-agents.git
-cd ML-agents/
-cd ml-agents-envs/
-python3.6 -m pip install -e ./
-cd ../
-cd ml-agents
-python3.6 -m pip install -e ./
+python3.8 -m pip install mlagents==0.28.0
+python3.8 -m pip install mkagents-envs==0.28.0
 ```
 
 ## Installing and running executable on Ubuntu
@@ -81,6 +76,7 @@ python3.6 -m pip install -e ./
 Ref: [Link](https://alexisrozhkov.github.io/unity_rl/). Run the following commands 
 ```
 pip install mlagents==0.28.0
+pip install mlagents-envs==0.28.0
 cd Build-ubuntu
 sudo chmod 777 *
 cd ..
@@ -93,20 +89,33 @@ mlagents-learn config.yaml --env "Build-ubuntu/exec" --run-id ubuntu_try15 --num
 You can also interact with the simulator as a ROS2 node. Full ROS2 integration is a WIP. To get started, follow the given steps:-
 
 1. Install [ROS2](https://docs.ros.org/en/foxy/Installation.html) (Foxy, Iron or any other version)
-2. If on linux, also install [mono-project](https://www.mono-project.com/download/stable/#download-lin) required for reading images within the application
-3. Change permissions of the ros2-env built environment with :-
+2. Install dependencies :-
+```
+sudo apt-get install ros-<ROS_VERSION>-ackermann-msgs
+sudo apt-get install ros-<ROS_VERSION>-sensor-msgs
+sudo apt-get install ros-<ROS_VERSION>-geometry-msgs
+```
+3. If on linux, also install [mono-project](https://www.mono-project.com/download/stable/#download-lin) required for reading images within the application
+4. Change permissions of the ros2-env built environment with :-
 ```
 cd ros2-env
 sudo chmod 777 *
 cd ..
 ```
-4. Your params.yaml file should be in the same directory you run from. It should contain the path to the heightmap, the spawn position and which sensors to use. Run 'Scripts/ros2_interface.py'
+5. Your params.yaml file should be in the same directory you run from. It should contain the path to the heightmap, the spawn position and which sensors to use. Run 'ros2_interface.py'
 ```
-python3 Scripts/ros2_interface.py
+source /opt/ros/<ROS_VERSION>/setup.bash
+python3 ros2_interface.py
 ```
 This should open a new simulator session with ROS2 wrapper. You can see the available topics with 'ros2 topic list' in a new terminal and it should list all sensor topics, pose, velocity and acceleration topics and the /cmd topic from where it listens to acceleration and throttle commands
-5. (optional) You can launch the example keyboard teleop script under Scripts/keyboard_controller.py that publishes to '/cmd' topic from the arrow keys to control the car. You may need to install pygame to run the script
+6. (optional) You can launch the example keyboard teleop script under Scripts/keyboard_controller.py that publishes to '/cmd' topic from the arrow keys to control the car. You may need to install pygame to run the script
 ```
+source /opt/ros/<ROS_VERSION>/setup.bash
 python3 Scripts/keyboard_controller.py
 ```
-6. (optional) You can open rviz2 to visualize the sensor readings
+7. (optional) You can open rviz2 to visualize the sensor readings
+
+```
+source /opt/ros/<ROS_VERSION>/setup.bash
+rviz2
+```
