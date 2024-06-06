@@ -3,12 +3,12 @@ track_info:
   track_width: 5.0
   texture_blend_factor: 0.9
   obs_density: 0.0
-  vegetation_density: 0.0
+  vegetation_density: 0.4
   offtrack_roughness: 0.00
   scale: 20.0
   ox: 200.0
   oy: 200.0
-  bush_demarcation: 0.
+  bush_demarcation: 0.5
 
 heightmap:
   filename: "heightmap.png"
@@ -19,7 +19,7 @@ respawn_loc:
   y: 3.0
   z: 200.0
   roll: 0
-  pitch: 180
+  pitch: 0
   yaw: 0
 
 sensors:
