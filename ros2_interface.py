@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from mlagents_envs.environment import UnityEnvironment,ActionTuple
+from mlagents_envs.side_channel.engine_configuration_channel import EngineConfigurationChannel
 from mlagents_envs.base_env import ActionSpec, TerminalSteps
 import time
 import torch
@@ -24,9 +25,24 @@ from geometry_msgs.msg import PoseStamped, TwistStamped, AccelStamped, Transform
 import tf2_ros
 from sensor_msgs.msg import LaserScan
 from sensor_msgs.msg import PointCloud2, PointField
+import math
 
 steer_cmd = 0
 throttle_cmd = 0
+SYNC = True
+DELAY = 0
+N_ACTIONS_PER_STEP = 1
+
+def quaternion_to_euler(quat):
+    x, y, z, w = quat
+    t0 = + 2.0 * (w * x + y * z)
+    t1 = + 1.0 - 2.0 * (x * x + y * y)
+    t2 = + 2.0 * (w * y - z * x)
+    t3 = + 1.0 - 2.0 * (y * y + z * z)
+    roll = math.atan2(t0, t1)
+    pitch = math.asin(t2)
+    yaw = math.atan2(t3, t0)
+    return [roll, pitch, yaw]
 
 class CarController(Node):
     def __init__(self):
@@ -49,19 +65,26 @@ class CarController(Node):
             AccelStamped,
             'car_accel',
             10)
+        engineConfigChannel = EngineConfigurationChannel()
         self.publisher_img = self.create_publisher(Image_ros, 'front_camera', 10)
-        self.env = UnityEnvironment(file_name="ros2-env-v2/sim", seed=1, side_channels=[],worker_id=0,log_folder='logs/')#,no_graphics=True)
+        self.env = UnityEnvironment(file_name="ros2-env-v2/sim", seed=1,worker_id=0,log_folder='logs/', side_channels=[engineConfigChannel])
+        engineConfigChannel.set_configuration_parameters(quality_level=1, target_frame_rate=-1, capture_frame_rate=60)
+# ,)#,no_graphics=True)
         # print("Started?")
         self.env.reset()
         self.fps = 10.
+        self.cmd_buffer = np.zeros((DELAY+1,2))
         # print("Started?")
-
+        self.i = 0
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         self.behavior_name = list(self.env.behavior_specs)[0]
         
         # print("Started?")
         self.subscription  # prevent unused variable warning    
-        self.timer = self.create_timer(0.1, self.publish_data)
+        if SYNC:
+            self.timer = self.create_timer(0.01, self.publish_data)
+        else :
+            self.timer = self.create_timer(0.05, self.publish_data)
         self.publisher_scan = self.create_publisher(
             LaserScan,
             'scan',
@@ -69,7 +92,9 @@ class CarController(Node):
         self.base_idx = 2
         self.publisher = self.create_publisher(PointCloud2, 'pcl', 10)
         self.curr_time = time.time()
-        self.fps_target = 10.
+        self.fps_target = 50.
+        self.received_cmd = False
+        print("Started")
     
     def publish_scan(self, scan_data):
         scan_msg = LaserScan()
@@ -112,13 +137,14 @@ class CarController(Node):
         self.publisher.publish(msg)
 
     def cmd_callback(self, msg):
-        global steer_cmd,throttle_cmd
         # print("Received new command", msg.steering_angle, msg.acceleration)
         # Process steering and throttle commands received from ackerman_cmd topic
+        if msg.acceleration < -2.:
+            self.env.reset()
+        self.cmd_buffer[0,0] = msg.steering_angle
+        self.cmd_buffer[0,1] = msg.acceleration
+        self.received_cmd = True
         
-        steer_cmd = msg.steering_angle
-        throttle_cmd = msg.acceleration 
-    
     def euler_to_quaternion(self,roll, pitch, yaw):
         # Calculate the quaternion components
         qx = math.sin(roll / 2) * math.cos(pitch / 2) * math.cos(yaw / 2) - math.cos(roll / 2) * math.sin(pitch / 2) * math.sin(yaw / 2)
@@ -126,6 +152,8 @@ class CarController(Node):
         qz = math.cos(roll / 2) * math.cos(pitch / 2) * math.sin(yaw / 2) - math.sin(roll / 2) * math.sin(pitch / 2) * math.cos(yaw / 2)
         qw = math.cos(roll / 2) * math.cos(pitch / 2) * math.cos(yaw / 2) + math.sin(roll / 2) * math.sin(pitch / 2) * math.sin(yaw / 2)
         return qx, qy, qz, qw
+
+
 
     def publish_image(self,img_):
         # Generate a sample image (you can replace this with your actual image capture code)
@@ -159,8 +187,9 @@ class CarController(Node):
         msg_twist.header.stamp = self.get_clock().now().to_msg()
         msg_accel.header.stamp = self.get_clock().now().to_msg()
         env_info = self.env.get_steps(self.behavior_name)
-        
-        # print("Here?")
+        if SYNC and not self.received_cmd:
+            print("Waiting")
+            return
         if len(env_info[0].obs) == 0 :
             print("No observations")
         
@@ -172,6 +201,11 @@ class CarController(Node):
         roll = float(env_info[0].obs[-1][0][3])*math.pi/180.
         pitch = float(env_info[0].obs[-1][0][4])*math.pi/180.
         yaw = float(env_info[0].obs[-1][0][5])*math.pi/180.
+        while pitch > math.pi:
+            pitch -= 2.*math.pi
+        while pitch < -math.pi:
+            pitch += 2.*math.pi
+        print(roll,pitch,yaw)
         qx,qy,qz,qw = self.euler_to_quaternion(roll,pitch,yaw)
         msg_pose.pose.orientation.x = qx
         msg_pose.pose.orientation.y = qy
@@ -243,22 +277,47 @@ class CarController(Node):
         self.publish_pcl(np.array(pcl).astype(np.float32))
         self.publish_scan(ranges)
         # print(steer_cmd,throttle_cmd)
-        self.get_logger().info('Published (steer,throttle): '+ str(steer_cmd) + ', ' + str(throttle_cmd))
 
-        actions = ActionTuple(np.array([[steer_cmd,throttle_cmd]]),None)
-        self.env.set_actions(self.behavior_name, actions)
-       
-        self.env.step()
+        if SYNC:
+            if self.received_cmd:
+                steer_cmd = self.cmd_buffer[-1,0]
+                throttle_cmd = self.cmd_buffer[-1,1]
+                if len(self.cmd_buffer) > 1:
+                    self.cmd_buffer[1:] = self.cmd_buffer[:-1]
+                actions = ActionTuple(np.array([[steer_cmd,throttle_cmd]]),None)
+                for j in range(N_ACTIONS_PER_STEP) :
+                    self.env.set_actions(self.behavior_name, actions)
+                    self.env.step()
+                    
+                self.publisher_pose.publish(msg_pose)
+                self.publisher_twist.publish(msg_twist)
+                self.publisher_accel.publish(msg_accel)
+                self.received_cmd = False
+                self.get_logger().info('Published (steer,throttle): '+ str(steer_cmd) + ', ' + str(throttle_cmd))
+        else :
+            steer_cmd = self.cmd_buffer[-1,0]
+            throttle_cmd = self.cmd_buffer[-1,1]
+            if len(self.cmd_buffer) > 1:
+                self.cmd_buffer[1:] = self.cmd_buffer[:-1]
+            actions = ActionTuple(np.array([[steer_cmd,throttle_cmd]]),None)
+            self.env.set_actions(self.behavior_name, actions)
+            self.env.step()
+            self.publisher_pose.publish(msg_pose)
+            self.publisher_twist.publish(msg_twist)
+            self.publisher_accel.publish(msg_accel)
+            self.get_logger().info('Published (steer,throttle): '+ str(steer_cmd) + ', ' + str(throttle_cmd))
+
         dt = time.time() - self.curr_time
         if dt < 1./self.fps_target:
             time.sleep(1./self.fps_target - dt)
         self.fps = self.fps + 0.1*(1./(time.time()-self.curr_time) - self.fps)
         self.get_logger().info('Curr FPS: '+ str(self.fps) + ' (' + "{:.2f}".format(self.fps/self.fps_target) + 'x real-time)')
         self.curr_time = time.time()
-        self.publisher_pose.publish(msg_pose)
-        self.publisher_twist.publish(msg_twist)
-        self.publisher_accel.publish(msg_accel)
-
+        self.i += 1
+        print(self.i)
+        # if self.i > 200:
+        #     self.i = 0
+        #     self.env.reset()
         
 
 def main(args=None):

@@ -225,9 +225,10 @@ namespace KartGame.AI
             public Location respawn_loc;
             public SensorInfo sensors;
             public float timescale;
+            public ArcadeKart.VehicleParams vehicle_params;
         }
 
-        public void CollectObservations1(VectorSensor sensor)
+        public override void CollectObservations(VectorSensor sensor)
         {
             sensor.AddObservation(m_Kart.transform.position.x);
             sensor.AddObservation(m_Kart.transform.position.y);
@@ -235,9 +236,10 @@ namespace KartGame.AI
             sensor.AddObservation(m_Kart.transform.localEulerAngles.x);
             sensor.AddObservation(m_Kart.transform.localEulerAngles.y);
             sensor.AddObservation(m_Kart.transform.localEulerAngles.z);
-            sensor.AddObservation(m_Kart.Rigidbody.velocity.x);
-            sensor.AddObservation(m_Kart.Rigidbody.velocity.y);
-            sensor.AddObservation(m_Kart.Rigidbody.velocity.z);
+            Vector3 localVel = m_Kart.transform.InverseTransformVector(m_Kart.Rigidbody.velocity);
+            sensor.AddObservation(localVel.x);
+            sensor.AddObservation(localVel.y);
+            sensor.AddObservation(localVel.z);
             sensor.AddObservation(m_Kart.Rigidbody.angularVelocity.x);
             sensor.AddObservation(m_Kart.Rigidbody.angularVelocity.y);
             sensor.AddObservation(m_Kart.Rigidbody.angularVelocity.z);
@@ -247,7 +249,8 @@ namespace KartGame.AI
             sensor.AddObservation(acceleration.y);
             sensor.AddObservation(acceleration.z);
         }
-        public override void CollectObservations(VectorSensor sensor)
+
+        public void CollectObservations1(VectorSensor sensor)
         {
             sensor.AddObservation(m_Kart.LocalSpeed());
 
@@ -361,14 +364,14 @@ namespace KartGame.AI
             total_progress += reward*Time.fixedDeltaTime;
             cum_unevenness += (Mathf.Abs(rx) + Mathf.Abs(rz))*Time.fixedDeltaTime;
             prev_x = curr_x;
-            if (Mathf.Abs(reward)>10.0f){
-                Debug.Log("Something wrong1!!");
-                Debug.Log(reward);
-                Debug.Log("Something wrong2!!");
-                Debug.Log(m_Kart.LocalSpeed());
-                Debug.Log("Something wrong3!!");
-                Debug.Log(m_Kart.Rigidbody.velocity);
-            }
+            // if (Mathf.Abs(reward)>10.0f){
+            //     Debug.Log("Something wrong1!!");
+            //     Debug.Log(reward);
+            //     Debug.Log("Something wrong2!!");
+            //     Debug.Log(m_Kart.LocalSpeed());
+            //     Debug.Log("Something wrong3!!");
+            //     Debug.Log(m_Kart.Rigidbody.velocity);
+            // }
 
             // added_reward = reward * TowardsCheckpointReward;
             // Add rewards if the agent is heading in the right direction
@@ -438,6 +441,32 @@ namespace KartGame.AI
                 respawn_roll = parameters.respawn_loc.roll;
                 respawn_pitch = parameters.respawn_loc.pitch;
                 respawn_yaw = parameters.respawn_loc.yaw;
+                m_Kart.baseVehicleParams.Bf = parameters.vehicle_params.Bf;
+                m_Kart.baseVehicleParams.Br = parameters.vehicle_params.Br;
+                m_Kart.baseVehicleParams.Cf = parameters.vehicle_params.Cf;
+                m_Kart.baseVehicleParams.delay = parameters.vehicle_params.delay;
+                m_Kart.baseVehicleParams.Cr = parameters.vehicle_params.Cr;
+                m_Kart.baseVehicleParams.g = parameters.vehicle_params.g;
+                m_Kart.baseVehicleParams.h_cg = parameters.vehicle_params.h_cg;
+                m_Kart.baseVehicleParams.I = parameters.vehicle_params.I;
+                m_Kart.baseVehicleParams.K_aero = parameters.vehicle_params.K_aero;
+                m_Kart.baseVehicleParams.K_brake = parameters.vehicle_params.K_brake;
+                m_Kart.baseVehicleParams.K_cmd = parameters.vehicle_params.K_cmd;
+                m_Kart.baseVehicleParams.K_steer = parameters.vehicle_params.K_steer;
+                m_Kart.baseVehicleParams.K_friction = parameters.vehicle_params.K_friction;
+                m_Kart.baseVehicleParams.K_v = parameters.vehicle_params.K_v;
+                m_Kart.baseVehicleParams.Lf = parameters.vehicle_params.Lf;
+                m_Kart.baseVehicleParams.Lr = parameters.vehicle_params.Lr;
+                m_Kart.baseVehicleParams.mu_f = parameters.vehicle_params.mu_f;
+                m_Kart.baseVehicleParams.mu_r = parameters.vehicle_params.mu_r;
+                m_Kart.baseVehicleParams.m = parameters.vehicle_params.m;
+                m_Kart.baseVehicleParams.max_steer = parameters.vehicle_params.max_steer;
+                m_Kart.baseVehicleParams.v_kin = parameters.vehicle_params.v_kin;
+                m_Kart.Rigidbody.mass = parameters.vehicle_params.m;
+
+                m_Kart.Rigidbody.inertiaTensor = m_Kart.Rigidbody.inertiaTensor * parameters.vehicle_params.I / m_Kart.Rigidbody.inertiaTensor.y;
+                // Debug.Log("Mass: " + m_Kart.Rigidbody.mass);
+                // Debug.Log("Inertia: " + m_Kart.Rigidbody.inertiaTensor);
             }
             Time.timeScale = parameters.timescale;
         }

@@ -16,7 +16,37 @@ namespace KartGame.KartSystems
             public float ElapsedTime;
             public float MaxTime;
         }
-    
+        public float curr_steer = 0.0f;
+
+        [System.Serializable]
+        public class VehicleParams 
+        {
+            public float m;
+            public float I;
+            public float max_steer;
+            public float Lf;
+            public float Lr;
+            public float K_cmd;
+            public float K_v;
+            public float K_brake;
+            public float K_aero;
+            public float mu_f;
+            public float mu_r;
+            public float g;
+            public float h_cg;
+            public float Cf;
+            public float Cr;
+            public float Bf;
+            public float Br;
+            public float K_steer;
+            public float K_friction;
+            public int delay;
+            public float v_kin;
+        }
+        
+        
+        public VehicleParams baseVehicleParams;
+
         [System.Serializable]
         public struct Cmd
         {
@@ -30,6 +60,7 @@ namespace KartGame.KartSystems
             throttle = 0.0f,
         };
         public bool takeExpertCmd = true;
+        public bool isDrifting = false;
         public struct Stats
         {
             [Header("Movement Settings")]
@@ -280,6 +311,7 @@ namespace KartGame.KartSystems
             sphere.transform.localPosition = new Vector3(y, 0.0f, x); // Set the local position
             sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Set the scale
         }
+        bool started = false;
         void Awake()
         {
             // Time.timeScale = 4f;
@@ -293,11 +325,10 @@ namespace KartGame.KartSystems
             Physics.IgnoreLayerCollision(13,13);
             Rigidbody = GetComponent<Rigidbody>();
             m_Inputs = GetComponents<IInput>();
-            UpdateSuspensionParams(FrontLeftWheel);
-            UpdateSuspensionParams(FrontRightWheel);
-            UpdateSuspensionParams(RearLeftWheel);
-            UpdateSuspensionParams(RearRightWheel);
-
+            // UpdateSuspensionParams(FrontLeftWheel);
+            // UpdateSuspensionParams(FrontRightWheel);
+            // UpdateSuspensionParams(RearLeftWheel);
+            // UpdateSuspensionParams(RearRightWheel);
             m_CurrentGrip = baseStats.Grip;
 
             if (DriftSparkVFX != null)
@@ -348,10 +379,10 @@ namespace KartGame.KartSystems
             {
                 observations.Add((transform.position.x, transform.position.z, transform.localEulerAngles.y, Rigidbody.velocity.x, Rigidbody.velocity.z, Rigidbody.angularVelocity.y, transform.rotation.w, LocalSpeed()));
             }
-            UpdateSuspensionParams(FrontLeftWheel);
-            UpdateSuspensionParams(FrontRightWheel);
-            UpdateSuspensionParams(RearLeftWheel);
-            UpdateSuspensionParams(RearRightWheel);
+            // UpdateSuspensionParams(FrontLeftWheel);
+            // UpdateSuspensionParams(FrontRightWheel);
+            // UpdateSuspensionParams(RearLeftWheel);
+            // UpdateSuspensionParams(RearRightWheel);
 
             GatherInputs();
 
@@ -374,7 +405,13 @@ namespace KartGame.KartSystems
             // calculate how grounded and airborne we are
             GroundPercent = (float) groundedCount / 4.0f;
             AirPercent = 1 - GroundPercent;
-
+            if (GroundPercent<0.01f) {
+                started = true;
+                Vector3 forward_vel = transform.forward * 1.0f;
+                Rigidbody.velocity = new Vector3(forward_vel.x, Rigidbody.velocity.y, forward_vel.z);
+                // return;
+            }
+            
             // apply vehicle physics
             if (m_CanMove)
             {
@@ -388,7 +425,8 @@ namespace KartGame.KartSystems
                     
                     // MoveVehicle((target_acc>0.0f), (target_acc<0.0f), Input.TurnInput);
                     // MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
-                    MoveVehicleNew(Input.Throttle, Input.TurnInput);
+                    // MoveVehicleNew(Input.Throttle, Input.TurnInput);
+                    MoveVehicleDynamic(Input.Throttle, Input.TurnInput);
                 }
                 else {
                     // if (curr_cmd.throttle > 0.0f)
@@ -396,7 +434,7 @@ namespace KartGame.KartSystems
 
                 }
             }
-            GroundAirbourne();
+            // GroundAirbourne();
 
             m_PreviousGroundPercent = GroundPercent;
 
@@ -871,5 +909,77 @@ namespace KartGame.KartSystems
 
             ActivateDriftVFX(IsDrifting && GroundPercent > 0.0f);
         }
+
+        void MoveVehicleDynamic(float throttle, float steer)
+        {
+            
+            Vector3 localVel = transform.InverseTransformVector(Rigidbody.velocity);
+            curr_steer += baseVehicleParams.K_steer*(steer*baseVehicleParams.max_steer-curr_steer);
+            float vx = localVel.z;
+            float vy = localVel.x;
+            var angularVel = Rigidbody.angularVelocity;
+            float w = angularVel.y;
+            float v_kin = baseVehicleParams.v_kin;
+            float alpha_f = curr_steer - Mathf.Atan2(w*baseVehicleParams.Lf+vy,Mathf.Max(vx,v_kin));
+            float alpha_r = Mathf.Atan2(w*baseVehicleParams.Lr-vy,Mathf.Max(vx,v_kin));
+            
+            float Cf = baseVehicleParams.Cf;
+            float Bf = baseVehicleParams.Bf;
+            float Cr = baseVehicleParams.Cr;
+            float Br = baseVehicleParams.Br;
+            float cg_ratio = baseVehicleParams.Lf/(baseVehicleParams.Lr+baseVehicleParams.Lf);
+            float Df = baseVehicleParams.mu_f*baseVehicleParams.m*baseVehicleParams.g*(1-cg_ratio);
+            float Dr = baseVehicleParams.mu_r*baseVehicleParams.m*baseVehicleParams.g*cg_ratio;
+            float Ffy = Df*Mathf.Sin(Cf*Mathf.Atan(Bf*alpha_f));
+            float Fry = Dr*Mathf.Sin(Cr*Mathf.Atan(Br*alpha_r));
+            
+            float sign_v;
+            if (vx > 0.3f) {
+                sign_v = 1.0f;
+            }
+            else if (vx < -0.3f) {
+                sign_v = 1.0f;
+            }
+            else {
+                sign_v = 0.0f;
+            }
+            float v_total = Mathf.Sqrt(vx*vx+vy*vy);
+            float v_theta = Mathf.Atan2(vy,vx);
+            float Frx = (throttle > 0) ? (baseVehicleParams.K_cmd-baseVehicleParams.K_v*vx)*throttle - sign_v*baseVehicleParams.K_aero*v_total*v_total*Mathf.Cos(v_theta) 
+                    : baseVehicleParams.K_brake*throttle - sign_v*baseVehicleParams.K_aero*v_total*v_total*Mathf.Cos(v_theta);
+            Frx -= sign_v*baseVehicleParams.K_friction*Mathf.Cos(v_theta);
+            Ffy -= sign_v*baseVehicleParams.K_friction*Mathf.Sin(v_theta)*cg_ratio;
+            Ffy -= sign_v*baseVehicleParams.K_friction*Mathf.Sin(v_theta)*(1-cg_ratio);
+            Ffy -= baseVehicleParams.K_aero*Mathf.Sin(v_theta)*v_total*v_total*cg_ratio;
+            Fry -= baseVehicleParams.K_aero*Mathf.Sin(v_theta)*v_total*v_total*(1-cg_ratio);
+            float vx_dot = (Frx - ((vx>v_kin)?Ffy*Mathf.Sin(curr_steer) - baseVehicleParams.m*vy*w:0.0f) )/baseVehicleParams.m;
+            float vy_dot = (Fry + Ffy*Mathf.Cos(curr_steer) - baseVehicleParams.m*vx*w)/baseVehicleParams.m;
+            float w_dot = (Ffy*baseVehicleParams.Lf*Mathf.Cos(curr_steer) - Fry*baseVehicleParams.Lr)/baseVehicleParams.I;
+            Vector3 forwardDir = transform.forward;
+            Vector3 rightDir = transform.right;
+
+            float vy_kin = Mathf.Tan(curr_steer)*vx*baseVehicleParams.Lr/(baseVehicleParams.Lf+baseVehicleParams.Lr);
+            // Debug.Log(accelerate+ " " +brake+" "+turnInput+" "+alpha_f+" "+alpha_r);
+            Vector3 v_dot = vx_dot*forwardDir + ((vx>v_kin)?vy_dot:0.0f)*rightDir;
+            w = (vx>v_kin)?w:((vx<-10.0f)?0.0f:steer*vx/(baseVehicleParams.Lf+baseVehicleParams.Lr));
+            Vector3 newVelocity = Quaternion.AngleAxis(w*Time.fixedDeltaTime*180.0f/Mathf.PI, transform.up)*(Rigidbody.velocity + v_dot * Time.fixedDeltaTime 
+            + ((vx<=v_kin)?(vy_kin*transform.right-transform.right*Vector3.Dot(transform.right,Rigidbody.velocity)):Vector3.zero));
+            newVelocity.y = Rigidbody.velocity.y;
+            angularVel.y = w + ((vx>v_kin)?(Time.fixedDeltaTime*w_dot):0.0f);
+            if (GroundPercent>0){
+                if (Mathf.Abs(alpha_f+alpha_r) > 0.2f) isDrifting = true; 
+                else isDrifting = false;
+                Rigidbody.velocity = newVelocity;
+                Rigidbody.angularVelocity = angularVel;    
+            }
+            else
+            {
+                m_InAir = true;
+            }
+            ActivateDriftVFX(isDrifting);
+            
+        }
     }
+
+    
 }

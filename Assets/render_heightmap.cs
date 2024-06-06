@@ -7,6 +7,7 @@ using System.IO;
 using UnityEngine.UIElements;
 using System.Threading.Tasks;
 using Unity.Barracuda;
+using KartGame.KartSystems;
 
 public class render_heightmap : MonoBehaviour
 {
@@ -81,6 +82,8 @@ public class render_heightmap : MonoBehaviour
         public Location respawn_loc;
         public SensorInfo sensors;
         public float timescale;
+        public ArcadeKart.VehicleParams vehicle_params;
+
     }
 
     public Vector3[] ReadCSV(string filePath, float ox, float oy, float scale)

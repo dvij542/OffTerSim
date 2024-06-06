@@ -1,0 +1,54 @@
+track_info:
+  centerline_file: "new_traj.csv"
+  track_width: 5.0
+  texture_blend_factor: 0.9
+  obs_density: 0.0
+  vegetation_density: 0.0
+  offtrack_roughness: 0.00
+  scale: 20.0
+  ox: 200.0
+  oy: 200.0
+  bush_demarcation: 0.
+
+heightmap:
+  filename: "heightmap.png"
+  scale: 0.0
+
+respawn_loc: 
+  x: 200.0
+  y: 3.0
+  z: 200.0
+  roll: 0
+  pitch: 180
+  yaw: 0
+
+sensors:
+  lidar: true
+  camera: true
+  pose: true
+  imu: true
+
+timescale: 1.0
+
+vehicle_params:
+  m: 250.0
+  I: 300.0
+  max_steer: 0.34
+  Lf: 1.0
+  Lr: 1.0
+  K_cmd: 2000.0
+  K_v: 50.0
+  K_brake: 2000.0
+  K_aero: 3.0
+  mu_f: 0.9
+  mu_r: 0.9
+  g: 9.81
+  h_cg: 0.0
+  Cf: 1.0
+  Cr: 1.0
+  Bf: 10.0
+  Br: 10.0
+  K_steer: 1.0
+  K_friction: 30.0
+  delay: 0
+  v_kin: 3.0
